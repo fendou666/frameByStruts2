@@ -9,10 +9,10 @@
 <title>Insert title here</title>
 </head>
 <%
-	pageContext.setAttribute("page", "request值");
+	pageContext.setAttribute("page", "page值");
 	request.setAttribute("req", "request值");
-	session.setAttribute("ses", "request值");	
-	application.setAttribute("app", "request值");
+	session.setAttribute("ses", "session值");	
+	application.setAttribute("app", "application值");
 %>
 
 

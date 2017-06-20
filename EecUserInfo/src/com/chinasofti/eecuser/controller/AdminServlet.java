@@ -300,7 +300,7 @@ public class AdminServlet extends HttpServlet {
 			out.write("updFalse");
 		}
     }
-    private void delteTheacherById(HttpServletRequest request, HttpServletResponse response){
+    private void delteTheacherById(HttpServletRequest request, HttpServletResponse response) throws IOException{
     	// 参数获取
     	String idStr			=  	request.getParameter("id");
     	String action			= 	"";
@@ -309,10 +309,12 @@ public class AdminServlet extends HttpServlet {
 		IAdminTheacherService adminTheacherService = new AdminTheacherServiceImp();
 		System.out.println("id:" + idStr);
 		if(idStr==null){
-			
+			System.out.println("参数不可以为空");
+			out.write("false");
+			return;
 		}else{
 			try{
-				id				= 	Integer.parseInt(idStr);
+				id	  = 	Integer.parseInt(idStr);
 			}catch(NumberFormatException E){
 				System.out.println("参数格式不对");
 				action = "errorReq";
@@ -343,7 +345,7 @@ public class AdminServlet extends HttpServlet {
 		}else if(action.equals("addTheacherTrue")){
 			addTheacherTrueAndRet(request, response);
 		}else if(action.equals("deleteTheacher")){
-			
+			delteTheacherById(request, response);
 		}else if(action.equals("updateTheacher")){
 			
 		}else if(action.equals("getQueryClass")){

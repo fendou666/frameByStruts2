@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="lession02" namespace="/" extends="struts-default">
+    
+    	<interceptors>
+    		<interceptor name="checklogin" class="com.chinasofti.common.CheckloginInterceptor"/>
+    		<interceptor name="logger1" class="com.opensymphony.xwork2.interceptor.LoggingInterceptor"/>
+    		<interceptor-stack name="mystack">
+			   	<interceptor-ref name="checklogin" />
+   				<interceptor-ref name="logger1" />
+   				<interceptor-ref name="defaultStack" />
+    		</interceptor-stack>
+    	</interceptors>
+    	<global-results>
+    		<result name="loginerror" type="dispatcher">/login.jsp</result>
+    	</global-results>
+   		<action name="*_*" class="com.chinasofti.actions.{1}Action" method="{2}">
+   			<interceptor-ref name="mystack" />
+   			<exception-mapping result="loginerror" exception="com.chinasofti.common.MyException"></exception-mapping>
+   			<result name="success" type="dispatcher">/loginsuccess.jsp</result>
+   		</action>
+   		
+ 		<action name="logout" class="com.chinasofti.actions.LogoutAction">
+   			<interceptor-ref name="mystack" />
+   			<exception-mapping result="loginerror" exception="com.chinasofti.common.MyException"></exception-mapping>
+   			<result name="success" type="redirect">/loginsuccess.jsp</result>
+   		</action>
+    </package>
+</struts>

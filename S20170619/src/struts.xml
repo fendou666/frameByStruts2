@@ -53,5 +53,13 @@
 			<result name="success">ShowObj.jsp</result>
 		</action>
 		
+		<action name="IOCAction" class="com.study.struts2.action.IOCAction">
+			<result name="error" type="dispatcher">Error.jsp</result>
+			<result name="success">ShowObj.jsp</result>
+		</action>
+		<action name="NOIOCAction" class="com.study.struts2.action.NOIOCAction">
+			<result name="error" type="dispatcher">Error.jsp</result>
+			<result name="success">ShowObj.jsp</result>
+		</action>
 	</package> 
 </struts>

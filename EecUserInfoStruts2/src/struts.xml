@@ -12,7 +12,7 @@
 			<result name="error" type="dispatcher">/JSP/Z6Admin/Admin.jsp</result>
 			<result name="success" type="redirect">/JSP/Z6Admin/Admin.jsp</result>
 		</action>
-		<action name="AdminTheacherQueryAction" class="com.chinasofti.eecuser.contrlller.action.LoginAction">
+		<action name="AdminTheacherQueryAction" class="com.chinasofti.eecuser.contrlller.action.TheacherQueryActionIOC">
 			<result name="none" type="dispatcher">/JSP/Z6Admin/Admin.jsp</result>
 			<result name="error" type="dispatcher">/JSP/Z6Admin/Admin.jsp</result>
 			<result name="success" type="redirect">/JSP/Z6Admin/Admin.jsp</result>
