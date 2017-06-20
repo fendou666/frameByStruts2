@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.devMode" value="true"></constant>
+	<package name="mypak" namespace="/" extends="struts-default">
+		<!-- <action name="hello"  class="com.study.struts2.action.HelloAction">
+			这里的name与action中对应的类中execte()返回值一样 
+			<result name="success">WorkIn/Hello.jsp</result>
+		</action> -->
+		<action name="helloWork">
+			<!-- <result name="success">Hello.jsp</result> -->
+			<result name="success">WorkIn/Hello.jsp</result>
+		</action>
+		<action name="hello"  class="com.study.struts2.action.HelloAction">
+			<result name="success">Hello.jsp</result>
+		</action>
+		<action name="helloForm"  class="com.study.struts2.action.HelloFormAction">
+			<result name="success">/OK.jsp</result>
+			<result name="error">/NO.jsp</result>
+		</action>
+		
+		<!-- 测试没有继承ActionSupport的类也可以执行  -->
+		<action name="actionTest"  class="com.study.struts2.action.TestAction">
+			<result name="sue">OK.jsp</result>
+		</action>
+		<!-- 测试工作空间  -->
+		
+		<action name="actionTest"  class="com.study.struts2.action.TestAction">
+			<result name="sue">/WorkIn/OK.jsp</result>
+		</action>
+		
+		<action name="A1">
+			<result name="sue">OK.jsp</result>
+		</action>
+		<action name="A2">
+			<result name="sue">/OK.jsp</result>
+		</action>
+		<action name="A3">
+			<result name="success">WorkIn/OK.jsp</result>
+		</action>
+		<action name="A4">
+			<result name="success">/WorkIn/OK.jsp</result>
+		</action>
+		<action name="HelloForm1"  class="com.study.struts2.action.HelloFormAction">
+			<result name="success">OK.jsp</result>
+			<result name="error">NO.jsp</result>
+		</action>
+		<action name="HelloForm2"  class="com.study.struts2.action.HelloFormAction">
+			<result name="success">/OK.jsp</result>
+			<result name="error">/NO.jsp</result>
+		</action>
+		<action name="HelloForm3"  class="com.study.struts2.action.HelloFormAction">
+			<result name="success">WorkIn/OK.jsp</result>
+			<result name="error">/WorkIn/OK.jsp</result>
+		</action>
+		<action name="HelloForm4"  class="com.study.struts2.action.HelloFormAction">
+			<result name="success">OK.jsp</result>
+			<result name="error">NO.jsp</result>
+		</action>
+	</package>
+	
+	<package name="mypak" namespace="/abc" extends="mypak">
+		<action name="ABCA1">
+			<result name="sue">OK.jsp</result>
+		</action>
+		<action name="ABCA2">
+			<result name="sue">/OK.jsp</result>
+		</action>
+		<action name="ABCA3">
+			<result name="success">WorkIn/OK.jsp</result>
+		</action>
+		<action name="ABCA4">
+			<result name="success">/WorkIn/OK.jsp</result>
+		</action>
+		<action name="ABChelloForm1"  class="com.study.struts2.action.HelloFormAction">
+			<result name="success">OK.jsp</result>
+			<result name="error">NO.jsp</result>
+		</action>
+		<action name="ABChelloForm2"  class="com.study.struts2.action.HelloFormAction">
+			<result name="success">/OK.jsp</result>
+			<result name="error">/NO.jsp</result>
+		</action>
+		<action name="ABChelloForm3"  class="com.study.struts2.action.HelloFormAction">
+			<result name="success">WorkIn/OK.jsp</result>
+			<result name="error">/WorkIn/OK.jsp</result>
+		</action>
+		<action name="ABChelloForm4"  class="com.study.struts2.action.HelloFormAction">
+			<result name="success">OK.jsp</result>
+			<result name="error">NO.jsp</result>
+		</action>
+	</package>
+	
+</struts>
+    
+    
