@@ -1,0 +1,21 @@
+package com.study.mvc.controller.action;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class LoginAjaxAction extends ActionSupport {
+
+	private static final long serialVersionUID = 1L;
+	
+	
+	
+	@Override
+	public String execute() throws Exception {
+		return super.execute();
+	}
+
+	@Override
+	public void validate() {
+		super.validate();
+	}
+	
+}

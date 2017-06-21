@@ -107,7 +107,7 @@ public class DBUtil {
 			ret = ps.executeUpdate();
 			System.out.println("增删改执行的sql 是" + sql);
 		} catch (SQLException e) {
-			errInfo = "增删该sql执行失败";
+			errInfo = "增删该sql执行失败 sql 为:" + sql;
 			System.out.println(errInfo);
 			e.printStackTrace();
 		}

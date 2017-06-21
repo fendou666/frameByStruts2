@@ -31,6 +31,8 @@ E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\94
 \S20170616\src
 E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\191088366.index
 \EecUserInfo\src
+E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1483221303.index
+\MVC02-JqueryJsonChangePage\src
 E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2593697931.index
 \S20170616New\src
 E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3052154266.index
@@ -41,6 +43,8 @@ E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\25
 \lession03_00101700\src
 E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2498885126.index
 \S20170616New\src
+E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3861057846.index
+\MVC02-JqueryJsonChangePage\src
 E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3416883354.index
 \S20170616New2\src
 E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2823816469.index

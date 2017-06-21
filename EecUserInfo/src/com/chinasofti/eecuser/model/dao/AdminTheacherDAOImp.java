@@ -138,6 +138,9 @@ public class AdminTheacherDAOImp implements IAdminTheacherDAO {
 				userList = new ArrayList<UserInfo>();
 				
 				while(rs.next()){
+					if(rs.isFirst()){
+						System.out.println("数据库返回多条数据第一次执行");
+					}
 					System.out.println("id 为 "  + rs.getString("eec_id"));
 					System.out.println("class_id 为：" + rs.getString("class_Id"));
 					userList.add(new UserInfo(
@@ -164,7 +167,9 @@ public class AdminTheacherDAOImp implements IAdminTheacherDAO {
 
 	@Override
 	public boolean deleteTheacher(int id) {
-		String sql = "DELETE FROM eecuser WHERE u.eec_id=?";
+		// 这里不可以删除sql数据
+		//String sql = "DELETE FROM eecuser WHERE u.eec_id=?";
+		String sql = "UPDATE eecuser SET isdelete=1 WHERE eec_id=?";
 		ArrayList<Object> objList = new ArrayList<Object>();
 		objList.add(id);
 		int delRows = DBUtil.getJDBC().updateSql(sql, objList);
@@ -177,6 +182,7 @@ public class AdminTheacherDAOImp implements IAdminTheacherDAO {
 
 	@Override
 	public boolean updateTheacher(UserInfo u) {
+		// TODO 这里是否需要将 isdelete写上?, 起始查询的时候已经是isdelete进行了筛选
 		String sql = "UPDATE eecuser u SET u.role_id=? WHERE u.eec_id=?";
 		ArrayList<Object> objList = new ArrayList<Object>();
 		objList.add(u.getRoleId());
