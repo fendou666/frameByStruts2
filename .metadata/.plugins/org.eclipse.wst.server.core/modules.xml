@@ -2,5 +2,6 @@
 <modules>
   <module moduleId="org.eclipse.jst.jee.server:MVC02-JqueryJsonChangePage" serverId="Tomcat v8.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:EecUserInfo" serverId="Tomcat v8.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:S20170622Convert" serverId="Tomcat v8.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:S20170620" serverId="Tomcat v8.0 Server at localhost"/>
 </modules>

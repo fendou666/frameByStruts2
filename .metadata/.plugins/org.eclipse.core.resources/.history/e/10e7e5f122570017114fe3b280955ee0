@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC
+        "-//Apache Struts//XWork Validator Definition 1.0//EN"
+        "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+<validators>
+	<field name="age">
+		<field-validator type="int">
+			<param name="min">18</param>
+			<param name="max">60</param>
+			<message>年龄只能在18到60岁之间</message>
+		</field-validator>
+	</field>
+	<field name="birthday">
+		<field-validator type="date">
+			
+		</field-validator>
+	</field>
+</validators>

@@ -12,9 +12,10 @@
 		<item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Program Files\feiq\Recv Files\testI18N(视频时需要修改)"/>
+			<item value="E:\1java\J2ee"/>
 			<item value="C:\Program Files\feiq\Recv Files\MVC02-JqueryJsonChangePage"/>
 			<item value="C:\Program Files\feiq\Recv Files\01 Struts2 知识点驱动\ch03 拦截器与访问ServletAPI\00101700Struts访问ServletApi\2-随堂演示\lession03_00101700\lession03_00101700"/>
-			<item value="E:\1java\J2ee"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>

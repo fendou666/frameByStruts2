@@ -1,0 +1,33 @@
+package com.study.struts.action;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class DataConvertAction<Telephone> extends ActionSupport{
+	
+	private static final long serialVersionUID = 1L;
+	
+	private String[] likes;
+	private Telephone tel;
+	
+	public String[] getLikes() {
+		return likes;
+	}
+
+	public void setLikes(String[] likes) {
+		this.likes = likes;
+	}
+
+	public Telephone getTel() {
+		return tel;
+	}
+
+	public void setTel(Telephone tel) {
+		this.tel = tel;
+	}
+
+	@Override
+	public String execute() throws Exception {
+		return super.execute();
+	}
+
+}

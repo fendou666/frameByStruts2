@@ -1,0 +1,6 @@
+package com.study.struts2.javabean;
+
+public class Telephone {
+	private String first;
+	private String second;
+}

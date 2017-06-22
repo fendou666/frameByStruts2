@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC
+        "-//Apache Struts//XWork Validator Definition 1.0//EN"
+        "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+<validators>
+	<field name="age">
+		<field-validator type="int">
+			<param name="min">18</param>
+			<param name="max">40</param>
+			<message>年龄只能在18到40岁之间</message>
+		</field-validator>
+	</field>
+	<field name="birthday">
+		<field-validator type="date">
+			<param name="min">1990-01-01</param>
+			<param name="max">2018-01-01</param>
+			<message>出生日期超出范围， 只能在1990年到2018年之间</message>
+		</field-validator>
+	</field>
+</validators>

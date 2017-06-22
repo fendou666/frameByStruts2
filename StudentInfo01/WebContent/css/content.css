@@ -1,0 +1,55 @@
+body {
+	text-align: center;
+}
+.c1{
+	position: relative;
+	margin: auto;
+	width: 1000px;			
+}
+.imgd {
+	position: absolute;
+	width: 120px;
+	min-height: 200px;
+	left: 20px;
+	/*background: red;*/
+}
+.option {
+	position: absolute;
+	top:0px;
+	left:700px;
+}
+.content {
+	position: relative;
+	text-align: left;
+	width: 800px;
+	left:200px;
+}
+.name {
+	color: dodgerblue;
+}
+.floorMsgsOnly{
+	font-size: small;
+	color: silver;
+}
+
+
+a {
+	text-decoration: none;
+}
+.hide {
+	padding-left: 0px;
+}
+.innerContern {
+	min-height: 90px;
+}
+.edit{
+	min-height: 90px;
+	display: none;
+}
+.foot {
+	position: absolute;
+	top: 250px;
+}
+.time {
+	color: burlywood;
+}
