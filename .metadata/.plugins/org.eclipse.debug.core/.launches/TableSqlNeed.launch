@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/EecUserInfo/src/com/chinasofti/eecuser/model/javabean/TableSqlNeed.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.chinasofti.eecuser.model.javabean.TableSqlNeed"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="EecUserInfo"/>
+</launchConfiguration>

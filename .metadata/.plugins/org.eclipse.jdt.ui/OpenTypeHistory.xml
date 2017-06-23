@@ -1,7 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy>
-<typeInfo handle="=MVC02-JqueryJsonChangePage/E:\/1java\/frameByStruts2\/MVC02-JqueryJsonChangePage\/WebContent\/WEB-INF\/lib\/xwork-core-2.3.20.jar&lt;com.opensymphony.xwork2(ActionSupport.class[ActionSupport" modifiers="33" timestamp="1497520020880"/>
-<typeInfo handle="=S20170620/E:\/1java\/frameByStruts2\/S20170620\/WebContent\/WEB-INF\/lib\/struts2-core-2.3.20.jar&lt;org.apache.struts2.util(StrutsTypeConverter.class[StrutsTypeConverter" modifiers="1057" timestamp="1497520020878"/>
-<typeInfo handle="=S20170622Convert/E:\/1java\/frameByStruts2\/S20170622Convert\/WebContent\/WEB-INF\/lib\/xwork-core-2.3.20.jar&lt;com.opensymphony.xwork2(ActionSupport.class[ActionSupport" modifiers="33" timestamp="1497520020880"/>
-<typeInfo handle="=S20170623FileUp/E:\/1java\/frameByStruts2\/S20170623FileUp\/WebContent\/WEB-INF\/lib\/xwork-core-2.3.20.jar&lt;com.opensymphony.xwork2(ActionSupport.class[ActionSupport" modifiers="33" timestamp="1497520020880"/>
-</typeInfoHistroy>
+<typeInfoHistroy/>
