@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.configuration.xml.reload" value="true" />
+	<constant name="struts.custom.i18n.resources" value="messageResource"></constant>
+	<package name="test1" extends="struts-default">
+		<action name="fileupload" class="chinasofti.actions.FileUploadAction">
+			<interceptor-ref name="fileUpload">
+				<param name="allowedTypes">image/bmp,image/png</param>
+				<param name="maximumSize">3072</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack" />
+			<result>/upload.jsp</result>
+			<result name="input">/upload.jsp</result>
+		</action>
+		<action name="download" class="chinasofti.actions.DownloadAction">
+			<result type="stream">
+			 	<param name="contentType">image/png</param>
+				<param name="contentDisposition">attachment;fileName=${downLoadFileName}</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		
+		</action>
+	</package>
+</struts>

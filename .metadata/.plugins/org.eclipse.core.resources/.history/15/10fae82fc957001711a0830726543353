@@ -1,0 +1,81 @@
+package com.study.struts2.action;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+
+import org.apache.struts2.ServletActionContext;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class FileUpLoadAction extends ActionSupport {
+	private static final long serialVersionUID = 1L;
+	private File upFile;
+	private String upFileContentType;
+	private String upFileName;
+	private String upFilePath;
+	
+	public File getUpFile() {
+		return upFile;
+	}
+
+	public void setUpFile(File upFile) {
+		this.upFile = upFile;
+	}
+
+	public String getUpFileContentType() {
+		return upFileContentType;
+	}
+
+	public void setUpFileContentType(String upFileContentType) {
+		this.upFileContentType = upFileContentType;
+	}
+
+	public String getUpFileName() {
+		return upFileName;
+	}
+
+	public void setUpFileName(String upFileName) {
+		this.upFileName = upFileName;
+	}
+
+	public String getUpFilePath() {
+		return upFilePath;
+	}
+
+	public void setUpFilePath(String upFilePath) {
+		this.upFilePath = upFilePath;
+	}
+
+	@Override
+	public String execute() throws Exception {
+		// ============定义变量输入流， 输出流
+		// =====输入流
+		BufferedInputStream bi = new BufferedInputStream(new FileInputStream(upFile));
+		// =====输出流
+		// ===先定义输出位置目录 TOD
+		String upFilePath = ServletActionContext.getRequest().getRealPath(upFilePath);
+		
+		File outDir = new File(upFilePath);
+		if(!outDir.exists()){
+			outDir.mkdirs();
+		}
+		// ==上传文件目录+文件名
+		upFilePath += File.separator + upFileName;
+		// ==创建输出流
+		BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(upFilePath));
+		// ============流的读写
+		byte [] b = new byte[1024];
+		int l = -1;
+		while((l=bi.read(b))!=-1){
+			bos.write(b, 0, l);
+		}
+		bos.flush();
+		// ============流资源关闭
+		
+		return SUCCESS;
+	}
+	
+}

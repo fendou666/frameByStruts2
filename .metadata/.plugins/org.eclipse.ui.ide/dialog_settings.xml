@@ -12,13 +12,22 @@
 		<item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Program Files\feiq\Recv Files\01 Struts2 知识点驱动\ch07 Struts2 上传下载与json插件\00103400Struts2文件的下载\2-随堂演示\lession07_00103400\lession07_00103300"/>
+			<item value="C:\Program Files\feiq\Recv Files\01 Struts2 知识点驱动\ch07 Struts2 上传下载与json插件\00103300Struts2文件的上传\2-随堂演示\upload"/>
 			<item value="C:\Program Files\feiq\Recv Files\testI18N(视频时需要修改)"/>
 			<item value="E:\1java\J2ee"/>
 			<item value="C:\Program Files\feiq\Recv Files\MVC02-JqueryJsonChangePage"/>
-			<item value="C:\Program Files\feiq\Recv Files\01 Struts2 知识点驱动\ch03 拦截器与访问ServletAPI\00101700Struts访问ServletApi\2-随堂演示\lession03_00101700\lession03_00101700"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>
 		</list>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item value="656" key="DIALOG_X_ORIGIN"/>
+		<item value="316" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

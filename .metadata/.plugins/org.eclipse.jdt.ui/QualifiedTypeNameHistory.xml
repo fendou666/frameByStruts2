@@ -5,11 +5,17 @@
 <fullyQualifiedTypeName name="org.apache.struts2.interceptor.ServletRequestAware"/>
 <fullyQualifiedTypeName name="com.study.mvc.model.bean.UserInfo"/>
 <fullyQualifiedTypeName name="java.lang.Enum"/>
-<fullyQualifiedTypeName name="org.apache.struts2.ServletActionContext"/>
 <fullyQualifiedTypeName name="net.sf.json.JSONArray"/>
 <fullyQualifiedTypeName name="com.study.struts2.javabean.Telephone"/>
 <fullyQualifiedTypeName name="com.study.struts2.javabean.Cat"/>
 <fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionSupport"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionContext"/>
+<fullyQualifiedTypeName name="java.io.BufferedInputStream"/>
+<fullyQualifiedTypeName name="org.apache.struts2.ServletActionContext"/>
+<fullyQualifiedTypeName name="java.io.BufferedOutputStream"/>
+<fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.io.FileInputStream"/>
 </qualifiedTypeNameHistroy>

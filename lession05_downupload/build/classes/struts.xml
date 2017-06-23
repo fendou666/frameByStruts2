@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- 请求参数的编码方式 -->
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<!-- 指定被struts2处理的请求后缀类型。多个用逗号隔开 -->
+	<constant name="struts.action.extension" value="action" />
+	<!-- 当struts.xml改动后，是否重新加载。默认值为false(生产环境下使用),开发阶段最好打开 -->
+	<constant name="struts.configuration.xml.reload" value="true" />
+	<!-- 是否使用struts的开发模式。开发模式会有更多的调试信息。默认值为false(生产环境下使用),开发阶段最好打开 -->
+	<constant name="struts.devMode" value="true" />
+	<!-- 设置浏览器是否缓存静态内容。默认值为true(生产环境下使用),开发阶段最好关闭 -->
+	<constant name="struts.serve.static.browserCache" value="false" />
+	<!-- 是否开启动态方法调用 -->
+	<constant name="struts.custom.i18n.resources" value="messageResource" />
+	<constant name="struts.custom.i18n.resources" value="globalMessages" />
+	<constant name="struts.multipart.maxSize" value="102400000000000" />
+
+	<package name="down" extends="struts-default">
+		<default-action-ref name="download" />
+		<action name="download" class="com.qst.action.down.FileDownloadAction">
+			<param name="inputPath">\images\abc.gif</param>
+			<result name="success" type="stream">
+				<param name="contentType">image/gif</param>
+				<param name="inputName">targetFile</param>
+				<param name="contentDisposition">filename="struts.gif"</param>
+				<param name="bufferSize">4096</param>
+			</result>
+		</action>
+		<action name="download2" class="com.qst.action.down.AuthorityDownAction">
+			<param name="inputPath">\images\struts-gif.zip</param>
+			<result name="success" type="stream">
+				<param name="contentType">application/zip</param>
+				<param name="inputName">targetFile</param>
+				<param name="contentDisposition">filename="struts-gif.zip"</param>
+				<param name="bufferSize">4096</param>
+			</result>
+			<result name="login">/input.jsp</result>
+
+		</action>
+		<action name="login" class="com.qst.action.down.LoginAction">
+			<result>/stuts2Down.html</result>
+		</action>
+	</package>
+
+	<package name="my" extends="struts-default" namespace="/">
+		<interceptors>
+			<interceptor-stack name="myStack">
+				<interceptor-ref name="defaultStack" />
+				<interceptor-ref name="token" />
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="myStack" />
+
+		<global-results>
+			<result name="invalid.token">/error.jsp</result>
+		</global-results>
+
+		<action name="fileUpload" class="com.qst.action.upload.FileUploadAction">
+			<param name="destPath">/abc</param>
+			<result name="input">/index.jsp</result>
+			<result>/success.jsp</result>
+		</action>
+		<action name="batchFileUpload" class="com.qst.action.upload.BatchFileUploadAction">
+			<param name="destPath">/abc</param>
+			<result name="input">/index.jsp</result>
+			<result>/success.jsp</result>
+		</action>
+	</package>
+
+	<package name="upload" extends="struts-default">
+		<action name="upload" class="lee.UploadAction">
+            <interceptor-ref name="fileUpload"> 
+                <param name="allowedTypes">image/bmp,image/png,image/gif,image/jpeg,image/pjpeg</param> 
+            </interceptor-ref> 
+            <interceptor-ref name="defaultStack"/>    
+            <param name="savePath">/upload</param>
+			<result name="input">/upload.jsp</result>	
+			<result>/succ.jsp</result>	
+		</action>
+	</package>
+</struts>

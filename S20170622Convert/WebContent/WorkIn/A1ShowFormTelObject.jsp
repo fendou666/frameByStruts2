@@ -31,6 +31,19 @@
 			 	<input type="checkbox" name="likes" checked="checked" value="3" > 羽毛球
 			</s:if>
 		</s:iterator>
+		
+	爱好简单: <s:iterator var="like"  value="likes">
+			<s:if test="#like == 1">
+				<input type="checkbox"  checked="checked" value="1" > 足球
+			</s:if>
+			<s:if test="#like == 2">
+			 	<input type="checkbox" checked="checked" value="2" > 篮球
+			</s:if>
+			<s:if test="#like == 3">
+			 	<input type="checkbox"  checked="checked" value="3" > 羽毛球
+			</s:if>
+		</s:iterator>
+		
 	<br>
 	<%-- 爱好: <s:property value="likes"/> <br> --%>
 	电话号码: <s:property value="tel"/> <br>

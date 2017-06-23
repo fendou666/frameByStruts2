@@ -15,7 +15,7 @@
 	var servlet = "<%=request.getContextPath()%>/AdminServlet";
 	$(function(){
 		$("#query").click(function(){
-			getEecUserInfo(servlet, "first", "delete");
+			getEecUserInfo(servlet, "first", "update");
 		})
 	})
 </script>
