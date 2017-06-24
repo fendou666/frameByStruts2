@@ -155,7 +155,7 @@ public class AdminServlet extends HttpServlet {
 			return;
 		}
 		HashMap<String, SqlDataPage> sqlPageHashSet = 
-				sessionPageHashMap(pageMode, sqlPageMapKey, 1, 10, request.getSession());
+				sessionPageHashMap(pageMode, sqlPageMapKey, 1, 3, request.getSession());
 		
 		List<UserInfo> userList = adminTheacherService.queryDataByCondition
 				(roleId, classId, id, name, sqlPageHashSet.get(sqlPageMapKey));

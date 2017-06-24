@@ -70,7 +70,7 @@ public class DBUtil {
 	public Connection getConn(){
 		return db.conn;
 	}
-	public  ResultSet queryDate(String sql, ArrayList<Object> objList){
+	public  ResultSet queryData(String sql, ArrayList<Object> objList){
 		ResultSet rs = null;
 		if(errInfo!=null){
 			return rs;

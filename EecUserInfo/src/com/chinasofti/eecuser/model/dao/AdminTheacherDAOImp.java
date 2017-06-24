@@ -20,7 +20,7 @@ public class AdminTheacherDAOImp implements IAdminTheacherDAO {
 	@Override
 	public List<UserInfo> queryEecUserOutClass(int id, String name,
 			SqlDataPage AddteacherPage) {
-		String conditionStr = " u.class_id is null AND u.manager_id is null";
+		String conditionStr = " AND u.class_id is null AND u.manager_id is null";
 		if(id!=-1){
 			conditionStr += " AND u.id="+id;
 		}else if(name!=null){
