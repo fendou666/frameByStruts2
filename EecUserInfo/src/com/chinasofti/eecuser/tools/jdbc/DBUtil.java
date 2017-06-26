@@ -33,7 +33,7 @@ public class DBUtil {
 		try {
 			pro.load(DBUtil.class.getResourceAsStream("jdbcpro.properties"));
 			driver 	= pro.getProperty("driver", "oracle.jdbc.OracleDriver");
-			url 	= pro.getProperty("url", "jdbc:oracle:thin:@175.3.13.32");
+			url 	= pro.getProperty("url", "jdbc:oracle:thin:@127.0.0.1:1521:orcl");
 			user 	= pro.getProperty("user", "scott");
 			pwd 	= pro.getProperty("pwd", "tiger");
 			if(driver==null || url==null || user==null || pwd==null){

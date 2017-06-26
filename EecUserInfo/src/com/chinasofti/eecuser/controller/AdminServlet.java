@@ -328,10 +328,8 @@ public class AdminServlet extends HttpServlet {
 		boolean updFlag = adminTheacherService.deleteTheacher(id);
 		if(updFlag){
 			out.write("success");
-			return;
 		}else{
 			out.write("delFalse");
-			return;
 		}
 		
     }

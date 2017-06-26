@@ -9,6 +9,39 @@ function showInfo(operationType){
 	console.log("name :" + $("#name").val());
 	console.log("operationType" + operationType);
 }
+var delBtOldHtml = null;
+
+function deleteInfo(servlet, elmtId, eecId){
+	$.post(
+		servlet,
+		{
+			//action:"deleteTheacher",
+			action:"https:www.baidu.com",
+			id:eecId
+		},
+		// TODO 关于这里如果写成JSON格式返回，应该怎么做
+		function(data){
+			console.info(data);
+			data = "false";
+			if(data=="false"){
+				if (delBtOldHtml == null){
+					delBtOldHtml = $(elmtId+" td:eq(9)").html();
+				}
+				$(elmtId+" td:eq(9)").html("参数不对，删除继续点击  "+ delBtOldHtml);
+			}else if(data=="delFalse"){
+				if (delBtOldHtml == null){
+					delBtOldHtml = $(elmtId+" td:eq(9)").html();
+				}
+				$(elmtId+" td:eq(9)").html("删除失败  "+ delBtOldHtm);
+			}else if(data=="success"){
+				$(elmtId+" td:eq(9)").text("删除成功");
+				$(elmtId).css("display", "none"); // TODO这里正确不正确?
+			}
+			return false;
+		}
+	
+	)
+}
 
 function getEecUserInfo(servlet, forward, operationType){
 	showInfo(operationType);
@@ -57,10 +90,13 @@ function getEecUserInfo(servlet, forward, operationType){
 						htmlData += "<td>" + eecUsers[i].telephone  +"</td>";
 						htmlData += "<td>" + eecUsers[i].roleName  +"</td>";
 						if(operationType == "delete"){
-							htmlData += "<td><a href=\"" + servlet +"?action=deleteTheacher&id="+ eecUsers[i].id +"\">删除</a></td>";
+							//htmlData += "<td><a href=\"" + servlet +"?action=deleteTheacher&id="+ eecUsers[i].id +"\">删除</a></td>";
+							htmlData += '<td><a href="#" onclick="return '
+							htmlData += 'deleteInfo(\'' +servlet+'\', \'#usd'+ (i+1) +'\',' + eecUsers[i].id +')" >删除</a></td>';
+							
 						}
 						if(operationType == "update"){
-							htmlData += "<td><a href=\"" + servlet +"?action=deleteTheacher&id="+ eecUsers[i].id +"\">修改</a></td>";
+							htmlData += "<td><a href=\"#" + servlet +"?action=deleteTheacher&id="+ eecUsers[i].id +"\">修改</a></td>";
 						}
 						
 						htmlData += "</tr>";
