@@ -15,14 +15,14 @@ function deleteInfo(servlet, elmtId, eecId){
 	$.post(
 		servlet,
 		{
-			//action:"deleteTheacher",
-			action:"https:www.baidu.com",
+			action:"deleteTheacher",
+			//action:"https:www.baidu.com",
 			id:eecId
 		},
 		// TODO 关于这里如果写成JSON格式返回，应该怎么做
 		function(data){
 			console.info(data);
-			data = "false";
+			//data = "false";
 			if(data=="false"){
 				if (delBtOldHtml == null){
 					delBtOldHtml = $(elmtId+" td:eq(9)").html();
@@ -37,11 +37,79 @@ function deleteInfo(servlet, elmtId, eecId){
 				$(elmtId+" td:eq(9)").text("删除成功");
 				$(elmtId).css("display", "none"); // TODO这里正确不正确?
 			}
-			return false;
+			
 		}
-	
 	)
+	return false;
 }
+
+function changeInfo(servlet, elmtId, eecId){
+	var classAry = ["20170207", "20170307", "20170407"];
+	var roleInfo = {
+			"3004":"任课老师",
+			"3005":"班主任"
+	};
+	var eecInfo={
+			"classId": $(elmtId+" td:eq(1)").text()
+	}
+	var eecInfoRoleId = $(elmtId+" td:eq(8)").text();
+	if(eecInfoRoleId == "3004"){
+		eecInfo.roleId = "3004";
+	}else if(eecInfoRoleId == "3005"){
+		eecInfo.roleId = "3005";
+	}else{
+		console.log("信息出错");
+	}
+	if(eecInfo.roleId){
+		var classSelectHtml = "";
+		
+	}
+}
+
+
+function updateInfo(servlet, elmtId, eecId){
+	var classAry = ["20170207", "20170307", "20170407"];
+	var roleInfo = {
+			"3004":"任课老师",
+			"3005":"班主任"
+	};
+	var eecInfo={
+			"classId": $(elmtId+" td:eq(1)").text()
+	}
+	eecInfo.roleId = roleInfo["3004"] == $(elmtId+" td:eq(8)").text()?"3004":"3005";
+	/*$.post(
+		servlet,
+		{
+			action:"updateTheacher",
+			//action:"https:www.baidu.com",
+			id:eecId,
+			classId:$(),
+		},
+		// TODO 关于这里如果写成JSON格式返回，应该怎么做
+		function(data){
+			console.info(data);
+			//data = "false";
+			if(data=="false"){
+				if (delBtOldHtml == null){
+					delBtOldHtml = $(elmtId+" td:eq(9)").html();
+				}
+				$(elmtId+" td:eq(9)").html("参数不对，删除继续点击  "+ delBtOldHtml);
+			}else if(data=="delFalse"){
+				if (delBtOldHtml == null){
+					delBtOldHtml = $(elmtId+" td:eq(9)").html();
+				}
+				$(elmtId+" td:eq(9)").html("删除失败  "+ delBtOldHtm);
+			}else if(data=="success"){
+				$(elmtId+" td:eq(9)").text("删除成功");
+				$(elmtId).css("display", "none"); // TODO这里正确不正确?
+			}
+			
+		}
+	)*/
+	return false;
+}
+
+
 
 function getEecUserInfo(servlet, forward, operationType){
 	showInfo(operationType);
@@ -96,7 +164,8 @@ function getEecUserInfo(servlet, forward, operationType){
 							
 						}
 						if(operationType == "update"){
-							htmlData += "<td><a href=\"#" + servlet +"?action=deleteTheacher&id="+ eecUsers[i].id +"\">修改</a></td>";
+							htmlData += '<td><a href="#" onclick="return '
+							htmlData += 'updateInfo(\'' +servlet+'\', \'#usd'+ (i+1) +'\',' + eecUsers[i].id +')" >删除</a></td>';
 						}
 						
 						htmlData += "</tr>";

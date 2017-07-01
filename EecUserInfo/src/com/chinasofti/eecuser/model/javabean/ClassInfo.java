@@ -4,92 +4,103 @@ public class ClassInfo {
 	
 	private int classId;
 	private int monitorId;
-	private int javateacherId;
-	private int classteacherId;
+	private int theTeacherId;
+	private int headTeacherId;
 	private String describe;
 	private String monitorName;
-	private String javateacherName;
-	private String classteacherName;
+	private String theTeacherName;
+	private String headTeacherName;
 	
 	public ClassInfo() {
 	
 	}
-	
-	public ClassInfo(int classId, String describe, String monitorName,
-			String javateacherName, String classteacherName) {
-		this.classId = classId;
-		this.describe = describe;
-		this.monitorName = monitorName;
-		this.javateacherName = javateacherName;
-		this.classteacherName = classteacherName;
-	}
-	
-	public ClassInfo(int classId, int monitorId, int javateacherId,
-			int classteacherId, String describe, String monitorName,
-			String javateacherName, String classteacherName) {
+
+	public ClassInfo(int classId, int monitorId, int theTeacherId,
+			int headTeacherId, String describe, String monitorName,
+			String theTeacherName, String headTeacherName) {
+		super();
 		this.classId = classId;
 		this.monitorId = monitorId;
-		this.javateacherId = javateacherId;
-		this.classteacherId = classteacherId;
+		this.theTeacherId = theTeacherId;
+		this.headTeacherId = headTeacherId;
 		this.describe = describe;
 		this.monitorName = monitorName;
-		this.javateacherName = javateacherName;
-		this.classteacherName = classteacherName;
+		this.theTeacherName = theTeacherName;
+		this.headTeacherName = headTeacherName;
 	}
-	@Override
-	public String toString() {
-		return "ClassInfo [classId=" + classId + ", monitorId=" + monitorId
-				+ ", javateacherId=" + javateacherId + ", classteacherId="
-				+ classteacherId + ", describe=" + describe + ", monitorName="
-				+ monitorName + ", javateacherName=" + javateacherName
-				+ ", classteacherName=" + classteacherName + "]";
-	}
+
 	public int getClassId() {
 		return classId;
 	}
+
 	public void setClassId(int classId) {
 		this.classId = classId;
 	}
+
 	public int getMonitorId() {
 		return monitorId;
 	}
+
 	public void setMonitorId(int monitorId) {
 		this.monitorId = monitorId;
 	}
-	public int getJavateacherId() {
-		return javateacherId;
+
+	public int getTheTeacherId() {
+		return theTeacherId;
 	}
-	public void setJavateacherId(int javateacherId) {
-		this.javateacherId = javateacherId;
+
+	public void setTheTeacherId(int theTeacherId) {
+		this.theTeacherId = theTeacherId;
 	}
-	public int getClassteacherId() {
-		return classteacherId;
+
+	public int getHeadTeacherId() {
+		return headTeacherId;
 	}
-	public void setClassteacherId(int classteacherId) {
-		this.classteacherId = classteacherId;
+
+	public void setHeadTeacherId(int headTeacherId) {
+		this.headTeacherId = headTeacherId;
 	}
+
 	public String getDescribe() {
 		return describe;
 	}
+
 	public void setDescribe(String describe) {
 		this.describe = describe;
 	}
+
 	public String getMonitorName() {
 		return monitorName;
 	}
+
 	public void setMonitorName(String monitorName) {
 		this.monitorName = monitorName;
 	}
-	public String getJavateacherName() {
-		return javateacherName;
+
+	public String getTheTeacherName() {
+		return theTeacherName;
 	}
-	public void setJavateacherName(String javateacherName) {
-		this.javateacherName = javateacherName;
+
+	public void setTheTeacherName(String theTeacherName) {
+		this.theTeacherName = theTeacherName;
 	}
-	public String getClassteacherName() {
-		return classteacherName;
+
+	public String getHeadTeacherName() {
+		return headTeacherName;
 	}
-	public void setClassteacherName(String classteacherName) {
-		this.classteacherName = classteacherName;
+
+	public void setHeadTeacherName(String headTeacherName) {
+		this.headTeacherName = headTeacherName;
 	}
+
+	@Override
+	public String toString() {
+		return "ClassInfo [classId=" + classId + ", monitorId=" + monitorId
+				+ ", theTeacherId=" + theTeacherId + ", headTeacherId="
+				+ headTeacherId + ", describe=" + describe + ", monitorName="
+				+ monitorName + ", theTeacherName=" + theTeacherName
+				+ ", headTeacherName=" + headTeacherName + "]";
+	}
+	
+	
 }

@@ -33,7 +33,7 @@ public class DBUtil {
 		try {
 			pro.load(DBUtil.class.getResourceAsStream("jdbcpro.properties"));
 			driver 	= pro.getProperty("driver", "oracle.jdbc.OracleDriver");
-			url 	= pro.getProperty("url", "jdbc:oracle:thin:@127.0.0.1:1521:orcl");
+			url 	= pro.getProperty("url", "jdbc:oracle:thin:@175.3.13.32");
 			user 	= pro.getProperty("user", "scott");
 			pwd 	= pro.getProperty("pwd", "tiger");
 			if(driver==null || url==null || user==null || pwd==null){
@@ -80,7 +80,7 @@ public class DBUtil {
 			if(objList!=null){
 				for(int i=0; i<objList.size();i++){
 					ps.setObject(i+1, objList.get(i));
-					System.out.println("i对象为" + objList.get(i));
+					//System.out.println("i对象为" + objList.get(i));
 				}
 			}
 			System.out.println("sql执行语句为:" + sql);
@@ -105,7 +105,7 @@ public class DBUtil {
 				}
 			}
 			ret = ps.executeUpdate();
-			System.out.println("增删改执行的sql 是" + sql);
+			//System.out.println("增删改执行的sql 是" + sql);
 		} catch (SQLException e) {
 			errInfo = "增删该sql执行失败 sql 为:" + sql;
 			System.out.println(errInfo);

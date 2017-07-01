@@ -38,7 +38,9 @@ public class PublicDAOImp implements IPublicDAO {
 		test.initAllSqlStrData(tableList, aliasTableList, tablesNeedFilds, sqlCountFild, sqlOrderByFild);
 		
 		// where 需要的条件语句
-		String conditionStr = " u.role_id=r.role_id  AND isdelete=0 AND u.role_id>=3004 AND u.role_id<=3005 AND u.role_id<=3004 AND u.eec_id=170000003 AND u.eec_name='谢文兵'";
+		//String conditionStr = "AND u.role_id=r.role_id  AND isdelete=0 AND u.role_id>=3004 AND u.role_id<=3005 AND u.role_id<=3004 AND u.eec_id=170000003 AND u.eec_name='谢文兵'";
+		String conditionStr = "AND u.role_id=r.role_id  AND isdelete=0 AND u.role_id>=3004 AND u.role_id<=3005 AND u.role_id<=3004 AND u.eec_id=170000003";
+		test.executeSqlStr(conditionStr, 10, 1);
 		// 返回的用户列表
 		List<UserInfo> userList = null;
 		String sql = "{?=call eecQueryPageRows(?,?,?,?,?,?,?,?,?,?)}";

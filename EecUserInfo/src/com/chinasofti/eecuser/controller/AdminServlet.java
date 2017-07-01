@@ -13,8 +13,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.chinasofti.eecuser.model.javabean.ClassInfo;
 import com.chinasofti.eecuser.model.javabean.SqlDataPage;
 import com.chinasofti.eecuser.model.javabean.UserInfo;
+import com.chinasofti.eecuser.model.service.AdminClassServiceImp;
 import com.chinasofti.eecuser.model.service.AdminTheacherServiceImp;
 import com.chinasofti.eecuser.model.service.IAdminTheacherService;
 
@@ -246,7 +248,7 @@ public class AdminServlet extends HttpServlet {
 				out.write("\"telephone\":\""+ tmp.getTelephone() +"\"," );
 				out.write("\"classNames\":[\"20170207\",\"20170201\",\"20170202\"]");
 				if(!iterator.hasNext()){
-					out.write("}");
+					out.write("}"); 
 				}else{
 					out.write("},");
 				}
@@ -333,18 +335,94 @@ public class AdminServlet extends HttpServlet {
 		}
 		
     }
+    private void queryClassDate(HttpServletRequest request, HttpServletResponse response) throws IOException{
+		// 获取页面的参数
+		String classIdStr 		= 	request.getParameter("classId");
+		String headTeacherName 			= 	request.getParameter("headTeacherName");
+		String action			= 	""; // 内部跳转
+		String sqlPageMapKey 	=  request.getParameter("sqlPageMapKey"); // 暂不使用
+		String pageMode 		= request.getParameter("pageIndex");
+		
+		// 其他需要的参数
+		PrintWriter out = response.getWriter();
+		IAdminTheacherService adminTheacherService = new AdminTheacherServiceImp();
+		int classId = 0;
+		System.out.println("classIdStr :" + classIdStr);
+		System.out.println("headTeacherName :" + headTeacherName);
+		System.out.println("action :" + action);
+		
+		// 此处参数处理了，对应数据库设置条件查询的时候的条件判断
+		// 只要是全部查询就给0, 为空给-1, 
+		// 根据此判断默认全部查询需要的SQL WHERE 语句条件， 关于详细语句看sql函数
+		if(classIdStr == null || classIdStr == ""){
+			classIdStr = "-1";
+		}
+		if(headTeacherName == null || idStr == ""){
+			headTeacherName = null;
+		}
+		try{
+			classId 	= 	Integer.parseInt(classIdStr);
+		}catch(NumberFormatException E){
+			System.out.println("参数格式不对");
+			action = "errorReq";
+		}
+		if(action.equals("errorReq")){
+			out.write("[]");
+			return;
+		}
+		
+		System.out.println("页码模式传参为" + pageMode);
+		if(pageMode==null){
+			out.write("[]");
+			return;
+		}
+		HashMap<String, SqlDataPage> sqlPageHashSet = 
+				sessionPageHashMap(pageMode, sqlPageMapKey, 1, 3, request.getSession());
+		
+		List<ClassInfo> classList  = AdminClassServiceImp.queryClassInfoByCondition
+				(classId, headTeacherName, sqlPageHashSet.get(sqlPageMapKey));
+		if(userList!=null && userList.size()>0){
+			out.write("[");
+			Iterator<UserInfo> iterator = userList.iterator();
+			UserInfo tmp = null;
+			while(iterator.hasNext()){
+				tmp = iterator.next();
+				out.write("{");
+				out.write("\"classId\":\""+ tmp.getClassId() +"\"," );
+				out.write("\"id\":\""+ tmp.getId() +"\"," );
+				out.write("\"name\":\""+ tmp.getName() +"\"," );
+				out.write("\"sex\":\""+ tmp.getSex() +"\"," );
+				out.write("\"age\":\""+ tmp.getAge() +"\"," );
+				out.write("\"email\":\""+ tmp.getEmail() +"\"," );
+				out.write("\"telephone\":\""+ tmp.getTelephone() +"\"," );
+				out.write("\"roleName\":\""+ tmp.getRoleName() +"\"" );
+				if(!iterator.hasNext()){
+					out.write("}");
+				}else{
+					out.write("},");
+				}
+			}
+			out.write("]");
+		}else{
+			out.write("[]");
+		}
+		request.getSession().setAttribute("sqlPageMap", sqlPageHashSet);
+    }
+    
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String action 		= 	request.getParameter("action");
 		PrintWriter out 	= 	response.getWriter();
-		
 		// 按需请求
-		if(action.equals("getQueryTheacher")){
+		if(action.equals("getClassAll")){ // 请求有效班级数量
+			
+		}else if(action.equals("getQueryTheacher")){
 			queryDate(request, response);
 		}else if(action.equals("addTheacher")){
 			insertData(request, response);
 		}else if(action.equals("addTheacherTrue")){
 			addTheacherTrueAndRet(request, response);
 		}else if(action.equals("deleteTheacher")){
+			System.out.println("进入删除");
 			delteTheacherById(request, response);
 		}else if(action.equals("updateTheacher")){
 			

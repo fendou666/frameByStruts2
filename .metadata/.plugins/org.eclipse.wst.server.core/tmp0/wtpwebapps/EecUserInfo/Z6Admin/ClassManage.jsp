@@ -41,22 +41,8 @@
 			<div id="d41">班级删除</div>
 			<table id="t1" >
 				<tr>
-					<td>职位：
-						<select name="roleId" id="roleId">
-							<option value="postAll">全部</option>
-							<option value="3004">任课老师</option>
-							<option value="3005">班主任</option>
-						</select>
-					</td>
-					<td>班级：
-						<select name="classId" id="classId">
-							<option value="classAll">全部</option>
-							<option value="20170207">java0207</option>
-							<option value="20170208">java0208</option>
-						</select>
-					</td>
-					<td>&nbsp;&nbsp;学号：<input type="text"  name="id" value=""></td>
-					<td>&nbsp;&nbsp;姓名：<input type="text" name="name" value=""></td>
+					<td>&nbsp;&nbsp;班级：<input type="text"  name="classId" value=""></td>
+					<td>&nbsp;&nbsp;班主任：<input type="text" name="monitorName" value=""></td>
 					<td>&nbsp;&nbsp;<input type="button" id="query" name="query" value="查 询"></td>
 				</tr>
 			</table>
@@ -68,6 +54,5 @@
 			</table>
 		</div>
 	</div>
-	
 </body>
 </html>

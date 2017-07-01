@@ -1,0 +1,34 @@
+package com.chinasofti.eecuser.model.javabean;
+
+public class ClassInfo {
+	
+	private int classId;
+	private int monitorId;
+	private int theTeacherId;
+	private int headTeacherId;
+	private String describe;
+	private String monitorName;
+	private String theTeacherName;
+	private String headTeacherName;
+	
+	public ClassInfo() {
+	
+	}
+
+	public ClassInfo(int classId, int monitorId, int theTeacherId,
+			int headTeacherId, String describe, String monitorName,
+			String theTeacherName, String headTeacherName) {
+		super();
+		this.classId = classId;
+		this.monitorId = monitorId;
+		this.theTeacherId = theTeacherId;
+		this.headTeacherId = headTeacherId;
+		this.describe = describe;
+		this.monitorName = monitorName;
+		this.theTeacherName = theTeacherName;
+		this.headTeacherName = headTeacherName;
+	}
+	
+	
+	
+}

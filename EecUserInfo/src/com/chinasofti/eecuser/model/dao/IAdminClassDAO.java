@@ -8,7 +8,7 @@ import com.chinasofti.eecuser.model.javabean.SqlDataPage;
 public interface IAdminClassDAO {
 	// ===============班级查询============
 	// 		班级查询所有
-	public List<ClassInfo> queryClassInfoByCondition(int class_id, SqlDataPage classPage);
+	public List<ClassInfo> queryClassInfoByCondition(int class_id, String headTeacherName, SqlDataPage classPage);
 	
 	// ===============班级创建（添加）============
 	// 		直接一个页面创建

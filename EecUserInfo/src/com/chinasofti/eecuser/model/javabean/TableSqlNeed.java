@@ -16,9 +16,10 @@ public class TableSqlNeed {
 	public TableSqlNeed() {
 	
 	}
+	
 	public void initAllSqlStrData(String [] tableList, String [] aliasTableList, 
 									HashMap<String, String[]> tablesNeedFilds, 
-									String sqlCountFild, String sqlOrderByFild){
+									String sqlCountFild,   String sqlOrderByFild){
 		if(tableList.length != aliasTableList.length){
 			System.out.println("穿参 表数量与表别名数量不同");
 			return;
@@ -27,10 +28,28 @@ public class TableSqlNeed {
 			return;
 		}
 		setSqlTableStr_And_sqlAliasTableStr(tableList, aliasTableList);
-		setSqlNeedFilds_And_SqlAliasNeedFilds(tablesNeedFilds);
+		setSqlNeedFilds_And_SqlAliasNeedFilds(tablesNeedFilds, null);
 		this.sqlCountFild = sqlCountFild;
 		this.sqlOrderByFild = sqlOrderByFild;
 	}
+	
+	public void initAllSqlStrData(String [] tableList, String [] aliasTableList, 
+			HashMap<String, String[]> tablesNeedFilds, 
+			String [] customFilds, 
+			String sqlCountFild,   String sqlOrderByFild){
+		if(tableList.length != aliasTableList.length){
+		System.out.println("穿参 表数量与表别名数量不同");
+		return;
+		}else if(tablesNeedFilds.size() == 0){
+		System.out.println("获取的字段数量为0 错误");
+		return;
+		}
+		setSqlTableStr_And_sqlAliasTableStr(tableList, aliasTableList);
+		setSqlNeedFilds_And_SqlAliasNeedFilds(tablesNeedFilds, customFilds);
+		this.sqlCountFild = sqlCountFild;
+		this.sqlOrderByFild = sqlOrderByFild;
+	}
+	
 	private void setSqlTableStr_And_sqlAliasTableStr(String [] tableList, String [] aliasTableList){
 		for(int i=0; i<tableList.length; i++){
 			if(i!=tableList.length-1){
@@ -42,12 +61,39 @@ public class TableSqlNeed {
 			}
 		}
 	}
+	// 对自定义字段值进行获取
+	private HashMap<String, String> getCustomNeedFilds_AND_aliasCustomNeedFilds(String [] customFilds){
+		HashMap<String, String> needFildsMAP = null;
+		if(customFilds != null){
+			needFildsMAP = new HashMap<String, String>();
+			String CustomNeedFilds = "";
+			String aliasCustomNeedFilds = "";
+			for(int i=0; i<customFilds.length; i++){
+				customFilds[i] = customFilds[i].trim();
+				aliasCustomNeedFilds += customFilds[i] + ", ";
+				int index = customFilds[i].lastIndexOf(' ');
+				CustomNeedFilds += customFilds[i].substring(index) + ", ";
+			}
+//			System.out.println("CustomNeedFilds " + CustomNeedFilds);
+//			System.out.println("aliasCustomNeedFilds " + aliasCustomNeedFilds);
+			needFildsMAP.put("CustomNeedFilds", CustomNeedFilds);
+			needFildsMAP.put("aliasCustomNeedFilds", aliasCustomNeedFilds);
+		}
+		return needFildsMAP;
+	}
 	
-	private void setSqlNeedFilds_And_SqlAliasNeedFilds(HashMap<String, String[]> tablesNeedFilds){
+	private void setSqlNeedFilds_And_SqlAliasNeedFilds(HashMap<String, String[]> tablesNeedFilds,
+			String [] customFilds){
 		Set<String> keySet = tablesNeedFilds.keySet();
 		Iterator<String> iterator = keySet.iterator();
 		String tableAlias = "";
 		String [] tableFilds = null;
+		// 获取自定义字段的值
+		if(customFilds !=null){
+			HashMap<String, String> needFildsMAP = getCustomNeedFilds_AND_aliasCustomNeedFilds(customFilds);
+			sqlNeedFilds 		+= needFildsMAP.get("CustomNeedFilds");
+			sqlAliasNeedFilds 	+= needFildsMAP.get("aliasCustomNeedFilds");
+		}
 		while(iterator.hasNext()){
 			tableAlias = iterator.next();
 			tableFilds =  tablesNeedFilds.get(tableAlias);
@@ -66,6 +112,26 @@ public class TableSqlNeed {
 		sqlNeedFilds = sqlNeedFilds.substring(0, sqlNeedFilds.length()-2);
 		sqlAliasNeedFilds = sqlAliasNeedFilds.substring(0, sqlAliasNeedFilds.length()-2);
 	}
+	
+	public void executeSqlStr(String condition, int maxPageRows, int currentPageNumbe){
+		String countSql = "select count(" + sqlCountFild + ") from " + sqlAliasTableStr + " where 1=1  " + condition; 
+		
+		String getRS = "select " + sqlNeedFilds 
+        + " from  (select "
+        + " case when mod(Lineno,"+ maxPageRows+") =0 then Lineno/"+ maxPageRows
+        + " 	when mod(Lineno,"+ maxPageRows+")!=0 then trunc(Lineno/"+ maxPageRows+")+1"
+        + " end as pageno," + sqlNeedFilds 
+        + " from  (select row_number() over(order by  " + sqlOrderByFild + ")  as Lineno,"
+        + sqlAliasNeedFilds
+        + " from " + sqlAliasTableStr  + " where 1=1 " + condition
+        + " )"
+        + ")"
+        + " where pageno=" + currentPageNumbe;
+		
+		System.out.println("countsql 是:" + countSql);
+		System.out.println("分页结果sql 是:" + getRS);
+	}
+	
 	
 	public String getSqlNeedFilds() {
 		return sqlNeedFilds;

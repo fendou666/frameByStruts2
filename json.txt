@@ -1,0 +1,18 @@
+关于json在struts.xml中的一些属性的的功能
+<param name=""></param>//关于对JSON的一些定义
+
+
+excludeProperties：代表排除Action中的哪些属性，排除多个属性时，使用逗号进行分隔（即不需要序列化的属性）
+
+
+includeProperties：代表包含Action中的哪些属性，包含多个属性时，使用逗号进行分隔（即需要序列化的属性）
+
+
+excludeNullProperties：代表排除Action中属性值为空的字段，使用true/false 默认为false(即包含属性值为null的字段)
+
+
+root：代表从哪里开始序列化
+
+
+注意：如果相同属性同时定义了excludeProperties和includeProperties
+那么excludeProperties的优先级要高，因此不对该属性进行序列化

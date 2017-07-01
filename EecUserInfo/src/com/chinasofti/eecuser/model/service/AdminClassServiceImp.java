@@ -15,9 +15,9 @@ public class AdminClassServiceImp implements IAdminClassService {
 	}
 	
 	@Override
-	public List<ClassInfo> queryClassInfoByCondition(int class_id, SqlDataPage classPage) {
+	public List<ClassInfo> queryClassInfoByCondition(int class_id, String headTeacherName, SqlDataPage classPage) {
 		
-		return adminClassDAO.queryClassInfoByCondition(class_id, classPage);
+		return adminClassDAO.queryClassInfoByCondition(class_id, String headTeacherName,  classPage);
 	}
 
 	@Override

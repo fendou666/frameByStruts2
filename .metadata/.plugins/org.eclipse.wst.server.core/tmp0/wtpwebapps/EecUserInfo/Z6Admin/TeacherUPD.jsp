@@ -84,6 +84,10 @@
 					<td>序号</td><td>班级</td><td>学号</td><td>姓名</td><td>性别</td>
 					<td>年龄</td><td>邮箱</td><td>手机号</td><td>职务</td><td>操作</td>
 				</tr>
+				<tr bgcolor="#8FBC8F">
+					<td>序号</td><td>班级</td><td>学号</td><td>姓名</td><td>性别</td>
+					<td>年龄</td><td>邮箱</td><td>手机号</td><td>职务</td><td>操作</td>
+				</tr>
 			</table>
 		</div>
 	</div>
