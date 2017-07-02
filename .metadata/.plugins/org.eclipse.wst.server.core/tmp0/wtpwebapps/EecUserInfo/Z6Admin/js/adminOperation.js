@@ -77,6 +77,30 @@ function updateInfo(servlet, elmtId, eecId){
 			"classId": $(elmtId+" td:eq(1)").text()
 	}
 	eecInfo.roleId = roleInfo["3004"] == $(elmtId+" td:eq(8)").text()?"3004":"3005";
+	var classSelectHtml =  '<select name="className" >';
+	for(var i=0;i<classAry.length ;i++){
+		if(classAry[i] == roleInfo.classId){
+			classSelectHtml += '<option select="select" value="' + classAry[i] +'">' + classAry[i] +'</option>';
+		}else{
+			classSelectHtml += '<option value="' + classAry[i] +'">' + classAry[i] +'</option>';
+		}
+	}
+	classSelectHtml += '</select>';
+	$(elmtId+" td:eq(1)").html(classSelectHtml);
+	
+	var roleInfoHtml =  '<select name="className" >';
+	for(var i=0;i<roleInfo.length ;i++){
+		if(classAry[i] == roleInfo.classId){
+			roleInfoHtml += '<option select="select" value="' + classAry[i] +'">' + classAry[i] +'</option>';
+		}else{
+			roleInfoHtml += '<option value="' + classAry[i] +'">' + classAry[i] +'</option>';
+		}
+	}
+	roleInfoHtml += '</select>';
+	$(elmtId+" td:eq(1)").html(roleInfoHtml);
+	
+	
+	
 	/*$.post(
 		servlet,
 		{

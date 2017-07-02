@@ -13,11 +13,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import net.sf.json.JSONArray;
+
 import com.chinasofti.eecuser.model.javabean.ClassInfo;
 import com.chinasofti.eecuser.model.javabean.SqlDataPage;
 import com.chinasofti.eecuser.model.javabean.UserInfo;
 import com.chinasofti.eecuser.model.service.AdminClassServiceImp;
 import com.chinasofti.eecuser.model.service.AdminTheacherServiceImp;
+import com.chinasofti.eecuser.model.service.IAdminClassService;
 import com.chinasofti.eecuser.model.service.IAdminTheacherService;
 
 /**
@@ -345,7 +348,7 @@ public class AdminServlet extends HttpServlet {
 		
 		// 其他需要的参数
 		PrintWriter out = response.getWriter();
-		IAdminTheacherService adminTheacherService = new AdminTheacherServiceImp();
+		IAdminClassService AdminClassServiceImp = new AdminClassServiceImp();
 		int classId = 0;
 		System.out.println("classIdStr :" + classIdStr);
 		System.out.println("headTeacherName :" + headTeacherName);
@@ -357,7 +360,7 @@ public class AdminServlet extends HttpServlet {
 		if(classIdStr == null || classIdStr == ""){
 			classIdStr = "-1";
 		}
-		if(headTeacherName == null || idStr == ""){
+		if(headTeacherName == null || headTeacherName == ""){
 			headTeacherName = null;
 		}
 		try{
@@ -381,31 +384,8 @@ public class AdminServlet extends HttpServlet {
 		
 		List<ClassInfo> classList  = AdminClassServiceImp.queryClassInfoByCondition
 				(classId, headTeacherName, sqlPageHashSet.get(sqlPageMapKey));
-		if(userList!=null && userList.size()>0){
-			out.write("[");
-			Iterator<UserInfo> iterator = userList.iterator();
-			UserInfo tmp = null;
-			while(iterator.hasNext()){
-				tmp = iterator.next();
-				out.write("{");
-				out.write("\"classId\":\""+ tmp.getClassId() +"\"," );
-				out.write("\"id\":\""+ tmp.getId() +"\"," );
-				out.write("\"name\":\""+ tmp.getName() +"\"," );
-				out.write("\"sex\":\""+ tmp.getSex() +"\"," );
-				out.write("\"age\":\""+ tmp.getAge() +"\"," );
-				out.write("\"email\":\""+ tmp.getEmail() +"\"," );
-				out.write("\"telephone\":\""+ tmp.getTelephone() +"\"," );
-				out.write("\"roleName\":\""+ tmp.getRoleName() +"\"" );
-				if(!iterator.hasNext()){
-					out.write("}");
-				}else{
-					out.write("},");
-				}
-			}
-			out.write("]");
-		}else{
-			out.write("[]");
-		}
+		JSONArray classListJson =  JSONArray.fromObject(classList);
+		out.write(classListJson.toString());
 		request.getSession().setAttribute("sqlPageMap", sqlPageHashSet);
     }
     
