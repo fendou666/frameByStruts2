@@ -10,7 +10,7 @@
 <link id="mycss" href="../css/add.css" rel="stylesheet" type="text/css"/> 
 </head>
 <script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
-<script type="text/javascript" src="js/adminOperation.js"></script>
+<script type="text/javascript" src="js/adminClassOperation.js"></script>
 <script type="text/javascript">
 	var servlet = "<%=request.getContextPath()%>/AdminServlet";
 	$(function(){

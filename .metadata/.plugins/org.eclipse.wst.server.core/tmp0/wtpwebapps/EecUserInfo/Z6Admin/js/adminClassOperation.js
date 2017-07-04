@@ -43,8 +43,8 @@ function deleteInfo(servlet, elmtId, eecId){
 	return false;
 }
 
-function changeInfo(servlet, elmtId, eecId){
-	var classAry = ["20170207", "20170307", "20170407"];
+function changeInfo(elmtId){
+	var classAry = ["20170201", "20170202", "20170203","20170204", "20170205", "20170206", "20170207"];
 	var roleInfo = {
 			"3004":"任课老师",
 			"3005":"班主任"
@@ -52,18 +52,43 @@ function changeInfo(servlet, elmtId, eecId){
 	var eecInfo={
 			"classId": $(elmtId+" td:eq(1)").text()
 	}
-	var eecInfoRoleId = $(elmtId+" td:eq(8)").text();
-	if(eecInfoRoleId == "3004"){
+	var eecInfoRoleName = $(elmtId+" td:eq(8)").text();
+	if(eecInfoRoleName == "任课老师"){
 		eecInfo.roleId = "3004";
-	}else if(eecInfoRoleId == "3005"){
+	}else if(eecInfoRoleName == "班主任"){
 		eecInfo.roleId = "3005";
 	}else{
 		console.log("信息出错");
 	}
-	if(eecInfo.roleId){
-		var classSelectHtml = "";
-		
+	var proSelect = ' select="select" ';
+	var classSelectHtml = '<select name="classId" id="classId">';
+	for(var i=0; i<classAry.length; i++){
+		console.log("class 遍历" + classAry[i]);
+		if(eecInfo.classId == classAry[i]){
+			classSelectHtml += '<option value="'+ classAry[i]+'" '+ proSelect +'>'+ classAry[i] +'</option>'
+		}else{
+			classSelectHtml += '<option value="'+ classAry[i] +'"  >'+ classAry[i] +'</option>'
+		}
 	}
+	classSelectHtml +='</select>';
+	$(elmtId+" td:eq(1)").html(classSelectHtml);
+	
+	if(eecInfo.roleId){
+		
+		var roleSelectHtml = '<select name="roleId" id="roleId">';
+		for(var i in roleInfo){
+			if(eecInfo.roleId == i){
+				roleSelectHtml += '<option value="'+ i+'" '+ proSelect +'>'+ roleInfo[i] +'</option>'
+			}else{
+				roleSelectHtml += '<option value="'+ i+'"  >'+ roleInfo[i] +'</option>'
+			}
+		}
+		roleSelectHtml += '</select>';
+		$(elmtId+" td:eq(8)").html(roleSelectHtml);
+	}
+	$(elmtId+" td:eq(9)").html('<a onclick="">确认更新</a>&nbsp;&nbsp;<a>取消更新</a>');
+	
+	return false;
 }
 
 
@@ -165,7 +190,7 @@ function getEecUserInfo(servlet, forward, operationType){
 						}
 						if(operationType == "update"){
 							htmlData += '<td><a href="#" onclick="return '
-							htmlData += 'updateInfo(\'' +servlet+'\', \'#usd'+ (i+1) +'\',' + eecUsers[i].id +')" >删除</a></td>';
+							htmlData += 'changeInfo(\'#usd'+ (i+1) +'\')" >更新</a></td>';
 						}
 						
 						htmlData += "</tr>";
