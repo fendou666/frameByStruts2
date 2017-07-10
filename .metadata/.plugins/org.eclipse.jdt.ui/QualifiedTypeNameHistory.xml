@@ -23,4 +23,6 @@
 <fullyQualifiedTypeName name="com.chinasofti.eecuser.model.service.AdminClassServiceImp"/>
 <fullyQualifiedTypeName name="com.chinasofti.eecuser.model.service.IAdminClassService"/>
 <fullyQualifiedTypeName name="net.sf.json.JSONArray"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
+<fullyQualifiedTypeName name="javax.servlet.annotation.WebServlet"/>
 </qualifiedTypeNameHistroy>
