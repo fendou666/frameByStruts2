@@ -43,31 +43,6 @@ public class SqlDataPage {
 	public void setMaxPageIndex(int maxPageIndex) {
 		this.maxPageIndex = maxPageIndex;
 	}
-	// 获取首页
-	public int getFirstPage(){
-		return currentPage = 1;
-	}
-	// 获取前页
-	public int getPrePage(){
-		currentPage--;
-		if(currentPage == 0){
-			currentPage = 1;
-		}
-		return currentPage;
-	}
-	
-	// 获取次页
-	public int getNextPage(){
-		currentPage++;
-		if(currentPage > maxPageIndex){
-			currentPage = maxPageIndex;
-		}
-		return currentPage;
-	}
-	// 获取尾页
-	public int getLastPage(){
-		return currentPage = maxPageIndex;
-	}
 	// 获取自定义页面
 	public int getCustomPage(int pageIndex){
 		if(pageIndex<1){
