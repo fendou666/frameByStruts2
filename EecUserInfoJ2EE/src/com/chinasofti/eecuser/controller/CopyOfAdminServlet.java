@@ -26,7 +26,7 @@ import com.chinasofti.eecuser.model.service.IAdminTheacherService;
 /**
  * Servlet implementation class AdminServlet
  */
-@WebServlet("/AdminServlet")
+@WebServlet("/CPAdminServlet")
 public class CopyOfAdminServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private HashMap<String, String> queryConf;

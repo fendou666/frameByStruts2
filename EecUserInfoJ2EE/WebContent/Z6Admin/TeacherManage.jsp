@@ -20,24 +20,8 @@
 	})
 </script>
 <body>
-	<%
-		final int ADMIN_ROLEID = 3006;
-		
-		// 登录信息暂时没有的情况，自己先做一个数据保证程序运行
-		UserInfo stu = new UserInfo(20170207, 170000002, "管理员", "男",
-				88,  "4437074544@qq.com", 11593239991L, 3006);
-		session.setAttribute("userInfo", stu);
-		UserInfo admin = (UserInfo)session.getAttribute("userInfo");
-		if(admin==null){
-			//request.getRequestDispatcher("NoLogin.jsp").forward(request, response);
-			return;
-		}
-		// 这一步判断可以去掉，肖梦娜使用过滤器做， 对应的权限只能访问对应的目录
-		if(admin.getRoleId()!=ADMIN_ROLEID){
-			//request.getRequestDispatcher("NoLogin.jsp").forward(request, response);
-			return;	
-		}
-	%>
+	
+	
 	<div id="d0">
 		<h1>学生信息综合管理系统</h1>
 	</div>
@@ -82,13 +66,24 @@
 			<table id="t2" border="1">
 				<tr bgcolor="#8FBC8F">
 					<td>序号</td><td>班级</td><td>学号</td><td>姓名</td><td>性别</td>
-					<td>年龄</td><td>邮箱</td><td>手机号</td><td>职务</td><td>操作</td>
+					<td>年龄</td><td>邮箱</td><td>手机号</td><td>职务</td>
 				</tr>
-				
+				<c:forEach var="teacher" items="${sessionScope.teacherAllData}">
+					<tr>
+						<td>${teacher.id}</td>
+						<td>${teacher.classId}</td>
+						<td>${teacher.id}</td>
+						<td>${teacher.name}</td>
+						<td>${teacher.sex}</td>
+						<td>${teacher.age}</td>
+						<td>${teacher.email}</td>
+						<td>${teacher.telephone}</td>
+						<td>${teacher.roleName}</td>
+					</tr>
+				</c:forEach>
 			</table>
 		</div>
 	</div>
-	
 	
 </body>
 </html>

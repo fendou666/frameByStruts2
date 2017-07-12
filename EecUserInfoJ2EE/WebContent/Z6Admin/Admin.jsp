@@ -12,6 +12,24 @@
 <script type="text/javascript" src="<%=request.getContextPath() %>/js/jquery-1.7.2.min.js"></script>
 
 <body>
+<%-- <%
+		final int ADMIN_ROLEID = 3006;
+		
+		// 登录信息暂时没有的情况，自己先做一个数据保证程序运行
+		UserInfo stu = new UserInfo(20170207, 170000002, "管理员", "男",
+				88,  "4437074544@qq.com", 11593239991L, 3006);
+		session.setAttribute("userInfo", stu);
+		UserInfo admin = (UserInfo)session.getAttribute("userInfo");
+		if(admin==null){
+			//request.getRequestDispatcher("NoLogin.jsp").forward(request, response);
+			return;
+		}
+		// 这一步判断可以去掉，肖梦娜使用过滤器做， 对应的权限只能访问对应的目录
+		if(admin.getRoleId()!=ADMIN_ROLEID){
+			//request.getRequestDispatcher("NoLogin.jsp").forward(request, response);
+			return;	
+		}
+	%> --%>
 	<%
 		UserInfo stu = new UserInfo(20170207, 170000002, "管理员", "男",
 				88,  "4437074544@qq.com", 11593239991L, 3006);

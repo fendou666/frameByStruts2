@@ -23,7 +23,7 @@ public class AdminTheacherDAOImp implements IAdminTheacherDAO {
 		String conditionStr = " AND u.class_id is null AND u.manager_id is null";
 		if(id!=-1){
 			conditionStr += " AND u.id="+id;
-		}else if(name!=null){
+		}else if(name!=null && !name.equals("all")){
 			conditionStr += " AND u.name="+name;
 		}
 		System.out.println("条件执行语句是" + conditionStr);
@@ -124,7 +124,9 @@ public class AdminTheacherDAOImp implements IAdminTheacherDAO {
 			// 函数存储过程通过这中方式调用
 			CallableStatement  pc = DBUtil.getJDBC().getConn().prepareCall(sql);
 			pc.registerOutParameter(1, OracleTypes.CURSOR);
+			System.out.println("teacherPage.getPageMaxRows()" + teacherPage.getPageMaxRows());
 			pc.setObject(2, teacherPage.getPageMaxRows());
+			System.out.println("teacherPage.getCurrentPage()" + teacherPage.getCurrentPage());
 			pc.setObject(3, teacherPage.getCurrentPage());
 			pc.setObject(4, conditionStr);
 			pc.registerOutParameter(5, OracleTypes.INTEGER);
