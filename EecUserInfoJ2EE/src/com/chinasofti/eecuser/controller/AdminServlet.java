@@ -162,21 +162,30 @@ public class AdminServlet extends HttpServlet {
 		//request.getRequestDispatcher("/Z6Admin/TeacherManage.jsp").forward(request, response);
 		response.sendRedirect(request.getContextPath() + "/Z6Admin/TeacherManage.jsp"); 
     }
-    private boolean paramDataCheck(HttpServletRequest request){
-    	HashMap<String, Object> defaultParam = gotoTeacherManageDefaultParam();
-    	try
-    	
-    	
-    	return false;
+    private boolean paramDataCheck(HttpServletRequest request, HashMap<String, Object> defaultParam){
+    	// TODO 关于参数全是null的情况
+    	try{
+    		defaultParam.put("roleId", Integer.parseInt(request.getParameter("roleId"))) ;
+    		defaultParam.put("classId", Integer.parseInt(request.getParameter("classId"))) ;
+    		defaultParam.put("id", Integer.parseInt(request.getParameter("id"))) ;
+    	}catch(NumberFormatException e){
+    		System.out.println("参数不符合 int类型");
+    		return false;
+    	}
+    	defaultParam.put("name", request.getParameter("name")) ;
+		return true;
     }
     
     private void getQueryTeacher(HttpServletRequest request, HttpServletResponse response) throws IOException{
     	String sqlPageMapKey = request.getParameter("sqlPageMapKey");
     	int currentPage = 1;
     	int pageMaxRows = 3;
-    	
-    	
     	PrintWriter out = response.getWriter();
+    	HashMap<String, Object> defaultParam = gotoTeacherManageDefaultParam();
+    	if(!paramDataCheck(request, defaultParam)){
+    		out.write("[]");
+    		return;
+    	}
     	// 获取存储在session中 存储所有分页对象的Map对象
     	HashMap<String,SqlDataPage> sqlPageHashSet = getSessionPageMap(request.getSession());
     	// 获取存储在分页Map中当前需要的分页对象

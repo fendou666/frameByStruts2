@@ -74,17 +74,6 @@ public class AdminServlet extends HttpServlet {
     // currentPage 设置首次运行的 当前页面
  	// pageMaxRows 设置页面最大的显示行数
     
-    private void queryDate(HttpServletRequest request, HttpServletResponse response) throws IOException{
-		
-		// 其他需要的参数
-		PrintWriter out = response.getWriter();
-		IAdminTheacherService adminTheacherService = new AdminTheacherServiceImp();
-		
-		List<UserInfo> userList = adminTheacherService.queryDataByCondition
-				(roleId, classId, id, name, sqlPageHashSet.get(sqlPageMapKey));
-		request.getSession().setAttribute("sqlPageMap", sqlPageHashSet);
-    }
-    
     
     private SqlDataPage getPageSpliteObj(HashMap<String,SqlDataPage> sqlPageHashSet, 
     		String sqlPageMapKey
@@ -133,18 +122,23 @@ public class AdminServlet extends HttpServlet {
     }
 
     
+    private HashMap<String,Object> gotoTeacherManageDefaultParam(){
+    	HashMap<String,Object> defaultData = new HashMap<String,Object>();
+    	// 参数类型是int值的 -1 代表全部，参数是string值的参数all代表全部， 默认全部查询 
+    	defaultData.put("roleId", -1);
+    	defaultData.put("classId", -1);
+    	defaultData.put("id", -1);
+    	defaultData.put("name", null);
+    	return defaultData;
+    }
     
-//    private HashMap<String,String> getReqParam(HttpServletRequest request){
-//    	HashMap<String,String> 
-//    	String sqlPageMapKey = request.getParameter("sqlPageMapKey");
-//    	
-//    }
-    
-    private void gotoTeacherManage(HttpServletRequest request, HttpServletResponse response) throws IOException{
+    private void gotoTeacherManage(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
     	
     	String sqlPageMapKey = request.getParameter("sqlPageMapKey");
     	int currentPage = 1;
-    	int pageMaxRows = 3;	
+    	int pageMaxRows = 3;
+    	HashMap<String, Object> defaultParam = gotoTeacherManageDefaultParam();
+    	
     	PrintWriter out = response.getWriter();
     	// 获取存储在session中 存储所有分页对象的Map对象
     	HashMap<String,SqlDataPage> sqlPageHashSet = getSessionPageMap(request.getSession());
@@ -152,25 +146,70 @@ public class AdminServlet extends HttpServlet {
     	SqlDataPage pageObj = getPageSpliteObj(sqlPageHashSet, sqlPageMapKey);
     	// pageObj初始化， 初始化每页最大显示行数和首次的页码
     	initPageSpliteObj(1, 3, pageObj);
-    	
-		IAdminTheacherService adminTheacherService = new AdminTheacherServiceImp();
+		
+    	IAdminTheacherService adminTheacherService = new AdminTheacherServiceImp();
 		List<UserInfo> userList = adminTheacherService.queryDataByCondition
-				(roleId, classId, id, name, sqlPageHashSet.get(sqlPageMapKey));
+				((int)defaultParam.get("roleId"), 
+				 (int)defaultParam.get("classId"), 
+				 (int)defaultParam.get("id"),
+				 (String)defaultParam.get("name"),
+				 pageObj);
 		// 后面这两步是不是不需要？， 因为对象本来就存在与session中
 		setPageSpliteObj(sqlPageHashSet, sqlPageMapKey, pageObj);
 		putSessionPageMap(request.getSession(), sqlPageHashSet);
+		// 将数据写入
+		request.getSession().setAttribute("teacherAllData", userList);
+		//request.getRequestDispatcher("/Z6Admin/TeacherManage.jsp").forward(request, response);
+		response.sendRedirect(request.getContextPath() + "/Z6Admin/TeacherManage.jsp"); 
+    }
+    private boolean paramDataCheck(HttpServletRequest request){
+    	
+    	HashMap<String, Object> defaultParam = gotoTeacherManageDefaultParam();
+    	try{
+    		defaultParam.put("roleId", Integer.parseInt(request.getParameter("roleId"))) ;
+    	}catch(NumberFormatException e){
+    		
+    	}
+    	return false;
+    }
+    
+    private void getQueryTeacher(HttpServletRequest request, HttpServletResponse response) throws IOException{
+    	String sqlPageMapKey = request.getParameter("sqlPageMapKey");
+    	int currentPage = 1;
+    	int pageMaxRows = 3;
+    	
+    	
+    	PrintWriter out = response.getWriter();
+    	// 获取存储在session中 存储所有分页对象的Map对象
+    	HashMap<String,SqlDataPage> sqlPageHashSet = getSessionPageMap(request.getSession());
+    	// 获取存储在分页Map中当前需要的分页对象
+    	SqlDataPage pageObj = getPageSpliteObj(sqlPageHashSet, sqlPageMapKey);
+    	// pageObj初始化， 初始化每页最大显示行数和首次的页码
+    	initPageSpliteObj(1, 3, pageObj);
 		
+    	IAdminTheacherService adminTheacherService = new AdminTheacherServiceImp();
+		List<UserInfo> userList = adminTheacherService.queryDataByCondition
+				((int)defaultParam.get("roleId"), 
+				 (int)defaultParam.get("classId"), 
+				 (int)defaultParam.get("id"),
+				 (String)defaultParam.get("name"),
+				 pageObj);
+		// 后面这两步是不是不需要？， 因为对象本来就存在与session中
+		setPageSpliteObj(sqlPageHashSet, sqlPageMapKey, pageObj);
+		putSessionPageMap(request.getSession(), sqlPageHashSet);
+		// 将数据写入
 		JSONArray fromObject = JSONArray.fromObject(userList);
 		out.write(fromObject.toString());
     }
+    
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String action 		= 	request.getParameter("action");
 		PrintWriter out 	= 	response.getWriter();
 		// 按需请求
 		if(action.equals("gotoTeacherManage")){ // 请求有效班级数量
-			
+			gotoTeacherManage(request, response);
 		}else if(action.equals("getQueryTheacher")){
-			queryDate(request, response);
+		
 		}else if(action.equals("errorReq")){
 			out.write("[]");
 		}else{ 
