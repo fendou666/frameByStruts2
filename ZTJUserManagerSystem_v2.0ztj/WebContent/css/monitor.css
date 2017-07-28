@@ -1,0 +1,60 @@
+@charset "utf-8";
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+.con_right{
+	font-size: 28px;
+}
+#nav{
+	text-align: left;
+	font-size: 30px;
+	font-weight: bold;
+}
+.mcon_ul{
+	width: 100%;
+}
+.mcon_ul li{
+	float: left;
+	width: 50%;
+	margin-top: 100px;
+}
+.mcon_ul li a{
+	display: block;
+}
+
+.mcon_first{
+	
+}
+.smenu{
+	 margin-left: 208px;
+	 width: 1500px;
+	 font-size: 24px;
+}
+.smenu tr{
+	width: 100%;
+}
+.smenu tr td{
+	width: 20%;
+	height: 30px;
+}
+.con_table{
+	font-size: 20px;
+	margin-left: 11%;
+	margin-top: 3%;
+	text-align: center;
+	width: 80%;
+}
+.con_table tr th,.con_table tr td{
+	width: 10%;
+	height: 35px;
+}
+.con_table tr th{
+	height: 40px;
+}
+
+.mmenu{
+	height: 50px;
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	 <!-- 班长权限所需的action -->
+	<package name="monitor" namespace="/monitor" extends="json-default">
+	 
+	<!-- 班级所有成员的信息 -->
+	<action name="classInf" class="com.seasky.managersys.action.Mon_ClassInfo">
+	 	<result name="success">/Mon_classUserInfo.jsp</result>
+	 	<!-- <result type="json">
+	 		<param name="includeProperties">teacher,headmaster,stuInfos</param>
+	 	</result> -->
+	</action>
+	</package>
+</struts>
