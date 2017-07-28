@@ -137,6 +137,7 @@ function updateInfo(servlet, elmtId, eecId){
 
 function getEecUserInfo(servlet, forward, operationType){
 	showInfo(operationType);
+	
 	$.post(
 			servlet,
 			{
@@ -145,8 +146,8 @@ function getEecUserInfo(servlet, forward, operationType){
 				// 不同人需求不同，暂时先各自按自己key分页
 				sqlPageMapKey:"teacherPage",  
 				pageIndex: forward, // 页面跳转参数
-				roleId:$("#roleId").val(),
-				classId:$("#classId").val(),
+				roleId:$("#roleId").val()=="postAll"?undefined:$("#roleId").val(),
+				classId:$("#classId").val()=="classAll"?undefined:$("#roleId").val(),
 				id:$("#id").val(),
 				name:$("#name").val()
 			},

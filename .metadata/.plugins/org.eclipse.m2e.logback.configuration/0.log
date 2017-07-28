@@ -1,1 +1,351 @@
 2017-06-23 21:54:41,170 [Worker-8] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is not available. Remote download required.
+2017-07-28 11:27:58,358 [pool-2-thread-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/apache/maven/archetypes/maven-archetype-webapp/maven-metadata.xml
+2017-07-28 11:27:58,497 [pool-2-thread-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/apache/maven/archetypes/maven-archetype-webapp/maven-metadata.xml
+2017-07-28 11:27:58,939 [pool-2-thread-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.nlpcn.org/org/apache/maven/archetypes/maven-archetype-webapp/maven-metadata.xml
+2017-07-28 11:27:59,039 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/apache/maven/archetypes/maven-archetype-webapp/1.0/maven-archetype-webapp-1.0.jar
+2017-07-28 11:27:59,114 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/apache/maven/archetypes/maven-archetype-webapp/1.0/maven-archetype-webapp-1.0.jar
+2017-07-28 11:29:51,687 [Worker-19] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/apache/maven/archetypes/maven-archetype-webapp/1.0/maven-archetype-webapp-1.0.pom
+2017-07-28 11:29:51,767 [Worker-19] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/apache/maven/archetypes/maven-archetype-webapp/1.0/maven-archetype-webapp-1.0.pom
+2017-07-28 11:29:51,798 [pool-3-thread-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded file:///D:/maven/.m2/repository/org/apache/maven/archetypes/maven-archetype-webapp/1.0/maven-archetype-webapp-1.0.jar
+2017-07-28 11:29:51,822 [Worker-19] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Collecting project info '/pom.xml' E:\1java\frameByStruts2\ess\pom.xml
+2017-07-28 11:29:52,429 [Worker-19] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/apache/maven/plugins/maven-compiler-plugin/2.5.1/maven-compiler-plugin-2.5.1.jar
+2017-07-28 11:29:52,548 [Worker-19] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/apache/maven/plugins/maven-compiler-plugin/2.5.1/maven-compiler-plugin-2.5.1.jar
+2017-07-28 11:29:53,126 [Worker-19] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/apache/maven/plugins/maven-compiler-plugin/2.5.1/maven-compiler-plugin-2.5.1.pom
+2017-07-28 11:29:53,278 [Worker-19] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/apache/maven/plugins/maven-compiler-plugin/2.5.1/maven-compiler-plugin-2.5.1.pom
+2017-07-28 11:29:57,787 [Worker-19] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/codehaus/plexus/plexus-compiler-api/1.9.1/plexus-compiler-api-1.9.1.pom
+2017-07-28 11:29:57,927 [Worker-19] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/codehaus/plexus/plexus-compiler-api/1.9.1/plexus-compiler-api-1.9.1.pom
+2017-07-28 11:29:57,985 [Worker-19] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/codehaus/plexus/plexus-compiler/1.9.1/plexus-compiler-1.9.1.pom
+2017-07-28 11:29:58,061 [Worker-19] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/codehaus/plexus/plexus-compiler/1.9.1/plexus-compiler-1.9.1.pom
+2017-07-28 11:29:58,118 [Worker-19] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/codehaus/plexus/plexus-components/1.1.20/plexus-components-1.1.20.pom
+2017-07-28 11:29:58,326 [Worker-19] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/codehaus/plexus/plexus-components/1.1.20/plexus-components-1.1.20.pom
+2017-07-28 11:29:58,674 [Worker-19] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/codehaus/plexus/plexus-compiler-manager/1.9.1/plexus-compiler-manager-1.9.1.pom
+2017-07-28 11:29:58,758 [Worker-19] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/codehaus/plexus/plexus-compiler-manager/1.9.1/plexus-compiler-manager-1.9.1.pom
+2017-07-28 11:29:58,832 [Worker-19] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/codehaus/plexus/plexus-compiler-javac/1.9.1/plexus-compiler-javac-1.9.1.pom
+2017-07-28 11:29:58,938 [Worker-19] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/codehaus/plexus/plexus-compiler-javac/1.9.1/plexus-compiler-javac-1.9.1.pom
+2017-07-28 11:29:58,984 [Worker-19] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/codehaus/plexus/plexus-compilers/1.9.1/plexus-compilers-1.9.1.pom
+2017-07-28 11:29:59,078 [Worker-19] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/codehaus/plexus/plexus-compilers/1.9.1/plexus-compilers-1.9.1.pom
+2017-07-28 11:29:59,187 [Worker-19] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/codehaus/plexus/plexus-compiler-api/1.9.1/plexus-compiler-api-1.9.1.jar
+2017-07-28 11:29:59,277 [Worker-19] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/codehaus/plexus/plexus-compiler-api/1.9.1/plexus-compiler-api-1.9.1.jar
+2017-07-28 11:29:59,312 [Worker-19] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/codehaus/plexus/plexus-compiler-manager/1.9.1/plexus-compiler-manager-1.9.1.jar
+2017-07-28 11:29:59,531 [Worker-19] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/codehaus/plexus/plexus-compiler-manager/1.9.1/plexus-compiler-manager-1.9.1.jar
+2017-07-28 11:29:59,570 [Worker-19] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/codehaus/plexus/plexus-compiler-javac/1.9.1/plexus-compiler-javac-1.9.1.jar
+2017-07-28 11:29:59,666 [Worker-19] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/codehaus/plexus/plexus-compiler-javac/1.9.1/plexus-compiler-javac-1.9.1.jar
+2017-07-28 11:30:01,477 [Worker-19] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.eec:ess:0.0.1-SNAPSHOT @ E:\1java\frameByStruts2\ess\pom.xml.
+2017-07-28 11:30:07,048 [Worker-19] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /ess/src/main/java
+2017-07-28 11:30:07,049 [Worker-19] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /ess/src/main/resources
+2017-07-28 11:30:07,050 [Worker-19] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /ess/src/test/java
+2017-07-28 11:30:07,063 [Worker-28] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.eec:ess:0.0.1-SNAPSHOT @ E:\1java\frameByStruts2\ess\pom.xml.
+2017-07-28 11:30:11,273 [Worker-19] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 19 sec
+2017-07-28 11:30:12,973 [Worker-28] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.eec:ess:0.0.1-SNAPSHOT @ E:\1java\frameByStruts2\ess\pom.xml.
+2017-07-28 11:30:13,053 [Worker-28] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:30:13,076 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-07-28 11:30:13,077 [Worker-28] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:30:13,077 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\1java\frameByStruts2\ess\src\test\resources
+2017-07-28 11:30:29,919 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:30:29,921 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-07-28 11:30:29,923 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:30:29,923 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\1java\frameByStruts2\ess\src\test\resources
+2017-07-28 11:30:51,940 [Worker-25] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.eec:ess:0.0.1-SNAPSHOT @ E:\1java\frameByStruts2\ess\pom.xml.
+2017-07-28 11:30:51,992 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:30:51,993 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-07-28 11:30:51,994 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:30:51,995 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\1java\frameByStruts2\ess\src\test\resources
+2017-07-28 11:31:31,383 [Worker-25] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.eec:ess:0.0.1-SNAPSHOT @ E:\1java\frameByStruts2\ess\pom.xml.
+2017-07-28 11:31:31,466 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:31:31,467 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-07-28 11:31:31,471 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:31:31,474 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\1java\frameByStruts2\ess\src\test\resources
+2017-07-28 11:31:31,474 [Worker-25] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of ess
+2017-07-28 11:31:31,475 [Worker-25] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for ess
+2017-07-28 11:31:31,532 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:34:44,750 [Worker-28] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.eec:ess:0.0.1-SNAPSHOT @ E:\1java\frameByStruts2\ess\pom.xml.
+2017-07-28 11:34:44,808 [Worker-28] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:34:44,812 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-07-28 11:34:44,813 [Worker-28] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:34:44,814 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\1java\frameByStruts2\ess\src\test\resources
+2017-07-28 11:34:50,881 [Worker-12] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.eec:ess:0.0.1-SNAPSHOT @ E:\1java\frameByStruts2\ess\pom.xml.
+2017-07-28 11:34:50,986 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:34:50,986 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-07-28 11:34:50,987 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:34:51,010 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\1java\frameByStruts2\ess\src\test\resources
+2017-07-28 11:34:51,010 [Worker-12] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of ess
+2017-07-28 11:34:51,010 [Worker-12] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for ess
+2017-07-28 11:34:51,013 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:34:52,213 [Worker-29] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:34:52,213 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-07-28 11:34:52,215 [Worker-29] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:34:52,215 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\1java\frameByStruts2\ess\src\test\resources
+2017-07-28 11:35:09,161 [Worker-24] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.eec:ess:0.0.1-SNAPSHOT @ E:\1java\frameByStruts2\ess\pom.xml.
+2017-07-28 11:35:09,190 [Worker-24] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:35:09,190 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-07-28 11:35:09,191 [Worker-24] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:35:09,191 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\1java\frameByStruts2\ess\src\test\resources
+2017-07-28 11:35:09,191 [Worker-24] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of ess
+2017-07-28 11:35:09,191 [Worker-24] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for ess
+2017-07-28 11:35:09,193 [Worker-24] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:35:10,364 [Worker-29] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:35:10,365 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-07-28 11:35:10,365 [Worker-29] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:35:10,366 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\1java\frameByStruts2\ess\src\test\resources
+2017-07-28 11:36:34,888 [Worker-27] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.eec:ess:0.0.1-SNAPSHOT @ E:\1java\frameByStruts2\ess\pom.xml.
+2017-07-28 11:36:34,918 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:36:34,918 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-07-28 11:36:34,919 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:36:34,919 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\1java\frameByStruts2\ess\src\test\resources
+2017-07-28 11:36:36,239 [Worker-24] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/junit/junit/3.8.1/junit-3.8.1-sources.jar
+2017-07-28 11:36:36,917 [Worker-24] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/junit/junit/3.8.1/junit-3.8.1-sources.jar
+2017-07-28 11:36:37,214 [Worker-24] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for junit:junit:3.8.1
+2017-07-28 11:36:37,251 [Worker-24] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/junit/junit/3.8.1/junit-3.8.1-javadoc.jar
+2017-07-28 11:36:37,453 [Worker-24] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.nlpcn.org/junit/junit/3.8.1/junit-3.8.1-javadoc.jar
+2017-07-28 11:36:37,483 [Worker-24] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for junit:junit:3.8.1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact junit:junit:jar:javadoc:3.8.1
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:769) ~[org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:1) ~[org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:166) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:109) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:96) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:736) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:713) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:244) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:232) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:197) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:153) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob$1.call(DownloadSourcesJob.java:136) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob$1.call(DownloadSourcesJob.java:1) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:166) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:142) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:96) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1348) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:134) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54) [org.eclipse.core.jobs_3.6.0.v20140424-0053.jar:na]
+2017-07-28 11:36:38,240 [Worker-20] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:36:38,240 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-07-28 11:36:38,241 [Worker-20] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:36:38,241 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\1java\frameByStruts2\ess\src\test\resources
+2017-07-28 11:36:57,251 [Worker-29] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.eec:ess:0.0.1-SNAPSHOT @ E:\1java\frameByStruts2\ess\pom.xml.
+2017-07-28 11:36:57,301 [Worker-29] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:36:57,301 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-07-28 11:36:57,302 [Worker-29] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:36:57,303 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\1java\frameByStruts2\ess\src\test\resources
+2017-07-28 11:37:06,528 [Worker-29] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.eec:ess:0.0.1-SNAPSHOT @ E:\1java\frameByStruts2\ess\pom.xml.
+2017-07-28 11:37:06,574 [Worker-29] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:37:06,574 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-07-28 11:37:06,575 [Worker-29] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:37:06,576 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\1java\frameByStruts2\ess\src\test\resources
+2017-07-28 11:37:06,576 [Worker-29] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of ess
+2017-07-28 11:37:06,576 [Worker-29] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for ess
+2017-07-28 11:37:06,580 [Worker-29] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:37:51,047 [Worker-29] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.eec:ess:0.0.1-SNAPSHOT @ E:\1java\frameByStruts2\ess\pom.xml.
+2017-07-28 11:37:51,070 [Worker-20] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-context/4.2.1.RELEASE/spring-context-4.2.1.RELEASE.pom
+2017-07-28 11:37:51,160 [Worker-20] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-context/4.2.1.RELEASE/spring-context-4.2.1.RELEASE.pom
+2017-07-28 11:37:51,213 [Worker-20] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-aop/4.2.1.RELEASE/spring-aop-4.2.1.RELEASE.pom
+2017-07-28 11:37:51,291 [Worker-20] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-aop/4.2.1.RELEASE/spring-aop-4.2.1.RELEASE.pom
+2017-07-28 11:37:51,362 [Worker-20] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-beans/4.2.1.RELEASE/spring-beans-4.2.1.RELEASE.pom
+2017-07-28 11:37:51,427 [Worker-20] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-beans/4.2.1.RELEASE/spring-beans-4.2.1.RELEASE.pom
+2017-07-28 11:37:51,535 [Worker-20] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-core/4.2.1.RELEASE/spring-core-4.2.1.RELEASE.pom
+2017-07-28 11:37:51,608 [Worker-20] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-core/4.2.1.RELEASE/spring-core-4.2.1.RELEASE.pom
+2017-07-28 11:37:51,670 [Worker-29] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/commons-logging/commons-logging/1.2/commons-logging-1.2.pom
+2017-07-28 11:37:51,829 [Worker-29] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/commons-logging/commons-logging/1.2/commons-logging-1.2.pom
+2017-07-28 11:37:51,879 [Worker-20] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/apache/commons/commons-parent/34/commons-parent-34.pom
+2017-07-28 11:37:51,998 [Worker-20] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/apache/commons/commons-parent/34/commons-parent-34.pom
+2017-07-28 11:37:52,098 [Worker-20] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-expression/4.2.1.RELEASE/spring-expression-4.2.1.RELEASE.pom
+2017-07-28 11:37:52,169 [Worker-20] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-expression/4.2.1.RELEASE/spring-expression-4.2.1.RELEASE.pom
+2017-07-28 11:37:52,228 [Worker-20] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-context/4.2.1.RELEASE/spring-context-4.2.1.RELEASE.jar
+2017-07-28 11:37:52,685 [Worker-20] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-context/4.2.1.RELEASE/spring-context-4.2.1.RELEASE.jar
+2017-07-28 11:37:52,759 [Worker-20] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-aop/4.2.1.RELEASE/spring-aop-4.2.1.RELEASE.jar
+2017-07-28 11:37:52,915 [Worker-20] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-aop/4.2.1.RELEASE/spring-aop-4.2.1.RELEASE.jar
+2017-07-28 11:37:52,972 [Worker-20] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-beans/4.2.1.RELEASE/spring-beans-4.2.1.RELEASE.jar
+2017-07-28 11:37:53,225 [Worker-20] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-beans/4.2.1.RELEASE/spring-beans-4.2.1.RELEASE.jar
+2017-07-28 11:37:53,271 [Worker-20] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-core/4.2.1.RELEASE/spring-core-4.2.1.RELEASE.jar
+2017-07-28 11:37:53,484 [Worker-20] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-core/4.2.1.RELEASE/spring-core-4.2.1.RELEASE.jar
+2017-07-28 11:37:53,536 [Worker-20] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/commons-logging/commons-logging/1.2/commons-logging-1.2.jar
+2017-07-28 11:37:53,625 [Worker-20] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/commons-logging/commons-logging/1.2/commons-logging-1.2.jar
+2017-07-28 11:37:53,679 [Worker-20] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-expression/4.2.1.RELEASE/spring-expression-4.2.1.RELEASE.jar
+2017-07-28 11:37:53,783 [Worker-20] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-expression/4.2.1.RELEASE/spring-expression-4.2.1.RELEASE.jar
+2017-07-28 11:37:54,637 [Worker-29] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:37:54,637 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-07-28 11:37:54,638 [Worker-29] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:37:54,639 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\1java\frameByStruts2\ess\src\test\resources
+2017-07-28 11:37:54,639 [Worker-29] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of ess
+2017-07-28 11:37:54,639 [Worker-29] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for ess
+2017-07-28 11:37:54,640 [Worker-29] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:37:55,649 [Worker-28] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-context/4.2.1.RELEASE/spring-context-4.2.1.RELEASE-sources.jar
+2017-07-28 11:37:55,843 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:37:55,844 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-07-28 11:37:55,845 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:37:55,845 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\1java\frameByStruts2\ess\src\test\resources
+2017-07-28 11:37:56,181 [Worker-28] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-context/4.2.1.RELEASE/spring-context-4.2.1.RELEASE-sources.jar
+2017-07-28 11:37:56,298 [Worker-28] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-context:4.2.1.RELEASE
+2017-07-28 11:37:56,427 [Worker-28] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-context/4.2.1.RELEASE/spring-context-4.2.1.RELEASE-javadoc.jar
+2017-07-28 11:37:57,059 [Worker-28] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-context/4.2.1.RELEASE/spring-context-4.2.1.RELEASE-javadoc.jar
+2017-07-28 11:37:57,131 [Worker-28] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for org.springframework:spring-context:4.2.1.RELEASE
+2017-07-28 11:37:57,190 [Worker-28] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-aop/4.2.1.RELEASE/spring-aop-4.2.1.RELEASE-sources.jar
+2017-07-28 11:37:57,428 [Worker-28] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-aop/4.2.1.RELEASE/spring-aop-4.2.1.RELEASE-sources.jar
+2017-07-28 11:37:57,505 [Worker-28] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-aop:4.2.1.RELEASE
+2017-07-28 11:37:57,687 [Worker-28] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-aop/4.2.1.RELEASE/spring-aop-4.2.1.RELEASE-javadoc.jar
+2017-07-28 11:37:58,115 [Worker-28] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-aop/4.2.1.RELEASE/spring-aop-4.2.1.RELEASE-javadoc.jar
+2017-07-28 11:37:58,171 [Worker-28] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for org.springframework:spring-aop:4.2.1.RELEASE
+2017-07-28 11:37:58,263 [Worker-28] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/aopalliance/aopalliance/1.0/aopalliance-1.0-sources.jar
+2017-07-28 11:37:58,341 [Worker-28] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/aopalliance/aopalliance/1.0/aopalliance-1.0-sources.jar
+2017-07-28 11:37:58,514 [Worker-28] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for aopalliance:aopalliance:1.0
+2017-07-28 11:37:58,540 [Worker-28] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/aopalliance/aopalliance/1.0/aopalliance-1.0-javadoc.jar
+2017-07-28 11:37:58,739 [Worker-28] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.nlpcn.org/aopalliance/aopalliance/1.0/aopalliance-1.0-javadoc.jar
+2017-07-28 11:37:58,740 [Worker-28] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for aopalliance:aopalliance:1.0
+org.eclipse.core.runtime.CoreException: Could not resolve artifact aopalliance:aopalliance:jar:javadoc:1.0
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:769) ~[org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:1) ~[org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:166) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:109) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:96) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:736) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:713) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:244) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:232) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:197) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:153) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob$1.call(DownloadSourcesJob.java:136) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob$1.call(DownloadSourcesJob.java:1) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:166) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:142) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:96) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1348) [org.eclipse.m2e.core_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:134) [org.eclipse.m2e.jdt_1.5.0.20140606-0033.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54) [org.eclipse.core.jobs_3.6.0.v20140424-0053.jar:na]
+2017-07-28 11:37:58,816 [Worker-28] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-beans/4.2.1.RELEASE/spring-beans-4.2.1.RELEASE-sources.jar
+2017-07-28 11:37:59,270 [Worker-28] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-beans/4.2.1.RELEASE/spring-beans-4.2.1.RELEASE-sources.jar
+2017-07-28 11:37:59,321 [Worker-28] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-beans:4.2.1.RELEASE
+2017-07-28 11:37:59,514 [Worker-28] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-beans/4.2.1.RELEASE/spring-beans-4.2.1.RELEASE-javadoc.jar
+2017-07-28 11:38:00,076 [Worker-28] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-beans/4.2.1.RELEASE/spring-beans-4.2.1.RELEASE-javadoc.jar
+2017-07-28 11:38:00,130 [Worker-28] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for org.springframework:spring-beans:4.2.1.RELEASE
+2017-07-28 11:38:00,222 [Worker-28] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-core/4.2.1.RELEASE/spring-core-4.2.1.RELEASE-sources.jar
+2017-07-28 11:38:00,398 [Worker-28] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-core/4.2.1.RELEASE/spring-core-4.2.1.RELEASE-sources.jar
+2017-07-28 11:38:00,456 [Worker-28] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-core:4.2.1.RELEASE
+2017-07-28 11:38:00,622 [Worker-28] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-core/4.2.1.RELEASE/spring-core-4.2.1.RELEASE-javadoc.jar
+2017-07-28 11:38:01,087 [Worker-28] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-core/4.2.1.RELEASE/spring-core-4.2.1.RELEASE-javadoc.jar
+2017-07-28 11:38:01,231 [Worker-28] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for org.springframework:spring-core:4.2.1.RELEASE
+2017-07-28 11:38:01,347 [Worker-28] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/commons-logging/commons-logging/1.2/commons-logging-1.2-sources.jar
+2017-07-28 11:38:01,509 [Worker-28] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/commons-logging/commons-logging/1.2/commons-logging-1.2-sources.jar
+2017-07-28 11:38:01,614 [Worker-28] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for commons-logging:commons-logging:1.2
+2017-07-28 11:38:01,676 [Worker-28] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/commons-logging/commons-logging/1.2/commons-logging-1.2-javadoc.jar
+2017-07-28 11:38:01,791 [Worker-28] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/commons-logging/commons-logging/1.2/commons-logging-1.2-javadoc.jar
+2017-07-28 11:38:01,897 [Worker-28] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for commons-logging:commons-logging:1.2
+2017-07-28 11:38:02,059 [Worker-28] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-expression/4.2.1.RELEASE/spring-expression-4.2.1.RELEASE-sources.jar
+2017-07-28 11:38:02,227 [Worker-28] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-expression/4.2.1.RELEASE/spring-expression-4.2.1.RELEASE-sources.jar
+2017-07-28 11:38:02,289 [Worker-28] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-expression:4.2.1.RELEASE
+2017-07-28 11:38:02,455 [Worker-28] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-expression/4.2.1.RELEASE/spring-expression-4.2.1.RELEASE-javadoc.jar
+2017-07-28 11:38:02,897 [Worker-28] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-expression/4.2.1.RELEASE/spring-expression-4.2.1.RELEASE-javadoc.jar
+2017-07-28 11:38:03,313 [Worker-28] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for org.springframework:spring-expression:4.2.1.RELEASE
+2017-07-28 11:38:03,712 [Worker-24] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:38:03,712 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-07-28 11:38:03,714 [Worker-24] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:38:03,715 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\1java\frameByStruts2\ess\src\test\resources
+2017-07-28 11:38:47,194 [Worker-28] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.eec:ess:0.0.1-SNAPSHOT @ E:\1java\frameByStruts2\ess\pom.xml.
+2017-07-28 11:38:47,342 [Worker-28] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:38:47,342 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-07-28 11:38:47,344 [Worker-28] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:38:47,344 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\1java\frameByStruts2\ess\src\test\resources
+2017-07-28 11:38:47,344 [Worker-28] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of ess
+2017-07-28 11:38:47,344 [Worker-28] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for ess
+2017-07-28 11:38:47,347 [Worker-28] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:38:48,521 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:38:48,522 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-07-28 11:38:48,522 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:38:48,523 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\1java\frameByStruts2\ess\src\test\resources
+2017-07-28 11:38:57,218 [Worker-29] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.eec:ess:0.0.1-SNAPSHOT @ E:\1java\frameByStruts2\ess\pom.xml.
+2017-07-28 11:38:57,347 [Worker-29] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:38:57,348 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-07-28 11:38:57,349 [Worker-29] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:38:57,349 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\1java\frameByStruts2\ess\src\test\resources
+2017-07-28 11:38:57,349 [Worker-29] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of ess
+2017-07-28 11:38:57,350 [Worker-29] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for ess
+2017-07-28 11:38:57,352 [Worker-29] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:38:58,549 [Worker-24] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:38:58,549 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-07-28 11:38:58,555 [Worker-24] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:38:58,555 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\1java\frameByStruts2\ess\src\test\resources
+2017-07-28 11:40:21,271 [Worker-19] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.eec:ess:0.0.1-SNAPSHOT @ E:\1java\frameByStruts2\ess\pom.xml.
+2017-07-28 11:40:21,370 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-07-28 11:40:21,371 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-07-28 11:40:21,372 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-07-28 11:40:21,372 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\1java\frameByStruts2\ess\src\test\resources
+2017-07-28 11:40:21,372 [Worker-19] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of ess
+2017-07-28 11:40:21,372 [Worker-19] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for ess
+2017-07-28 11:40:21,375 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-07-28 11:40:45,753 [Worker-20] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.eec:ess:0.0.1-SNAPSHOT @ E:\1java\frameByStruts2\ess\pom.xml.
+2017-07-28 11:40:45,972 [Worker-19] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-context/4.3.3.RELEASE/spring-context-4.3.3.RELEASE.pom
+2017-07-28 11:40:46,061 [Worker-19] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-context/4.3.3.RELEASE/spring-context-4.3.3.RELEASE.pom
+2017-07-28 11:40:46,157 [Worker-19] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-aop/4.3.3.RELEASE/spring-aop-4.3.3.RELEASE.pom
+2017-07-28 11:40:46,257 [Worker-19] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-aop/4.3.3.RELEASE/spring-aop-4.3.3.RELEASE.pom
+2017-07-28 11:40:46,336 [Worker-19] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-beans/4.3.3.RELEASE/spring-beans-4.3.3.RELEASE.pom
+2017-07-28 11:40:46,453 [Worker-19] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-beans/4.3.3.RELEASE/spring-beans-4.3.3.RELEASE.pom
+2017-07-28 11:40:46,580 [Worker-19] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-core/4.3.3.RELEASE/spring-core-4.3.3.RELEASE.pom
+2017-07-28 11:40:46,677 [Worker-19] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-core/4.3.3.RELEASE/spring-core-4.3.3.RELEASE.pom
+2017-07-28 11:40:46,758 [Worker-19] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-expression/4.3.3.RELEASE/spring-expression-4.3.3.RELEASE.pom
+2017-07-28 11:40:46,839 [Worker-19] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-expression/4.3.3.RELEASE/spring-expression-4.3.3.RELEASE.pom
+2017-07-28 11:40:46,915 [Worker-20] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-context/4.3.3.RELEASE/spring-context-4.3.3.RELEASE.jar
+2017-07-28 11:40:47,396 [Worker-20] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-context/4.3.3.RELEASE/spring-context-4.3.3.RELEASE.jar
+2017-07-28 11:40:47,481 [Worker-20] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-aop/4.3.3.RELEASE/spring-aop-4.3.3.RELEASE.jar
+2017-07-28 11:40:47,619 [Worker-20] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-aop/4.3.3.RELEASE/spring-aop-4.3.3.RELEASE.jar
+2017-07-28 11:40:47,737 [Worker-20] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-beans/4.3.3.RELEASE/spring-beans-4.3.3.RELEASE.jar
+2017-07-28 11:40:47,925 [Worker-20] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-beans/4.3.3.RELEASE/spring-beans-4.3.3.RELEASE.jar
+2017-07-28 11:40:47,982 [Worker-20] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-core/4.3.3.RELEASE/spring-core-4.3.3.RELEASE.jar
+2017-07-28 11:40:48,240 [Worker-20] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-core/4.3.3.RELEASE/spring-core-4.3.3.RELEASE.jar
+2017-07-28 11:40:48,294 [Worker-20] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-expression/4.3.3.RELEASE/spring-expression-4.3.3.RELEASE.jar
+2017-07-28 11:40:48,411 [Worker-20] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-expression/4.3.3.RELEASE/spring-expression-4.3.3.RELEASE.jar
+2017-07-28 11:40:48,761 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-07-28 11:40:48,761 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-07-28 11:40:48,762 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-07-28 11:40:48,762 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\1java\frameByStruts2\ess\src\test\resources
+2017-07-28 11:40:48,762 [Worker-20] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of ess
+2017-07-28 11:40:48,762 [Worker-20] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for ess
+2017-07-28 11:40:48,764 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-07-28 11:40:49,879 [Worker-24] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-context/4.3.3.RELEASE/spring-context-4.3.3.RELEASE-sources.jar
+2017-07-28 11:40:50,014 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-07-28 11:40:50,014 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-07-28 11:40:50,015 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-07-28 11:40:50,015 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\1java\frameByStruts2\ess\src\test\resources
+2017-07-28 11:40:50,395 [Worker-24] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-context/4.3.3.RELEASE/spring-context-4.3.3.RELEASE-sources.jar
+2017-07-28 11:40:50,483 [Worker-24] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-context:4.3.3.RELEASE
+2017-07-28 11:40:50,556 [Worker-24] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-context/4.3.3.RELEASE/spring-context-4.3.3.RELEASE-javadoc.jar
+2017-07-28 11:40:51,120 [Worker-24] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-context/4.3.3.RELEASE/spring-context-4.3.3.RELEASE-javadoc.jar
+2017-07-28 11:40:51,336 [Worker-24] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for org.springframework:spring-context:4.3.3.RELEASE
+2017-07-28 11:40:51,413 [Worker-24] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-aop/4.3.3.RELEASE/spring-aop-4.3.3.RELEASE-sources.jar
+2017-07-28 11:40:51,584 [Worker-24] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-aop/4.3.3.RELEASE/spring-aop-4.3.3.RELEASE-sources.jar
+2017-07-28 11:40:51,668 [Worker-24] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-aop:4.3.3.RELEASE
+2017-07-28 11:40:51,827 [Worker-24] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-aop/4.3.3.RELEASE/spring-aop-4.3.3.RELEASE-javadoc.jar
+2017-07-28 11:40:52,074 [Worker-24] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-aop/4.3.3.RELEASE/spring-aop-4.3.3.RELEASE-javadoc.jar
+2017-07-28 11:40:52,136 [Worker-24] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for org.springframework:spring-aop:4.3.3.RELEASE
+2017-07-28 11:40:52,214 [Worker-24] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-beans/4.3.3.RELEASE/spring-beans-4.3.3.RELEASE-sources.jar
+2017-07-28 11:40:52,401 [Worker-24] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-beans/4.3.3.RELEASE/spring-beans-4.3.3.RELEASE-sources.jar
+2017-07-28 11:40:52,452 [Worker-24] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-beans:4.3.3.RELEASE
+2017-07-28 11:40:52,661 [Worker-24] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-beans/4.3.3.RELEASE/spring-beans-4.3.3.RELEASE-javadoc.jar
+2017-07-28 11:40:52,999 [Worker-24] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-beans/4.3.3.RELEASE/spring-beans-4.3.3.RELEASE-javadoc.jar
+2017-07-28 11:40:53,053 [Worker-24] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for org.springframework:spring-beans:4.3.3.RELEASE
+2017-07-28 11:40:53,135 [Worker-24] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-core/4.3.3.RELEASE/spring-core-4.3.3.RELEASE-sources.jar
+2017-07-28 11:40:53,314 [Worker-24] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-core/4.3.3.RELEASE/spring-core-4.3.3.RELEASE-sources.jar
+2017-07-28 11:40:53,352 [Worker-24] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-core:4.3.3.RELEASE
+2017-07-28 11:40:53,514 [Worker-24] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-core/4.3.3.RELEASE/spring-core-4.3.3.RELEASE-javadoc.jar
+2017-07-28 11:40:53,809 [Worker-24] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-core/4.3.3.RELEASE/spring-core-4.3.3.RELEASE-javadoc.jar
+2017-07-28 11:40:53,869 [Worker-24] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for org.springframework:spring-core:4.3.3.RELEASE
+2017-07-28 11:40:53,949 [Worker-24] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-expression/4.3.3.RELEASE/spring-expression-4.3.3.RELEASE-sources.jar
+2017-07-28 11:40:54,064 [Worker-24] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-expression/4.3.3.RELEASE/spring-expression-4.3.3.RELEASE-sources.jar
+2017-07-28 11:40:54,151 [Worker-24] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-expression:4.3.3.RELEASE
+2017-07-28 11:40:54,306 [Worker-24] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-expression/4.3.3.RELEASE/spring-expression-4.3.3.RELEASE-javadoc.jar
+2017-07-28 11:40:54,485 [Worker-24] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.aliyun.com/nexus/content/groups/public/org/springframework/spring-expression/4.3.3.RELEASE/spring-expression-4.3.3.RELEASE-javadoc.jar
+2017-07-28 11:40:54,551 [Worker-24] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for org.springframework:spring-expression:4.3.3.RELEASE
+2017-07-28 11:40:54,925 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-07-28 11:40:54,925 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-07-28 11:40:54,926 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-07-28 11:40:54,926 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\1java\frameByStruts2\ess\src\test\resources
+2017-07-28 11:41:56,388 [Worker-12] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Collecting project info '/pom.xml' E:\1java\frameByStruts2\abc\pom.xml
+2017-07-28 11:41:56,414 [Worker-12] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.eec:abc:0.0.1-SNAPSHOT @ E:\1java\frameByStruts2\abc\pom.xml.
+2017-07-28 11:41:56,492 [Worker-12] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /abc/src/main/java
+2017-07-28 11:41:56,492 [Worker-12] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /abc/src/main/resources
+2017-07-28 11:41:56,492 [Worker-12] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /abc/src/test/java
+2017-07-28 11:41:59,199 [Worker-20] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.eec:abc:0.0.1-SNAPSHOT @ E:\1java\frameByStruts2\abc\pom.xml.
+2017-07-28 11:42:04,626 [Worker-12] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 8 sec
+2017-07-28 11:42:05,019 [Worker-28] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.eec:abc:0.0.1-SNAPSHOT @ E:\1java\frameByStruts2\abc\pom.xml.
+2017-07-28 11:42:05,220 [Worker-28] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:42:05,220 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-07-28 11:42:05,221 [Worker-28] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+2017-07-28 11:42:05,221 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\1java\frameByStruts2\abc\src\test\resources
