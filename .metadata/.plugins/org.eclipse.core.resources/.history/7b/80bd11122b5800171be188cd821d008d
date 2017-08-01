@@ -1,0 +1,99 @@
+package com.chinasofti.eecuser.model.javabean;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+
+public class TableSqlNeed {
+	private String sqlNeedFilds			= "";	// sql查询需要的所有字段拼接的字符串----为了分页
+	private String sqlAliasNeedFilds 	= "";// sql使用别名查询的所有字段拼接的字符串----为了快速条件查找
+	private String sqlTableStr 			= ""; // sql语句中 from后面跟的表
+	private String sqlAliasTableStr 	= ""; // sql语句中 from后面跟的表带别名
+	private String sqlCountFild 		= "";	// 统计总数量使用的那个字段
+	private String sqlOrderByFild 		= ""; // 条件查询排序的字段
+	
+	public TableSqlNeed() {
+	
+	}
+	public void initAllSqlStrData(String [] tableList, String [] aliasTableList, 
+									HashMap<String, String[]> tablesNeedFilds, 
+									String sqlCountFild, String sqlOrderByFild){
+		if(tableList.length != aliasTableList.length){
+			System.out.println("穿参 表数量与表别名数量不同");
+			return;
+		}else if(tablesNeedFilds.size() == 0){
+			System.out.println("获取的字段数量为0 错误");
+			return;
+		}
+		setSqlTableStr_And_sqlAliasTableStr(tableList, aliasTableList);
+		setSqlNeedFilds_And_SqlAliasNeedFilds(tablesNeedFilds);
+	}
+	private void setSqlTableStr_And_sqlAliasTableStr(String [] tableList, String [] aliasTableList){
+		for(int i=0; i<tableList.length; i++){
+			if(i!=tableList.length-1){
+				sqlTableStr 		+= tableList[i] + ", ";
+				sqlAliasTableStr 	+= tableList[i] + " " + aliasTableList[i] + ", ";
+			}else{
+				sqlTableStr 		+= tableList[i] + " ";
+				sqlAliasTableStr 	+= tableList[i] + " " + aliasTableList[i] + " ";
+			}
+		}
+	}
+	
+	private void setSqlNeedFilds_And_SqlAliasNeedFilds(HashMap<String, String[]> tablesNeedFilds){
+		Set<String> keySet = tablesNeedFilds.keySet();
+		Iterator<String> iterator = keySet.iterator();
+		String tableAlias = "";
+		String [] tableFilds = null;
+		while(iterator.hasNext()){
+			tableAlias = iterator.next();
+			tableFilds =  tablesNeedFilds.get(tableAlias);
+			for(int i=0; i<tableFilds.length; i++){
+				if(i!=tableFilds.length-1){
+					sqlNeedFilds 		+= tableFilds[i] + ", ";
+					sqlAliasNeedFilds 	+= tableAlias + "." + tableFilds[i] + ", ";
+				}else{
+					sqlNeedFilds 		+= tableFilds[i] + " ";
+					sqlAliasNeedFilds 	+= tableAlias + "." + tableFilds[i] + " ";
+				}
+			}
+		}
+	}
+	
+	public String getSqlNeedFilds() {
+		return sqlNeedFilds;
+	}
+	public String getSqlAliasNeedFilds() {
+		return sqlAliasNeedFilds;
+	}
+	public String getSqlTableStr() {
+		return sqlTableStr;
+	}
+	public String getSqlAliasTableStr() {
+		return sqlAliasTableStr;
+	}
+	public String getSqlCountFild() {
+		return sqlCountFild;
+	}
+	public String getSqlOrderByFild() {
+		return sqlOrderByFild;
+	}
+	
+	public static void main(String[] args) {
+		String [] tableList 		= {"eecuser", "eecrole"};
+		String [] aliasTableList 	= {"e", "r"};
+		HashMap<String, String[]> tablesNeedFilds	= new HashMap<String, String[]>();
+		tablesNeedFilds.put("e", new String[]{"class_Id", "EEC_Id", "EEC_Name", "sex", "age", 
+			"email", "telephone"});
+		tablesNeedFilds.put("r", new String[]{"role_name"});
+		String sqlCountFild 		= "eec_id";	// 统计总数量使用的那个字段
+		String sqlOrderByFild 		= "eec_id"; // 条件查询排序的字段
+		
+		
+		TableSqlNeed test = new TableSqlNeed();
+		test.initAllSqlStrData(tableList, aliasTableList, tablesNeedFilds, sqlCountFild, sqlOrderByFild);
+		System.out.println("别名查询字段:" + test.getSqlAliasNeedFilds());
+		System.out.println("别名查询字段:" + test.getSqlAliasNeedFilds());
+	}
+}

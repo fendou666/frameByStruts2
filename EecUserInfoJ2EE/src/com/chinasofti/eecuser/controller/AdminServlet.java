@@ -241,6 +241,7 @@ public class AdminServlet extends HttpServlet {
 		JSONArray fromObject = JSONArray.fromObject(userList);
 		out.write(fromObject.toString());
     }
+<<<<<<< HEAD
     private void getTeacherByPageIndex(HttpServletRequest request, HttpServletResponse response){
 //    	获取分页的key
     	String sqlPageMapKey 	= request.getParameter("sqlPageMapKey");
@@ -255,6 +256,51 @@ public class AdminServlet extends HttpServlet {
 //    	获取当前分页对应的条件
     	// TODO这里的条件对象可以定义为一个对象，里面包含各种条件的数组?
     	
+=======
+    private HashMap<String, Object> getConditionMap(String sqlPageMapKey, 
+    					HttpSession session
+    				){
+    	String conditionMapKey = sqlPageMapKey+"condition";
+    	HashMap<String, Object> defaultParam = (HashMap<String, Object>)session.getAttribute(conditionMapKey);
+    	return defaultParam;
+    }
+    private void setConditionMap(String sqlPageMapKey, 
+    							HashMap<String, Object> defaultParam,
+    							HttpSession session){
+    	String conditionMapKey = sqlPageMapKey+"condition";
+    	session.setAttribute(conditionMapKey, defaultParam);
+    }
+    
+    
+    private void getDataByPageMode(HttpServletRequest request, HttpServletResponse response) throws IOException{
+    	String sqlPageMapKey 	= request.getParameter("sqlPageMapKey");
+    	String pageMode 		= request.getParameter("pageIndex");
+    	// 获取存储在session中 存储所有分页对象的Map对象
+    	HashMap<String,SqlDataPage> sqlPageHashSet = getSessionPageMap(request.getSession());
+    	// 获取存储在分页Map中当前需要的分页对象
+    	SqlDataPage pageObj = getPageSpliteObj(sqlPageHashSet, sqlPageMapKey);
+    	getPageMode(pageMode, pageObj);
+    	PrintWriter out = response.getWriter();
+    	HashMap<String, Object> defaultParam = getConditionMap(sqlPageMapKey, request.getSession());
+    	if(!paramDataCheck(request, defaultParam)){
+    		out.write("[]");
+    		return;
+    	}
+    	
+    	IAdminTheacherService adminTheacherService = new AdminTheacherServiceImp();
+		List<UserInfo> userList = adminTheacherService.queryDataByCondition
+				((int)defaultParam.get("roleId"), 
+				 (int)defaultParam.get("classId"), 
+				 (int)defaultParam.get("id"),
+				 (String)defaultParam.get("name"),
+				 pageObj);
+		// 后面这两步是不是不需要？， 因为对象本来就存在与session中
+		setPageSpliteObj(sqlPageHashSet, sqlPageMapKey, pageObj);
+		putSessionPageMap(request.getSession(), sqlPageHashSet);
+		// 将数据写入
+		JSONArray fromObject = JSONArray.fromObject(userList);
+		out.write(fromObject.toString());
+>>>>>>> 2b137ed67297ad2e4f3e20162c47fa64835bfbaf
     	
     	
     }

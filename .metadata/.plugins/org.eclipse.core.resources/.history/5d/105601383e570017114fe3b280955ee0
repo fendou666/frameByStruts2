@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="/struts-tags"  prefix="s"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	用户名：<s:property value="userName"/> <br>
+	出生日期: <s:property value="birthday"/> <br>
+	爱好: <s:iterator var=like value="">
+			<s:if test="">
+				<input type="checkbox" name="likes" value="1" > 足球
+			 	<input type="checkbox" name="likes" value="2" > 篮球
+			 	<input type="checkbox" name="likes" value="3" > 羽毛球<br>
+			</s:if>
+		</s:iterator>
+	爱好: <s:property value="likes"/> <br>
+	电话号码: <s:property value="tel"/> <br>
+</body>
+</html>

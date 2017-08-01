@@ -11119,6 +11119,7 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+<<<<<<< HEAD
 !SESSION 2017-07-18 15:17:04.887 -----------------------------------------------
 eclipse.buildId=4.4.0.I20140606-1215
 java.version=1.8.0_121
@@ -12066,11 +12067,15 @@ not correct please set the HOME environment variable and restart Eclipse. Otherw
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
 !SESSION 2017-07-28 09:52:14.642 -----------------------------------------------
+=======
+!SESSION 2017-07-16 07:12:04.936 -----------------------------------------------
+>>>>>>> 2b137ed67297ad2e4f3e20162c47fa64835bfbaf
 eclipse.buildId=4.4.0.I20140606-1215
 java.version=1.8.0_121
 java.vendor=Oracle Corporation
 BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
 Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product
+<<<<<<< HEAD
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product -data E:\1java\frameByStruts2 -product org.eclipse.epp.package.jee.product
 
 !ENTRY org.eclipse.e4.ui.workbench 4 0 2017-07-28 09:52:18.733
@@ -12423,6 +12428,11 @@ Framework arguments:  -product org.eclipse.epp.package.jee.product
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
 
 !ENTRY org.eclipse.e4.ui.workbench 4 0 2017-07-28 10:04:47.008
+=======
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product -data D:\studyWorkSpace\frameByStruts2 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2017-07-16 07:12:06.686
+>>>>>>> 2b137ed67297ad2e4f3e20162c47fa64835bfbaf
 !MESSAGE Unable to load class 'org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon' from bundle '694'
 !STACK 0
 java.lang.ClassNotFoundException: org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon cannot be found by org.eclipse.ui.ide_3.10.0.v20140521-1937
@@ -12430,7 +12440,11 @@ java.lang.ClassNotFoundException: org.eclipse.ui.internal.ide.addons.SaveAllDirt
 	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:336)
 	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:328)
 	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+<<<<<<< HEAD
 	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+=======
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+>>>>>>> 2b137ed67297ad2e4f3e20162c47fa64835bfbaf
 	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:568)
 	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:102)
 	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:73)
@@ -12447,14 +12461,24 @@ java.lang.ClassNotFoundException: org.eclipse.ui.internal.ide.addons.SaveAllDirt
 	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:382)
 	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:236)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<<<<<<< HEAD
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
+=======
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+>>>>>>> 2b137ed67297ad2e4f3e20162c47fa64835bfbaf
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.e4.ui.workbench 4 0 2017-07-28 10:04:47.029
+=======
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2017-07-16 07:12:06.687
+>>>>>>> 2b137ed67297ad2e4f3e20162c47fa64835bfbaf
 !MESSAGE Unable to load class 'org.eclipse.ui.internal.ide.application.addons.ModelCleanupAddon' from bundle '695'
 !STACK 0
 java.lang.ClassNotFoundException: org.eclipse.ui.internal.ide.application.addons.ModelCleanupAddon cannot be found by org.eclipse.ui.ide.application_1.0.500.v20140514-2033
@@ -12462,7 +12486,11 @@ java.lang.ClassNotFoundException: org.eclipse.ui.internal.ide.application.addons
 	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:336)
 	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:328)
 	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+<<<<<<< HEAD
 	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+=======
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+>>>>>>> 2b137ed67297ad2e4f3e20162c47fa64835bfbaf
 	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:568)
 	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:102)
 	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:73)
@@ -12479,14 +12507,24 @@ java.lang.ClassNotFoundException: org.eclipse.ui.internal.ide.application.addons
 	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:382)
 	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:236)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<<<<<<< HEAD
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
+=======
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+>>>>>>> 2b137ed67297ad2e4f3e20162c47fa64835bfbaf
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.egit.ui 2 0 2017-07-28 10:05:03.995
+=======
+!ENTRY org.eclipse.egit.ui 2 0 2017-07-16 07:12:12.997
+>>>>>>> 2b137ed67297ad2e4f3e20162c47fa64835bfbaf
 !MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
 Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
 The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
@@ -12494,6 +12532,7 @@ this system level configuration. The Git installation location can be configured
 Team > Git > Configuration preference page's 'System Settings' tab.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.egit.ui 2 0 2017-07-28 10:05:03.996
 !MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
 user global configuration and to define the default location to store repositories: 'C:\Users\Administrator'. If this is
@@ -12764,6 +12803,15 @@ Binding(CTRL+SHIFT+ARROW_DOWN,
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
 !SESSION 2017-07-28 10:21:22.451 -----------------------------------------------
+=======
+!ENTRY org.eclipse.egit.ui 2 0 2017-07-16 07:12:12.998
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\ls'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2017-07-18 21:06:47.235 -----------------------------------------------
+>>>>>>> 2b137ed67297ad2e4f3e20162c47fa64835bfbaf
 eclipse.buildId=4.4.0.I20140606-1215
 java.version=1.8.0_121
 java.vendor=Oracle Corporation
@@ -12771,7 +12819,11 @@ BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
 Framework arguments:  -product org.eclipse.epp.package.jee.product
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.e4.ui.workbench 4 0 2017-07-28 10:21:25.726
+=======
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2017-07-18 21:06:50.063
+>>>>>>> 2b137ed67297ad2e4f3e20162c47fa64835bfbaf
 !MESSAGE Unable to load class 'org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon' from bundle '694'
 !STACK 0
 java.lang.ClassNotFoundException: org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon cannot be found by org.eclipse.ui.ide_3.10.0.v20140521-1937
@@ -12779,7 +12831,11 @@ java.lang.ClassNotFoundException: org.eclipse.ui.internal.ide.addons.SaveAllDirt
 	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:336)
 	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:328)
 	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+<<<<<<< HEAD
 	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+=======
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+>>>>>>> 2b137ed67297ad2e4f3e20162c47fa64835bfbaf
 	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:568)
 	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:102)
 	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:73)
@@ -12796,14 +12852,24 @@ java.lang.ClassNotFoundException: org.eclipse.ui.internal.ide.addons.SaveAllDirt
 	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:382)
 	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:236)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<<<<<<< HEAD
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
+=======
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+>>>>>>> 2b137ed67297ad2e4f3e20162c47fa64835bfbaf
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.e4.ui.workbench 4 0 2017-07-28 10:21:25.767
+=======
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2017-07-18 21:06:50.063
+>>>>>>> 2b137ed67297ad2e4f3e20162c47fa64835bfbaf
 !MESSAGE Unable to load class 'org.eclipse.ui.internal.ide.application.addons.ModelCleanupAddon' from bundle '695'
 !STACK 0
 java.lang.ClassNotFoundException: org.eclipse.ui.internal.ide.application.addons.ModelCleanupAddon cannot be found by org.eclipse.ui.ide.application_1.0.500.v20140514-2033
@@ -12811,7 +12877,11 @@ java.lang.ClassNotFoundException: org.eclipse.ui.internal.ide.application.addons
 	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:336)
 	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:328)
 	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+<<<<<<< HEAD
 	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+=======
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+>>>>>>> 2b137ed67297ad2e4f3e20162c47fa64835bfbaf
 	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:568)
 	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:102)
 	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:73)
@@ -12828,14 +12898,24 @@ java.lang.ClassNotFoundException: org.eclipse.ui.internal.ide.application.addons
 	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:382)
 	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:236)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<<<<<<< HEAD
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
+=======
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+>>>>>>> 2b137ed67297ad2e4f3e20162c47fa64835bfbaf
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.egit.ui 2 0 2017-07-28 10:21:44.920
+=======
+!ENTRY org.eclipse.egit.ui 2 0 2017-07-18 21:06:57.375
+>>>>>>> 2b137ed67297ad2e4f3e20162c47fa64835bfbaf
 !MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
 Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
 The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
@@ -12843,6 +12923,7 @@ this system level configuration. The Git installation location can be configured
 Team > Git > Configuration preference page's 'System Settings' tab.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.egit.ui 2 0 2017-07-28 10:21:44.921
 !MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
 user global configuration and to define the default location to store repositories: 'C:\Users\Administrator'. If this is
@@ -13346,3 +13427,11 @@ Binding(ALT+SHIFT+V,
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2017-07-28 11:42:05.221
 !MESSAGE Using platform encoding (GBK actually) to copy filtered resources, i.e. build is platform dependent!
+=======
+!ENTRY org.eclipse.egit.ui 2 0 2017-07-18 21:06:57.375
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\ls'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+>>>>>>> 2b137ed67297ad2e4f3e20162c47fa64835bfbaf

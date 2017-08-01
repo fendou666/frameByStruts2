@@ -1,0 +1,36 @@
+package com.study.struts2.convert;
+
+import java.util.Map;
+
+import org.apache.struts2.util.StrutsTypeConverter;
+
+import com.study.struts2.javabean.Telephone;
+
+public class TelConvert extends StrutsTypeConverter {
+	
+	@Override
+	public Object convertFromString(Map arg0, String[] arg1, Class arg2) {
+		Object ret = null;
+		if(arg1!=null){
+			System.out.println("转换对象前传递过来的字符串是" + arg1);
+			if(arg2 == Telephone.class){
+				Telephone tel = null;
+				if(null !=arg1[0] && arg1[0].indexOf("-")!=-1){
+					String[] tmp = arg1[0].split("-");
+					tel = new Telephone(tmp[0], tmp[1]);
+					ret = tel;
+				}
+			}
+		}
+		
+		return null;
+	}
+
+	@Override
+	public String convertToString(Map arg0, Object arg1) {
+		return null;
+	}
+	// =========这是测试========
+	public static void main(String[] args) {
+	}
+}
