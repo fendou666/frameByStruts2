@@ -1,8 +1,0 @@
-package com.study.struts2.action;
-
-public class Snippet {
-	public static void main(String[] args) {
-		com.study.struts2.action
-	}
-}
-

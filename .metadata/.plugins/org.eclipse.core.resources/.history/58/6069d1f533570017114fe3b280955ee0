@@ -1,7 +1,0 @@
-package com.study.struts2.i18n;
-
-import com.opensymphony.xwork2.ActionSupport;
-
-public class I18nAction extends ActionSupport {
-	
-}

@@ -134,77 +134,99 @@ function updateInfo(servlet, elmtId, eecId){
 }
 
 
+function QueryShowHtml(data, operationType){
+	console.log(data);
+	var eecUsers = eval(data);
+	var htmlData = "";
+	htmlData +=	'<tr bgcolor="#8FBC8F">';
+	htmlData += '<td>序号</td><td>班级</td><td>学号</td><td>姓名</td><td>性别</td>';
+	htmlData += '<td>年龄</td><td>邮箱</td><td>手机号</td><td>职务</td>';
+	if(!(operationType === "query")){
+		htmlData += "<td>操作</td>";
+		console.log("添加操作")
+	}
+	
+	htmlData += '</tr>';
+	if(eecUsers == null || eecUsers.length == 0 || eecUsers[0] == null){
+		htmlData += "<tr >";
+		htmlData += '<td colspan="12">没有获取到数据</td>';
+		htmlData += "</tr>";
+	}else{
+		
+		$.each(eecUsers ,function(i){
+			htmlData += "<tr id=\"usd" + (i+1) + "\">";
+			htmlData += "<td>" + (i+1)  +"</td>";
+			htmlData += "<td>" + eecUsers[i].classId  +"</td>";
+			htmlData += "<td>" + eecUsers[i].id  +"</td>";
+			htmlData += "<td>" + eecUsers[i].name  +"</td>";
+			htmlData += "<td>" + eecUsers[i].sex  +"</td>";
+			htmlData += "<td>" + eecUsers[i].age  +"</td>";
+			htmlData += "<td>" + eecUsers[i].email  +"</td>";
+			htmlData += "<td>" + eecUsers[i].telephone  +"</td>";
+			htmlData += "<td>" + eecUsers[i].roleName  +"</td>";
+			if(operationType == "delete"){
+				//htmlData += "<td><a href=\"" + servlet +"?action=deleteTheacher&id="+ eecUsers[i].id +"\">删除</a></td>";
+				htmlData += '<td><a href="#" onclick="return '
+				htmlData += 'deleteInfo(\'' +servlet+'\', \'#usd'+ (i+1) +'\',' + eecUsers[i].id +')" >删除</a></td>';
+				
+			}
+			if(operationType == "update"){
+				htmlData += '<td><a href="#" onclick="return '
+				htmlData += 'updateInfo(\'' +servlet+'\', \'#usd'+ (i+1) +'\',' + eecUsers[i].id +')" >删除</a></td>';
+			}
+			
+			htmlData += "</tr>";
+		})
+		
+		htmlData +=  '<td colspan="2"><input type="button"  onclick="getQueryTeacherByPage(\''+servlet +'\',\'first\',\'' + operationType +'\' )" value="首页" ></td>';
+		htmlData +=  '<td colspan="2"><input type="button"  onclick="getQueryTeacherByPage(\''+servlet +'\',\'pre\',\'' + operationType +'\')" value="前页" ></td>';
+		htmlData +=  '<td colspan="2"><input type="button"  onclick="getQueryTeacherByPage(\''+servlet +'\',\'next\',\'' + operationType +'\')" value="次页" ></td>';
+		htmlData +=  '<td colspan="2"><input type="button"  onclick="getQueryTeacherByPage(\''+servlet +'\',\'last\',\'' + operationType +'\')" value="尾页" ></td>';
+		htmlData +=  '<td colspan="2"><input type="number" id="pageIndex">';
+		htmlData +=  '<input type="button" onclick="getQueryTeacherByPage(\''+servlet +'\', getCustomPageIndex(),\'' + operationType +'\')" value="指定页" ></td>';
+	}
+	$("#t2").html(htmlData);
+}
+
 
 function getEecUserInfo(servlet, forward, operationType){
-	showInfo(operationType);
-	
+	var postData = {
+			action:"getQueryTheacher",
+			// 分页对象存储在session中的key， 本来考虑通过传参，锁定不同的分页对象，
+			// 不同人需求不同，暂时先各自按自己key分页, 这里去掉，暂时后台进行配置
+			// sqlPageMapKey:"teacherPage",  
+			pageIndex: forward, // 页面跳转参数
+			roleId:$("#roleId").val(),
+			classId:$("#classId").val(),
+			id:$("#id").val(),
+			name:$("#name").val()
+	};
 	$.post(
 			servlet,
-			{
-				action:"getQueryTheacher",
-				// 分页对象存储在session中的key， 本来考虑通过传参，锁定不同的分页对象，
-				// 不同人需求不同，暂时先各自按自己key分页
-				sqlPageMapKey:"teacherPage",  
-				pageIndex: forward, // 页面跳转参数
-				roleId:$("#roleId").val()=="postAll"?undefined:$("#roleId").val(),
-				classId:$("#classId").val()=="classAll"?undefined:$("#roleId").val(),
-				id:$("#id").val(),
-				name:$("#name").val()
-			},
+			postData,
 			function(data){
 				//console.log("数据解析支持成功");
 				console.log(data);
-				var eecUsers = eval(data);
-				var htmlData = "";
-				htmlData +=	'<tr bgcolor="#8FBC8F">';
-				htmlData += '<td>序号</td><td>班级</td><td>学号</td><td>姓名</td><td>性别</td>';
-				htmlData += '<td>年龄</td><td>邮箱</td><td>手机号</td><td>职务</td>';
-				if(!(operationType === "query")){
-					htmlData += "<td>操作</td>";
-					console.log("添加操作")
-				}
-				
-				htmlData += '</tr>';
-				if(eecUsers == null || eecUsers.length == 0){
-					htmlData += "<tr >";
-					htmlData += '<td colspan="12">没有获取到数据</td>';
-					htmlData += "</tr>";
-				}else{
-					
-					$.each(eecUsers ,function(i){
-						htmlData += "<tr id=\"usd" + (i+1) + "\">";
-						htmlData += "<td>" + (i+1)  +"</td>";
-						htmlData += "<td>" + eecUsers[i].classId  +"</td>";
-						htmlData += "<td>" + eecUsers[i].id  +"</td>";
-						htmlData += "<td>" + eecUsers[i].name  +"</td>";
-						htmlData += "<td>" + eecUsers[i].sex  +"</td>";
-						htmlData += "<td>" + eecUsers[i].age  +"</td>";
-						htmlData += "<td>" + eecUsers[i].email  +"</td>";
-						htmlData += "<td>" + eecUsers[i].telephone  +"</td>";
-						htmlData += "<td>" + eecUsers[i].roleName  +"</td>";
-						if(operationType == "delete"){
-							//htmlData += "<td><a href=\"" + servlet +"?action=deleteTheacher&id="+ eecUsers[i].id +"\">删除</a></td>";
-							htmlData += '<td><a href="#" onclick="return '
-							htmlData += 'deleteInfo(\'' +servlet+'\', \'#usd'+ (i+1) +'\',' + eecUsers[i].id +')" >删除</a></td>';
-							
-						}
-						if(operationType == "update"){
-							htmlData += '<td><a href="#" onclick="return '
-							htmlData += 'updateInfo(\'' +servlet+'\', \'#usd'+ (i+1) +'\',' + eecUsers[i].id +')" >删除</a></td>';
-						}
-						
-						htmlData += "</tr>";
-					})
-					
-					htmlData +=  '<td colspan="2"><input type="button"  onclick="getEecUserInfo(\''+servlet +'\',\'first\',\'' + operationType +'\' )" value="首页" ></td>';
-					htmlData +=  '<td colspan="2"><input type="button"  onclick="getEecUserInfo(\''+servlet +'\',\'pre\',\'' + operationType +'\')" value="前页" ></td>';
-					htmlData +=  '<td colspan="2"><input type="button"  onclick="getEecUserInfo(\''+servlet +'\',\'next\',\'' + operationType +'\')" value="次页" ></td>';
-					htmlData +=  '<td colspan="2"><input type="button"  onclick="getEecUserInfo(\''+servlet +'\',\'last\',v' + operationType +'\')" value="尾页" ></td>';
-					htmlData +=  '<td colspan="2"><input type="number" id="pageIndex">';
-					htmlData +=  '<input type="button" onclick="getEecUserInfo(getCustomPageIndex())" value="指定页" ></td>';
-				}
-				$("#t2").html(htmlData);
+				QueryShowHtml(data, operationType);
 			},
 			"JSON"
-		);
+	);
 }
+
+function getQueryTeacherByPage(servlet, forward, operationType){
+	var postData = {
+			action:"getQueryTheacherByPage",
+			pageIndex: forward, // 页面跳转参数
+	};
+	$.post(
+			servlet,
+			postData,
+			function(data){
+				QueryShowHtml(data, operationType);
+			},
+			"JSON"
+	);
+}
+
+
+

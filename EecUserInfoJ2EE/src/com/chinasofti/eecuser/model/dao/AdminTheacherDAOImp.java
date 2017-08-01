@@ -105,7 +105,7 @@ public class AdminTheacherDAOImp implements IAdminTheacherDAO {
 			conditionStr += " AND u.eec_id=" + id;
 		}
 		if(name != null){
-			conditionStr += " AND u.eec_name='" + name +"'";
+			conditionStr += " AND u.eec_name LIKE '%" + name +"%'";
 		}
 		return conditionStr;
 	}

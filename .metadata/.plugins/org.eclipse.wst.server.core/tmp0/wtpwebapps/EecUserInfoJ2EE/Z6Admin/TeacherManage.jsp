@@ -20,7 +20,9 @@
 	})
 </script>
 <body>
-	
+	<%
+		request.setAttribute("servlet", request.getContextPath() + "/AdminServlet");
+	%>
 	
 	<div id="d0">
 		<h1>学生信息综合管理系统</h1>
@@ -46,20 +48,20 @@
 				<tr>
 					<td>职位：
 						<select name="roleId" id="roleId">
-							<option value="postAll">全部</option>
+							<option value="">全部</option>
 							<option value="3004">任课老师</option>
 							<option value="3005">班主任</option>
 						</select>
 					</td>
 					<td>班级：
 						<select name="classId" id="classId">
-							<option value="classAll">全部</option>
+							<option value="">全部</option>
 							<option value="20170207">java0207</option>
 							<option value="20170208">java0208</option>
 						</select>
 					</td>
-					<td>&nbsp;&nbsp;学号：<input type="text"  name="id" value=""></td>
-					<td>&nbsp;&nbsp;姓名：<input type="text" name="name" value=""></td>
+					<td>&nbsp;&nbsp;学号：<input type="text" id="id"  name="id" value=""></td>
+					<td>&nbsp;&nbsp;姓名：<input type="text" id="name" name="name" value=""></td>
 					<td>&nbsp;&nbsp;<input type="button" id="query" name="query" value="查 询"></td>
 				</tr>
 			</table>
@@ -81,6 +83,14 @@
 						<td>${teacher.roleName}</td>
 					</tr>
 				</c:forEach>
+				<tr>
+					<td colspan="2"><input type="button"  onclick="getQueryTeacherByPage('${requestScope.servlet}', 'first', 'query' )" value="首页" ></td>
+					<td colspan="2"><input type="button"  onclick="getQueryTeacherByPage('${requestScope.servlet}', 'pre', 'query' )" value="前页" ></td>
+					<td colspan="2"><input type="button"  onclick="getQueryTeacherByPage('${requestScope.servlet}', 'next', 'query' )" value="次页" ></td>
+					<td colspan="2"><input type="button"  onclick="getQueryTeacherByPage('${requestScope.servlet}', 'last', 'query')" value="尾页" ></td>
+					<td colspan="2"><input type="number" id="pageIndex">';
+					<input type="button" onclick="getQueryTeacherByPage('${requestScope.servlet}', getCustomPageIndex(),'query')" value="指定页" ></td>
+				</tr>
 			</table>
 		</div>
 	</div>
