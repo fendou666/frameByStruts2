@@ -1,12 +1,13 @@
 package com.chinasofti.eecuser.model.javabean;
 import java.util.Date;
 public class UserInfo {
+
 //field(21)
   private int id;
   private String name;
   private String nickname;
   private String sex;
-  private Date birthDate;
+  private Date birthday;
   private int age;
   private String constellatory;
   private int managerId;
@@ -83,7 +84,7 @@ public class UserInfo {
 		this.name = name;
 		this.nickname = nickname;
 		this.sex = sex;
-		this.birthDate = birthDate;
+		this.birthday = birthday;
 		this.age = age;
 		this.roleId = roleId;
 		this.classId = classId;
@@ -102,7 +103,7 @@ public class UserInfo {
 		this.name = name;
 		this.nickname = nickname;
 		this.sex = sex;
-		this.birthDate = birthDate;
+		this.birthday = birthday;
 		this.age = age;
 		this.constellatory = constellatory;
 		this.managerId = managerId;
@@ -140,11 +141,11 @@ public class UserInfo {
 	public void setSex(String sex) {
 		this.sex = sex;
 	}
-	public Date getBirthDate() {
-		return birthDate;
+	public Date getBirthday() {
+		return birthday;
 	}
-	public void setBirthDate(Date birthDate) {
-		this.birthDate = birthDate;
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
 	}
 	public int getAge() {
 		return age;
@@ -242,5 +243,18 @@ public class UserInfo {
 	public void setPriviValue(int priviValue) {
 		this.priviValue = priviValue;
 	}
-	
+	@Override
+	public String toString() {
+		return "UserInfo [id=" + id + ", name=" + name + ", nickname="
+				+ nickname + ", sex=" + sex + ", birthday=" + birthday
+				+ ", age=" + age + ", constellatory=" + constellatory
+				+ ", managerId=" + managerId + ", groupId=" + groupId
+				+ ", roleId=" + roleId + ", classId=" + classId
+				+ ", telephone=" + telephone + ", email=" + email
+				+ ", registrationDate=" + registrationDate + ", lastLoginTime="
+				+ lastLoginTime + ", isDelete=" + isDelete + ", headImg="
+				+ headImg + ", roleName=" + roleName + ", groupName="
+				+ groupName + ", priviUpperId=" + priviUpperId
+				+ ", priviValue=" + priviValue + "]";
+	}
 }

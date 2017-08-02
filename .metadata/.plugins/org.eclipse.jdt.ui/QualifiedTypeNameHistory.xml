@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.apache.struts2.interceptor.SessionAware"/>
 <fullyQualifiedTypeName name="org.apache.struts2.interceptor.RequestAware"/>
-<fullyQualifiedTypeName name="org.apache.struts2.interceptor.ServletRequestAware"/>
 <fullyQualifiedTypeName name="com.study.mvc.model.bean.UserInfo"/>
 <fullyQualifiedTypeName name="java.lang.Enum"/>
 <fullyQualifiedTypeName name="com.study.struts2.javabean.Telephone"/>
 <fullyQualifiedTypeName name="com.study.struts2.javabean.Cat"/>
-<fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionSupport"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
-<fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionContext"/>
 <fullyQualifiedTypeName name="java.io.BufferedInputStream"/>
-<fullyQualifiedTypeName name="org.apache.struts2.ServletActionContext"/>
 <fullyQualifiedTypeName name="java.io.BufferedOutputStream"/>
 <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
 <fullyQualifiedTypeName name="java.io.InputStream"/>
@@ -22,7 +17,19 @@
 <fullyQualifiedTypeName name="com.chinasofti.eecuser.model.javabean.TableSqlNeedBase"/>
 <fullyQualifiedTypeName name="com.chinasofti.eecuser.model.service.AdminClassServiceImp"/>
 <fullyQualifiedTypeName name="com.chinasofti.eecuser.model.service.IAdminClassService"/>
-<fullyQualifiedTypeName name="net.sf.json.JSONArray"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
 <fullyQualifiedTypeName name="javax.servlet.annotation.WebServlet"/>
+<fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionContext"/>
+<fullyQualifiedTypeName name="org.apache.struts2.StrutsStatics"/>
+<fullyQualifiedTypeName name="org.apache.struts2.interceptor.ServletRequestAware"/>
+<fullyQualifiedTypeName name="org.apache.struts2.interceptor.ServletResponseAware"/>
+<fullyQualifiedTypeName name="org.apache.struts2.interceptor.SessionAware"/>
+<fullyQualifiedTypeName name="org.apache.struts2.interceptor.ApplicationAware"/>
+<fullyQualifiedTypeName name="com.sun.glass.ui.Application"/>
+<fullyQualifiedTypeName name="org.apache.catalina.core.ApplicationContext"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="javax.servlet.ServletContext"/>
+<fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionSupport"/>
+<fullyQualifiedTypeName name="net.sf.json.JSONArray"/>
+<fullyQualifiedTypeName name="org.apache.struts2.ServletActionContext"/>
 </qualifiedTypeNameHistroy>

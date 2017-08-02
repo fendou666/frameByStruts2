@@ -13,6 +13,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.apache.catalina.core.ApplicationContext;
+
 import net.sf.json.JSONArray;
 
 import com.chinasofti.eecuser.model.javabean.ClassInfo;
@@ -22,6 +24,7 @@ import com.chinasofti.eecuser.model.service.AdminClassServiceImp;
 import com.chinasofti.eecuser.model.service.AdminTheacherServiceImp;
 import com.chinasofti.eecuser.model.service.IAdminClassService;
 import com.chinasofti.eecuser.model.service.IAdminTheacherService;
+import com.sun.glass.ui.Application;
 
 /**
  * Servlet implementation class AdminServlet
@@ -203,6 +206,7 @@ public class AdminServlet extends HttpServlet {
 		List<UserInfo> userList = getDateFromService(request, defaultParam, pageObj);
 		// 将数据写入
 		request.getSession().setAttribute("teacherAllData", userList);
+		request.getSession().setAttribute("teacherPageMax", pageObj.getMaxPageIndex());
 		//request.getRequestDispatcher("/Z6Admin/TeacherManage.jsp").forward(request, response);
 		response.sendRedirect(request.getContextPath() + "/Z6Admin/TeacherManage.jsp"); 
 	}
@@ -214,8 +218,9 @@ public class AdminServlet extends HttpServlet {
     	List<UserInfo> userList = getDateFromService(request, defaultParam, pageObj);
     	// 将数据写入
     	JSONArray fromObject = JSONArray.fromObject(userList);
-    	System.out.println("返回值是" + fromObject.toString());
-    	response.getWriter().write(fromObject.toString());
+    	// Json数据格式验证  http://www.bejson.com/
+    	String result = "{\"pageMaxNum\":"+ pageObj.getMaxPageIndex()+", \"data\":"+ fromObject.toString() +"}";
+    	response.getWriter().write(result);
     }
     private void teacherInfoQuery(HttpServletRequest request, HttpServletResponse response, boolean goPage) throws IOException, ServletException{
     	// 获取默认参数，并进行初始化
@@ -252,6 +257,7 @@ public class AdminServlet extends HttpServlet {
     }
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		String action 		= 	request.getParameter("action");
 		PrintWriter out 	= 	response.getWriter();
 		// 按需请求

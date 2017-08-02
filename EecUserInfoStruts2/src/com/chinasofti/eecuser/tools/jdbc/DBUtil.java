@@ -70,7 +70,7 @@ public class DBUtil {
 	public Connection getConn(){
 		return db.conn;
 	}
-	public  ResultSet queryDate(String sql, ArrayList<Object> objList){
+	public  ResultSet queryData(String sql, ArrayList<Object> objList){
 		ResultSet rs = null;
 		if(errInfo!=null){
 			return rs;
@@ -80,7 +80,7 @@ public class DBUtil {
 			if(objList!=null){
 				for(int i=0; i<objList.size();i++){
 					ps.setObject(i+1, objList.get(i));
-					System.out.println("i对象为" + objList.get(i));
+					//System.out.println("i对象为" + objList.get(i));
 				}
 			}
 			System.out.println("sql执行语句为:" + sql);
@@ -105,9 +105,9 @@ public class DBUtil {
 				}
 			}
 			ret = ps.executeUpdate();
-			System.out.println("增删改执行的sql 是" + sql);
+			//System.out.println("增删改执行的sql 是" + sql);
 		} catch (SQLException e) {
-			errInfo = "增删该sql执行失败";
+			errInfo = "增删该sql执行失败 sql 为:" + sql;
 			System.out.println(errInfo);
 			e.printStackTrace();
 		}

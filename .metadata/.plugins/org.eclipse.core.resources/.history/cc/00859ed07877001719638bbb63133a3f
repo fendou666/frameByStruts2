@@ -1,0 +1,18 @@
+package com.chinasofti.eecuser.controller;
+
+public class AdminTeacherChain extends AdminQueryUtils {
+
+	private static final long serialVersionUID = 1L;
+	
+	
+	@Override
+	public String execute() throws Exception {
+		
+		initTeacherManageDefaultParam(defaultData);
+		
+		
+		
+		return SUCCESS;
+	}
+	
+}

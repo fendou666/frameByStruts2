@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.devMode" value="true"></constant>
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<package name="mypak" namespace="/" extends="struts-default">
+		<action name="PropertyAct" class="com.study.struts2.action.PropertyAction"  method="test">
+			<!-- 这里必须是success 因为系统默认success 成功  -->
+			<result name="success">showObj.jsp</result>
+		</action>
+		<action name="PojoAct" class="com.study.struts2.action.PojoAction">
+			<!-- 这里必须是success 因为系统默认success 成功  -->
+			<result name="success">showObj.jsp</result>
+		</action>
+		<action name="PojoImpAct" class="com.study.struts2.action.PojoModelImpAction"  method="test">
+			<!-- 这里必须是success 因为系统默认success 成功  -->
+			<result name="success">showObj.jsp</result>
+		</action>
+	</package>
+	
+</struts>
+    
+    

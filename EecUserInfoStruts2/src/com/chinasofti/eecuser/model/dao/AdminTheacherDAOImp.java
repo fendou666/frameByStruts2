@@ -4,11 +4,13 @@ import java.sql.CallableStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import oracle.jdbc.OracleTypes;
 
 import com.chinasofti.eecuser.model.javabean.SqlDataPage;
+import com.chinasofti.eecuser.model.javabean.TableSqlNeed;
 import com.chinasofti.eecuser.model.javabean.UserInfo;
 import com.chinasofti.eecuser.tools.jdbc.DBUtil;
 
@@ -18,10 +20,10 @@ public class AdminTheacherDAOImp implements IAdminTheacherDAO {
 	@Override
 	public List<UserInfo> queryEecUserOutClass(int id, String name,
 			SqlDataPage AddteacherPage) {
-		String conditionStr = " u.class_id is null AND u.manager_id is null";
+		String conditionStr = " AND u.class_id is null AND u.manager_id is null";
 		if(id!=-1){
 			conditionStr += " AND u.id="+id;
-		}else if(name!=null){
+		}else if(name!=null && !name.equals("all")){
 			conditionStr += " AND u.name="+name;
 		}
 		System.out.println("条件执行语句是" + conditionStr);
@@ -103,7 +105,7 @@ public class AdminTheacherDAOImp implements IAdminTheacherDAO {
 			conditionStr += " AND u.eec_id=" + id;
 		}
 		if(name != null){
-			conditionStr += " AND u.eec_name='" + name +"'";
+			conditionStr += " AND u.eec_name LIKE '%" + name +"%'";
 		}
 		return conditionStr;
 	}
@@ -122,7 +124,9 @@ public class AdminTheacherDAOImp implements IAdminTheacherDAO {
 			// 函数存储过程通过这中方式调用
 			CallableStatement  pc = DBUtil.getJDBC().getConn().prepareCall(sql);
 			pc.registerOutParameter(1, OracleTypes.CURSOR);
+			System.out.println("teacherPage.getPageMaxRows()" + teacherPage.getPageMaxRows());
 			pc.setObject(2, teacherPage.getPageMaxRows());
+			System.out.println("teacherPage.getCurrentPage()" + teacherPage.getCurrentPage());
 			pc.setObject(3, teacherPage.getCurrentPage());
 			pc.setObject(4, conditionStr);
 			pc.registerOutParameter(5, OracleTypes.INTEGER);
@@ -138,6 +142,9 @@ public class AdminTheacherDAOImp implements IAdminTheacherDAO {
 				userList = new ArrayList<UserInfo>();
 				
 				while(rs.next()){
+					if(rs.isFirst()){
+						System.out.println("数据库返回多条数据第一次执行");
+					}
 					System.out.println("id 为 "  + rs.getString("eec_id"));
 					System.out.println("class_id 为：" + rs.getString("class_Id"));
 					userList.add(new UserInfo(
@@ -162,9 +169,144 @@ public class AdminTheacherDAOImp implements IAdminTheacherDAO {
 		return userList;  
  	}
 
+	public List<UserInfo> queryData() {
+		// where 需要的条件语句
+		String conditionStr = " u.role_id=r.role_id  AND isdelete=0 AND u.role_id>=3004 AND u.role_id<=3005 AND u.role_id<=3004 AND u.eec_id=170000003 AND u.eec_name='谢文兵'";
+		// 返回的用户列表
+		List<UserInfo> userList = null;
+		String sql = "{?=call eecAdminQueryTeacherPageRows(?,?,?,?)}";
+		
+		try {
+			// 函数存储过程通过这中方式调用
+			CallableStatement  pc = DBUtil.getJDBC().getConn().prepareCall(sql);
+			pc.registerOutParameter(1, OracleTypes.CURSOR);
+			pc.setObject(2, 10);
+			pc.setObject(3, 1);
+			pc.setObject(4, conditionStr);
+			pc.registerOutParameter(5, OracleTypes.INTEGER);
+			
+			pc.execute();
+			
+			ResultSet rs = (ResultSet)pc.getObject(1);
+			if(rs!=null){
+				// 设置总记录条数
+				int recordAll = ((int)pc.getObject(5));
+				System.out.println("查询到的数据 条数是" + recordAll);
+				// 设置最大页码
+				userList = new ArrayList<UserInfo>();
+				
+				while(rs.next()){
+					if(rs.isFirst()){
+						System.out.println("数据库返回多条数据第一次执行");
+					}
+					System.out.println("id 为 "  + rs.getString("eec_id"));
+					System.out.println("class_id 为：" + rs.getString("class_Id"));
+					userList.add(new UserInfo(
+							Integer.parseInt(rs.getString("class_Id")==null?"0000":rs.getString("class_Id")),
+							Integer.parseInt(rs.getString("EEC_Id")),
+							rs.getString("EEC_Name"),
+							rs.getString("sex"),
+							Integer.parseInt(rs.getString("age")),
+							rs.getString("email"),
+							Long.parseLong(rs.getString("telephone")),
+							rs.getString("role_name")
+					));
+				}
+			}
+			System.out.println("获取到sql数量是" + pc.getObject(5));
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		if (userList!=null && userList.size() == 0){
+			userList = null;
+		}
+		return userList;  
+ 	}
+	
+	public List<UserInfo> queryDataAnother() {
+		String [] tableList 		= {"eecuser", "eecrole"};
+		String [] aliasTableList 	= {"u", "r"};
+		HashMap<String, String[]> tablesNeedFilds	= new HashMap<String, String[]>();
+		tablesNeedFilds.put("u", new String[]{"class_Id", "EEC_Id", "EEC_Name", "sex", "age", 
+			"email", "telephone"});
+		tablesNeedFilds.put("r", new String[]{"role_name"});
+		String sqlCountFild 		= "eec_id";	// 统计总数量使用的那个字段
+		String sqlOrderByFild 		= "u.eec_id"; // 条件查询排序的字段
+		TableSqlNeed test = new TableSqlNeed();
+		test.initAllSqlStrData(tableList, aliasTableList, tablesNeedFilds, sqlCountFild, sqlOrderByFild);
+		
+		// where 需要的条件语句
+		String conditionStr = " u.role_id=r.role_id  AND isdelete=0 AND u.role_id>=3004 AND u.role_id<=3005 AND u.role_id<=3004 AND u.eec_id=170000003 AND u.eec_name='谢文兵'";
+		// 返回的用户列表
+		List<UserInfo> userList = null;
+		String sql = "{?=call eecQueryPageRows(?,?,?,?,?,?,?,?,?,?)}";
+//		v_maxPageRows in number,
+//        v_currentPageNumber in number,
+//        v_sqlCountFild      in varchar2, --eec_id
+//        v_sqlOrderByFild    in varchar2, --eec_id
+//        v_condition         in varchar2, -- condition字段
+//        v_sqlAliasNeedFilds in varchar2, --
+//        v_sqlAliasTableStr  in varchar2, --eecuser u, eecrole r
+//        v_sqlNeedFilds      in varchar2, --
+//        v_sqlTableStr       in varchar2, --eecuser u, eecrole r
+//        v_count             out number
+		try {
+			// 函数存储过程通过这中方式调用
+			CallableStatement  pc = DBUtil.getJDBC().getConn().prepareCall(sql);
+			pc.registerOutParameter(1, OracleTypes.CURSOR);
+			pc.setObject(2, 10);
+			pc.setObject(3, 1);
+			pc.setObject(4, test.getSqlCountFild());
+			pc.setObject(5, test.getSqlOrderByFild());
+			pc.setObject(6, conditionStr);
+			pc.setObject(7, test.getSqlAliasNeedFilds());
+			pc.setObject(8, test.getSqlAliasTableStr());
+			pc.setObject(9, test.getSqlNeedFilds());
+			pc.setObject(10, test.getSqlTableStr());
+			pc.registerOutParameter(11, OracleTypes.INTEGER);
+			pc.execute();
+			
+			ResultSet rs = (ResultSet)pc.getObject(1);
+			if(rs!=null){
+				// 设置总记录条数
+				int recordAll = ((int)pc.getObject(11));
+				System.out.println("查询到的数据 条数是" + recordAll);
+				// 设置最大页码
+				userList = new ArrayList<UserInfo>();
+				
+				while(rs.next()){
+					if(rs.isFirst()){
+						System.out.println("数据库返回多条数据第一次执行");
+					}
+					System.out.println("id 为 "  + rs.getString("eec_id"));
+					System.out.println("class_id 为：" + rs.getString("class_Id"));
+					userList.add(new UserInfo(
+							Integer.parseInt(rs.getString("class_Id")==null?"0000":rs.getString("class_Id")),
+							Integer.parseInt(rs.getString("EEC_Id")),
+							rs.getString("EEC_Name"),
+							rs.getString("sex"),
+							Integer.parseInt(rs.getString("age")),
+							rs.getString("email"),
+							Long.parseLong(rs.getString("telephone")),
+							rs.getString("role_name")
+					));
+				}
+			}
+			System.out.println("获取到sql数量是" + pc.getObject(11));
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		if (userList!=null && userList.size() == 0){
+			userList = null;
+		}
+		return userList;  
+ 	}
+	
 	@Override
 	public boolean deleteTheacher(int id) {
-		String sql = "DELETE FROM eecuser WHERE u.eec_id=?";
+		// 这里不可以删除sql数据
+		//String sql = "DELETE FROM eecuser WHERE u.eec_id=?";
+		String sql = "UPDATE eecuser SET isdelete=1 WHERE eec_id=?";
 		ArrayList<Object> objList = new ArrayList<Object>();
 		objList.add(id);
 		int delRows = DBUtil.getJDBC().updateSql(sql, objList);
@@ -177,6 +319,7 @@ public class AdminTheacherDAOImp implements IAdminTheacherDAO {
 
 	@Override
 	public boolean updateTheacher(UserInfo u) {
+		// TODO 这里是否需要将 isdelete写上?, 起始查询的时候已经是isdelete进行了筛选
 		String sql = "UPDATE eecuser u SET u.role_id=? WHERE u.eec_id=?";
 		ArrayList<Object> objList = new ArrayList<Object>();
 		objList.add(u.getRoleId());
@@ -188,7 +331,9 @@ public class AdminTheacherDAOImp implements IAdminTheacherDAO {
 			return true;
 		}
 	}
+	
+	
 	public static void main(String[] args) {
-		System.out.println("int 最大值：" + Integer.MAX_VALUE);
+		new AdminTheacherDAOImp().queryDataAnother();
 	}
 }
