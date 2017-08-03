@@ -52,7 +52,7 @@
 		</div>
 		<div id="d3">
 			<div id="d31"><a href="#">个人信息</a></div>
-			<div id="d32"><a href="<%=request.getContextPath() %>/AdminServlet?action=gotoTeacherManage">教师信息管理</a></div>
+			<div id="d32"><a href="<%=request.getContextPath() %>/gotoTeacherManager">教师信息管理</a></div>
 			<div id="d33"><a href="ClassManage.jsp">班级管理</a></div>
 		</div>
 		<di v id="d4">

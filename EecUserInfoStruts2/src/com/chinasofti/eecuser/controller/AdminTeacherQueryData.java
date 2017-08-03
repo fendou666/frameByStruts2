@@ -17,7 +17,8 @@ import com.chinasofti.eecuser.model.javabean.UserInfo;
 public class AdminTeacherQueryData extends AdminQueryUtils {
 
 	private static final long serialVersionUID = 1L;
-	private String result;
+	private String result="";
+	
 	
 	public String getResult() {
 		return result;
@@ -25,7 +26,9 @@ public class AdminTeacherQueryData extends AdminQueryUtils {
 	public void setResult(String result) {
 		this.result = result;
 	}
-
+	
+	
+	
 	@Override
 	public String execute() throws Exception {
 		HttpServletRequest request = ServletActionContext.getRequest();
@@ -36,6 +39,7 @@ public class AdminTeacherQueryData extends AdminQueryUtils {
 		initTeacherManageDefaultParam(defaultData);
 		if(!paramDataCheck(request, defaultData)){
 			result = "[]";
+			System.out.println("result:" + result);
     		return SUCCESS;
     	}
 		
@@ -47,8 +51,8 @@ public class AdminTeacherQueryData extends AdminQueryUtils {
     	// 将数据写入
     	JSONArray fromObject = JSONArray.fromObject(userList);
     	// Json数据格式验证  http://www.bejson.com/
-    	String result = "{\"pageMaxNum\":"+ pageObj.getMaxPageIndex()+", \"data\":"+ fromObject.toString() +"}";
-		
+    	result = "{\"pageMaxNum\":"+ pageObj.getMaxPageIndex()+", \"data\":"+ fromObject.toString() +"}";
+    	System.out.println("result:" + result);
     	return SUCCESS;
 	}
 	

@@ -10,7 +10,7 @@
 	<%
 		String action = request.getParameter("userPermission");
 		action="0";
-		request.getRequestDispatcher("LoginServlet?userPermission="+action).forward(request, response);
+		request.getRequestDispatcher("chainPage?userPermission="+action).forward(request, response);
 		//request.getRequestDispatcher(request.getContextPath() +"/Z6Admin/Admin.jsp").forward(request, response);
 	%>
 </body>

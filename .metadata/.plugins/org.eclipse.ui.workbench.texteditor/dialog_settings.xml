@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="getPageMode" key="selection"/>
+		<item value="getEecUserInfo" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="getEecUserInfo"/>
 			<item value="getPageMode"/>
 			<item value="queryDataByCondition"/>
 			<item value="headteacher_name"/>
@@ -15,7 +16,6 @@
 			<item value="headteacher_id"/>
 			<item value="theteacher_id"/>
 			<item value="theTeacherName"/>
-			<item value="UserInfo"/>
 		</list>
 		<list key="replacehistory">
 			<item value="headTeacher_name"/>

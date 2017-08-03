@@ -12,10 +12,9 @@
 <script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" src="js/adminOperation.js"></script>
 <script type="text/javascript">
-	var servlet = "<%=request.getContextPath()%>/AdminServlet";
 	$(function(){
 		$("#query").click(function(){
-			getEecUserInfo(servlet, "first", "query");
+			getEecUserInfo("first");
 		})
 	})
 </script>
@@ -37,7 +36,7 @@
 		<div id="d3">
 			<div id="d31"><a href="#">个人信息</a></div>
 			<div id="d32"><a href="ClassManage.jsp">班级管理</a></div>
-			<div id="d33"><a href="<%=request.getContextPath() %>/AdminServlet?action=gotoTeacherManage">教师信息查看</a></div>
+			<div id="d33"><a href="<%=request.getContextPath() %>/gotoTeacherManager">教师信息查看</a></div>
 			<div id="d34"><a href="TeacherAdd.jsp">添加教师</a></div>
 			<div id="d35"><a href="TeacherDEL.jsp">罢免教师</a></div>
 			<div id="d36"><a href="TeacherUPD.jsp">教师信息更改</a></div>

@@ -147,7 +147,7 @@
 
 	function QueryShowHtml(servlet, data, operationType){
 		console.log(data);
-		var recData = eval(data);
+		var recData = eval("(" +data +")");
 		var eecUsers = recData.data;
 		var htmlData = "";
 		htmlData +=	'<tr bgcolor="#8FBC8F">';
@@ -204,7 +204,6 @@
 	
 	function getEecUserInfo(servlet, forward, operationType){
 		var postData = {
-				action:"AdminTheacherQueryAction",
 				// 分页对象存储在session中的key， 本来考虑通过传参，锁定不同的分页对象，
 				// 不同人需求不同，暂时先各自按自己key分页, 这里去掉，暂时后台进行配置
 				// sqlPageMapKey:"teacherPage",  
@@ -215,12 +214,12 @@
 				name:$("#name").val()
 		};
 		$.post(
-				servlet,
+				"AdminTheacherQueryAction",
 				postData,
 				function(data){
 					//console.log("数据解析支持成功");
 					console.log(data);
-					QueryShowHtml(servlet, data, operationType);
+					QueryShowHtml("AdminTheacherQueryPageAction", data, operationType);
 				},
 				"JSON"
 		);
@@ -228,15 +227,14 @@
 	
 	function getQueryTeacherByPage(servlet, forward, operationType){
 		var postData = {
-				action:"getQueryTheacherByPage",
-				pageIndex: forward, // 页面跳转参数
+				pageIndex: forward // 页面跳转参数
 		};
 		$.post(
-				servlet,
+				"AdminTheacherQueryPageAction",
 				postData,
 				function(data){
 					console.log(data);
-					QueryShowHtml(servlet, data, operationType);
+					QueryShowHtml("AdminTheacherQueryPageAction", data, operationType);
 				},
 				"JSON"
 		);
