@@ -24,3 +24,10 @@
 127.0.0.1 - - [07/Aug/2017:12:21:45 +0800] "GET / HTTP/1.1" 404 957
 0:0:0:0:0:0:0:1 - - [07/Aug/2017:12:21:46 +0800] "GET /EecUserInfoStruts2Spring/Z6Admin/Admin.jsp HTTP/1.1" 200 1060
 0:0:0:0:0:0:0:1 - - [07/Aug/2017:12:21:47 +0800] "GET /EecUserInfoStruts2Spring/gotoTeacherManager HTTP/1.1" 200 9688
+127.0.0.1 - - [07/Aug/2017:14:26:05 +0800] "GET / HTTP/1.1" 404 957
+0:0:0:0:0:0:0:1 - - [07/Aug/2017:14:26:10 +0800] "GET /EecUserInfoStruts2Spring/Z6Admin/Admin.jsp HTTP/1.1" 200 1060
+0:0:0:0:0:0:0:1 - - [07/Aug/2017:14:26:11 +0800] "GET /favicon.ico HTTP/1.1" 404 979
+0:0:0:0:0:0:0:1 - - [07/Aug/2017:14:26:13 +0800] "GET /EecUserInfoStruts2Spring/gotoTeacherManager HTTP/1.1" 200 9458
+127.0.0.1 - - [07/Aug/2017:14:27:46 +0800] "GET / HTTP/1.1" 404 957
+0:0:0:0:0:0:0:1 - - [07/Aug/2017:14:27:47 +0800] "GET /EecUserInfoStruts2Spring/Z6Admin/Admin.jsp HTTP/1.1" 200 1060
+0:0:0:0:0:0:0:1 - - [07/Aug/2017:14:27:51 +0800] "GET /EecUserInfoStruts2Spring/gotoTeacherManager HTTP/1.1" 200 9458

@@ -181,7 +181,7 @@ public abstract class AdminQueryUtils extends ActionSupport {
     public List<UserInfo> getDateFromService(HttpServletRequest request,
 			HashMap<String, Object> defaultParam,
 			SqlDataPage pageObj){
-    	IAdminTheacherService adminTheacherService = new AdminTheacherServiceImp();
+    	System.out.println("adminTheacherService:" +adminTheacherService);
     	return  adminTheacherService.queryDataByCondition
 				((int)defaultParam.get("roleId"), 
 				 (int)defaultParam.get("classId"), 
