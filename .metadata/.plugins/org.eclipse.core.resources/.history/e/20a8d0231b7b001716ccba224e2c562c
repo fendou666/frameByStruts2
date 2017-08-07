@@ -1,0 +1,10 @@
+package javaInterfaceTest;
+
+public class Test {
+
+	
+	public void testInterfaceParam(){
+		
+	}
+	
+}

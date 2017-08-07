@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="getEecUserInfo" key="selection"/>
+		<item value="dbUtil" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="DBUtil.getJDBC()"/>
 			<item value="getEecUserInfo"/>
 			<item value="getPageMode"/>
 			<item value="queryDataByCondition"/>
@@ -15,9 +16,9 @@
 			<item value="theteacher_name"/>
 			<item value="headteacher_id"/>
 			<item value="theteacher_id"/>
-			<item value="theTeacherName"/>
 		</list>
 		<list key="replacehistory">
+			<item value="dbUtil"/>
 			<item value="headTeacher_name"/>
 			<item value="theTeacher_name"/>
 			<item value="headTeacher_id"/>
@@ -25,7 +26,6 @@
 			<item value="theTheacherName"/>
 			<item value="headTheacher_id"/>
 			<item value="theTheacher_id"/>
-			<item value="ClassInfo"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

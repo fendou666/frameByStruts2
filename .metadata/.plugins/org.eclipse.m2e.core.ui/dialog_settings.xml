@@ -53,6 +53,7 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.eec.EecUserINfoSpringMaven"/>
 			<item value="com.eec.abc"/>
 			<item value="com.eec.ess"/>
 		</list>
@@ -60,6 +61,7 @@
 			<item value="com.eec"/>
 		</list>
 		<list key="artifactId">
+			<item value="EecUserINfoSpringMaven"/>
 			<item value="abc"/>
 			<item value="ess"/>
 		</list>

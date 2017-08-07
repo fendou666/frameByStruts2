@@ -1,0 +1,29 @@
+package com.eec.test;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class SpringTest {
+	
+	
+	@Before
+	public void initConfig(){
+		
+	}
+	
+	@Test
+	public void testDButil(){
+		
+	}
+	
+	@Test
+	public void testDAO(){
+		
+	}
+	
+	@Test
+	public void testService(){
+		
+	}
+	
+}

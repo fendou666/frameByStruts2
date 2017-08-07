@@ -12,15 +12,22 @@ import com.chinasofti.eecuser.tools.jdbc.DBUtil;
 public class StudentDAOImp implements IStudentDAO {
 	
 	private UserInfo userInfo=null;
-	
+	private DBUtil dbUtil;
+	public DBUtil getDbUtil() {
+		return dbUtil;
+	}
+
+	public void setDbUtil(DBUtil dbUtil) {
+		this.dbUtil = dbUtil;
+	}
 	public UserInfo queryUserById(int eecId) {
 		String sql="select u.eec_name,u.eec_id,u.sex,u.birthday,u.telephone,u.email,u.class_Id,r.role_id,r.role_name"
 					+ " from eecuser u ,eecrole r where u.role_id = r.role_id and u.eec_id=?";
 		
 		PreparedStatement ps;
 		try {
-			System.out.println("DAO:"+DBUtil.getJDBC().getConn());
-			ps = DBUtil.getJDBC().getConn().prepareStatement(sql);
+			System.out.println("DAO:"+dbUtil.getConn());
+			ps = dbUtil.getConn().prepareStatement(sql);
 			
 			ps.setInt(1, eecId);
 			ResultSet rs = ps.executeQuery();
@@ -55,7 +62,7 @@ public class StudentDAOImp implements IStudentDAO {
 	
 		PreparedStatement ps;
 		try {
-			ps = DBUtil.getJDBC().getConn().prepareStatement(sql);
+			ps = dbUtil.getConn().prepareStatement(sql);
 			ps.setInt(1, classId);
 			ResultSet rs = ps.executeQuery();
 			while(rs.next()){
@@ -91,7 +98,7 @@ public class StudentDAOImp implements IStudentDAO {
 	
 		PreparedStatement ps;
 	try {
-		ps = DBUtil.getJDBC().getConn().prepareStatement(sql);
+		ps = dbUtil.getConn().prepareStatement(sql);
 		ps.setLong(1, telephone);
 		ps.setString(2, email);
 		ps.setInt(3, eecId);
@@ -131,7 +138,7 @@ public class StudentDAOImp implements IStudentDAO {
 		System.out.println("queryUserByConditions========sql==:"+sql);
 		PreparedStatement ps;
 		try {
-			ps = DBUtil.getJDBC().getConn().prepareStatement(sql);
+			ps = dbUtil.getConn().prepareStatement(sql);
 			ResultSet rs = ps.executeQuery();
 			while(rs.next()){
 				if(rs.isFirst()){

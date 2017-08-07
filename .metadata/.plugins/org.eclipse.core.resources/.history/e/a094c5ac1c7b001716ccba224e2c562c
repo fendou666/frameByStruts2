@@ -1,0 +1,23 @@
+package javaInterfaceTest;
+
+public class Test {
+
+	
+	public String getInterfaceValue(TestParam testParam, TestParam2 testParam2){
+		
+	}
+	
+	
+	public void testInterfaceParam(){
+		String msg = "我是准备传递给interface的值";
+		
+		String ifcMsg = null;
+		TestParam testParam = new TestParam() {
+			@Override
+			public String getStr() {
+				return msg;
+			}
+		};
+	}
+	
+}

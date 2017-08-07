@@ -10,6 +10,14 @@ import com.chinasofti.eecuser.model.javabean.UserInfo;
 public class AdminTheacherServiceImp implements IAdminTheacherService {
 	private IAdminTheacherDAO adminTheacherDAO;
 	
+	public IAdminTheacherDAO getAdminTheacherDAO() {
+		return adminTheacherDAO;
+	}
+
+	public void setAdminTheacherDAO(IAdminTheacherDAO adminTheacherDAO) {
+		this.adminTheacherDAO = adminTheacherDAO;
+	}
+
 	public AdminTheacherServiceImp(){
 		adminTheacherDAO = new AdminTheacherDAOImp();
 	}

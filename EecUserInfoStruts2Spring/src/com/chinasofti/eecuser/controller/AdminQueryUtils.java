@@ -20,6 +20,15 @@ public abstract class AdminQueryUtils extends ActionSupport {
 
 	private static final long serialVersionUID = 1L;
 	private HashMap<String, String> queryConf;
+	private IAdminTheacherService adminTheacherService;
+	
+	public IAdminTheacherService getAdminTheacherService() {
+		return adminTheacherService;
+	}
+	public void setAdminTheacherService(IAdminTheacherService adminTheacherService) {
+		this.adminTheacherService = adminTheacherService;
+	}
+	
 	
 	public AdminQueryUtils() {
 		queryConf = new HashMap<String, String>();

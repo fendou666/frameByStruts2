@@ -17,7 +17,14 @@ import com.chinasofti.eecuser.model.javabean.ClassInfo;
 import com.chinasofti.eecuser.tools.jdbc.DBUtil;
 
 public class AdminClassDAOImp implements IAdminClassDAO {
+	private DBUtil dbUtil;
+	public DBUtil getDbUtil() {
+		return dbUtil;
+	}
 
+	public void setDbUtil(DBUtil dbUtil) {
+		this.dbUtil = dbUtil;
+	}
 	
 	
 //	@Override
@@ -27,7 +34,7 @@ public class AdminClassDAOImp implements IAdminClassDAO {
 //		
 //		try {
 //			// 函数存储过程通过这中方式调用
-//			CallableStatement  pc = DBUtil.getJDBC().getConn().prepareCall(sql);
+//			CallableStatement  pc = dbUtil.getConn().prepareCall(sql);
 //			pc.registerOutParameter(1, OracleTypes.CURSOR);
 //			pc.setObject(2, classPage.getPageMaxRows());
 //			pc.setObject(3, classPage.getCurrentPage());
@@ -72,7 +79,7 @@ public class AdminClassDAOImp implements IAdminClassDAO {
 		objList.add(newClass.getTheTeacherId());
 		objList.add(newClass.getHeadTeacherId());
 		objList.add(newClass.getDescribe());
-		int insertRows = DBUtil.getJDBC().updateSql(sql, objList);
+		int insertRows = dbUtil.updateSql(sql, objList);
 		if(insertRows == 0){
 			return false;
 		}else{
@@ -85,7 +92,7 @@ public class AdminClassDAOImp implements IAdminClassDAO {
 		String sql = "DELETE FROM CLASS WHERE class_id=?";
 		ArrayList<Object> objList = new ArrayList<Object>();
 		objList.add(20170207);
-		int delRows = DBUtil.getJDBC().updateSql(sql, objList);
+		int delRows = dbUtil.updateSql(sql, objList);
 		if(delRows == 0){
 			return false;
 		}else{
@@ -133,7 +140,7 @@ public class AdminClassDAOImp implements IAdminClassDAO {
 		String sql = "{?=call eecQueryPageRows(?,?,?,?,?,?,?,?,?,?)}";
 		try {
 			// 函数存储过程通过这中方式调用
-			CallableStatement  pc = DBUtil.getJDBC().getConn().prepareCall(sql);
+			CallableStatement  pc = dbUtil.getConn().prepareCall(sql);
 			pc.registerOutParameter(1, OracleTypes.CURSOR);
 			// 每页10行
 			pc.setObject(2, 10);

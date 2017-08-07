@@ -1,0 +1,12 @@
+<classpath>
+  <container id="EecUserInfoStruts2!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="E:/1java/frameByStruts2/EecUserInfoStruts2/WebContent/WEB-INF/lib/org.springframework.jdbc-3.0.2.RELEASE.jar">
+      <source-attachment-path>D:/Downloads/spring-framework-3.0.2.RELEASE.zip</source-attachment-path>
+    </entry>
+  </container>
+  <container id="EecUserInfoSpringJdbcTmp!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="E:/1java/frameByStruts2/EecUserInfoSpringJdbcTmp/WebContent/WEB-INF/lib/org.springframework.jdbc-3.0.2.RELEASE.jar">
+      <source-attachment-path>D:/Downloads/spring-framework-3.0.2.RELEASE.zip</source-attachment-path>
+    </entry>
+  </container>
+</classpath>

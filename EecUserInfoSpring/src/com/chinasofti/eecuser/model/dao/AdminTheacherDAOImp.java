@@ -15,8 +15,15 @@ import com.chinasofti.eecuser.model.javabean.UserInfo;
 import com.chinasofti.eecuser.tools.jdbc.DBUtil;
 
 public class AdminTheacherDAOImp implements IAdminTheacherDAO {
+	private DBUtil dbUtil;
+	public DBUtil getDbUtil() {
+		return dbUtil;
+	}
 
-	
+	public void setDbUtil(DBUtil dbUtil) {
+		this.dbUtil = dbUtil;
+	}
+
 	@Override
 	public List<UserInfo> queryEecUserOutClass(int id, String name,
 			SqlDataPage AddteacherPage) {
@@ -32,7 +39,7 @@ public class AdminTheacherDAOImp implements IAdminTheacherDAO {
 		
 		try {
 			// 函数存储过程通过这中方式调用
-			CallableStatement  pc = DBUtil.getJDBC().getConn().prepareCall(sql);
+			CallableStatement  pc = dbUtil.getConn().prepareCall(sql);
 			pc.registerOutParameter(1, OracleTypes.CURSOR);
 			pc.setObject(2, AddteacherPage.getPageMaxRows());
 			pc.setObject(3, AddteacherPage.getCurrentPage());
@@ -80,7 +87,7 @@ public class AdminTheacherDAOImp implements IAdminTheacherDAO {
 		objList.add(theacherType);
 		objList.add(classId);
 		objList.add(id);
-		int updRows = DBUtil.getJDBC().updateSql(sql, objList);
+		int updRows = dbUtil.updateSql(sql, objList);
 		if(updRows==0){
 			return false;
 		}else{
@@ -122,7 +129,7 @@ public class AdminTheacherDAOImp implements IAdminTheacherDAO {
 		
 		try {
 			// 函数存储过程通过这中方式调用
-			CallableStatement  pc = DBUtil.getJDBC().getConn().prepareCall(sql);
+			CallableStatement  pc = dbUtil.getConn().prepareCall(sql);
 			pc.registerOutParameter(1, OracleTypes.CURSOR);
 			System.out.println("teacherPage.getPageMaxRows()" + teacherPage.getPageMaxRows());
 			pc.setObject(2, teacherPage.getPageMaxRows());
@@ -178,7 +185,7 @@ public class AdminTheacherDAOImp implements IAdminTheacherDAO {
 		
 		try {
 			// 函数存储过程通过这中方式调用
-			CallableStatement  pc = DBUtil.getJDBC().getConn().prepareCall(sql);
+			CallableStatement  pc = dbUtil.getConn().prepareCall(sql);
 			pc.registerOutParameter(1, OracleTypes.CURSOR);
 			pc.setObject(2, 10);
 			pc.setObject(3, 1);
@@ -252,7 +259,7 @@ public class AdminTheacherDAOImp implements IAdminTheacherDAO {
 //        v_count             out number
 		try {
 			// 函数存储过程通过这中方式调用
-			CallableStatement  pc = DBUtil.getJDBC().getConn().prepareCall(sql);
+			CallableStatement  pc = dbUtil.getConn().prepareCall(sql);
 			pc.registerOutParameter(1, OracleTypes.CURSOR);
 			pc.setObject(2, 10);
 			pc.setObject(3, 1);
@@ -309,7 +316,7 @@ public class AdminTheacherDAOImp implements IAdminTheacherDAO {
 		String sql = "UPDATE eecuser SET isdelete=1 WHERE eec_id=?";
 		ArrayList<Object> objList = new ArrayList<Object>();
 		objList.add(id);
-		int delRows = DBUtil.getJDBC().updateSql(sql, objList);
+		int delRows = dbUtil.updateSql(sql, objList);
 		if(delRows==0){
 			return false;
 		}else{
@@ -324,7 +331,7 @@ public class AdminTheacherDAOImp implements IAdminTheacherDAO {
 		ArrayList<Object> objList = new ArrayList<Object>();
 		objList.add(u.getRoleId());
 		objList.add(u.getId());
-		int updRows = DBUtil.getJDBC().updateSql(sql, objList);
+		int updRows = dbUtil.updateSql(sql, objList);
 		if(updRows==0){
 			return false;
 		}else{

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;testParam&apos; from expression &apos;new TestParam(){@Override public String getStr(){return msg;}}&apos;&#x0D;&#x0A;- Original project: &apos;ATest&apos;&#x0D;&#x0A;- Variable name: &apos;testParam&apos;&#x0D;&#x0A;- Destination method: &apos;javaInterfaceTest.Test.testInterfaceParam()&apos;&#x0D;&#x0A;- Variable expression: &apos;new TestParam(){@Override public String getStr(){return msg;}}&apos;&#x0D;&#x0A;- Replace occurrences of expression with variable" description="Extract local variable &apos;testParam&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src&lt;javaInterfaceTest{Test.java" name="testParam" replace="true" selection="161 0" stamp="1502074291036" version="1.0"/>
+</session>
