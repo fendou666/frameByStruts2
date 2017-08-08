@@ -1,0 +1,8 @@
+package action.test;
+
+import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
+
+public class MultiActionByParam  extends MultiActionController{
+
+	
+}

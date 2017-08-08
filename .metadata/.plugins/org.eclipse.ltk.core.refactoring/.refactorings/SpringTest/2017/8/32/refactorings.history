@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;SpringTest/src/config/springMVC.xml&apos; to &apos;springmvc-servlet.xml&apos;" description="Rename resource &apos;springMVC.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/config/springMVC.xml" name="springmvc-servlet.xml" stamp="1502179346649" updateReferences="true"/>
+</session>

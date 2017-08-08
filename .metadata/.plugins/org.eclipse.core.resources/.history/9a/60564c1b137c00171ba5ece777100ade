@@ -1,0 +1,11 @@
+package action.test;
+
+import java.awt.event.ActionEvent;
+
+import javax.swing.AbstractAction;
+
+public class SingleAction extends AbstractAction {
+
+
+
+}

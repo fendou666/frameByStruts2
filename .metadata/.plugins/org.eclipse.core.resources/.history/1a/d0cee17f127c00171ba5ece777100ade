@@ -1,0 +1,9 @@
+
+package javatest;
+
+public class TestBean {
+	private int i1;
+	private boolean b1;
+	private String str1;
+	
+}

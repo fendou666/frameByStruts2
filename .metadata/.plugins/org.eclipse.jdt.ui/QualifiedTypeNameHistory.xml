@@ -54,4 +54,8 @@
 <fullyQualifiedTypeName name="javaInterfaceTest.TestParam2"/>
 <fullyQualifiedTypeName name="javaInterfaceTest.Test"/>
 <fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionSupport"/>
+<fullyQualifiedTypeName name="javax.swing.AbstractAction"/>
+<fullyQualifiedTypeName name="org.springframework.web.servlet.mvc.AbstractController"/>
+<fullyQualifiedTypeName name="org.springframework.web.servlet.ModelAndView"/>
+<fullyQualifiedTypeName name="org.springframework.web.servlet.mvc.multiaction.MultiActionController"/>
 </qualifiedTypeNameHistroy>
