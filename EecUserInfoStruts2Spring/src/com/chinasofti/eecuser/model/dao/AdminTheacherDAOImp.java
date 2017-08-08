@@ -137,14 +137,12 @@ public class AdminTheacherDAOImp implements IAdminTheacherDAO {
 		final String cdtStr = conditionStr;
 		System.out.println("pageInfo :" +teacherPage);
 		// 函数存储过程通过这中方式调用
-		List<UserInfo> ul = jt.execute(new CallableStatementCreator() {
+		return jt.execute(new CallableStatementCreator() {
 				@Override
 				public CallableStatement createCallableStatement(Connection conn)
 						throws SQLException {
-					System.out.println("111111111111");
 					String sql = "{?=call eecAdminQueryTeacherPageRows(?,?,?,?)}";
 					CallableStatement pc = conn.prepareCall(sql);
-					System.out.println("222222222222");
 					pc.registerOutParameter(1, OracleTypes.CURSOR);
 					System.out.println("teacherPage.getPageMaxRows()" + teacherPage.getPageMaxRows());
 					pc.setObject(2, teacherPage.getPageMaxRows());
@@ -152,7 +150,6 @@ public class AdminTheacherDAOImp implements IAdminTheacherDAO {
 					pc.setObject(3, teacherPage.getCurrentPage());
 					pc.setObject(4, cdtStr);
 					pc.registerOutParameter(5, OracleTypes.INTEGER);
-					System.out.println("333333333333");
 					return pc;
 				}
 			}, new CallableStatementCallback<List<UserInfo>>() {
@@ -161,42 +158,40 @@ public class AdminTheacherDAOImp implements IAdminTheacherDAO {
 				public List<UserInfo> doInCallableStatement(
 						CallableStatement pc) throws SQLException,
 						DataAccessException {
-//					pc.execute();
-//					System.out.println("获取到sql数量是" + pc.getObject(5));
-//					ResultSet rs = (ResultSet)pc.getObject(1);
-//					List<UserInfo> userList = null;
-//					if(rs!=null){
-//						// 设置总记录条数
-//						teacherPage.setAllRows((int)pc.getObject(5));
-//						// 设置最大页码
-//						teacherPage.setMaxPageIndexByAllRows();
-//						userList = new ArrayList<UserInfo>();
-//						while(rs.next()){
-//							if(rs.isFirst()){
-//								System.out.println("数据库返回多条数据第一次执行");
-//							}
-//							//System.out.println("id 为 "  + rs.getString("eec_id"));
-//							userList.add(new UserInfo(
-//									Integer.parseInt(rs.getString("class_Id")==null?"0000":rs.getString("class_Id")),
-//									Integer.parseInt(rs.getString("EEC_Id")),
-//									rs.getString("EEC_Name"),
-//									rs.getString("sex"),
-//									Integer.parseInt(rs.getString("age")),
-//									rs.getString("email"),
-//									Long.parseLong(rs.getString("telephone")),
-//									rs.getString("role_name")
-//							));
-//						}
-//					}
-//					if (userList!=null && userList.size() == 0){
-//						userList = null;
-//					}
-//					return userList;
-					System.out.println("44444444444444");
-					return null;
+					pc.execute();
+					System.out.println("获取到sql数量是" + pc.getObject(5));
+					ResultSet rs = (ResultSet)pc.getObject(1);
+					List<UserInfo> userList = null;
+					if(rs!=null){
+						// 设置总记录条数
+						teacherPage.setAllRows((int)pc.getObject(5));
+						// 设置最大页码
+						teacherPage.setMaxPageIndexByAllRows();
+						userList = new ArrayList<UserInfo>();
+						while(rs.next()){
+							if(rs.isFirst()){
+								System.out.println("数据库返回多条数据第一次执行");
+							}
+							//System.out.println("id 为 "  + rs.getString("eec_id"));
+							userList.add(new UserInfo(
+									Integer.parseInt(rs.getString("class_Id")==null?"0000":rs.getString("class_Id")),
+									Integer.parseInt(rs.getString("EEC_Id")),
+									rs.getString("EEC_Name"),
+									rs.getString("sex"),
+									Integer.parseInt(rs.getString("age")),
+									rs.getString("email"),
+									Long.parseLong(rs.getString("telephone")),
+									rs.getString("role_name")
+							));
+						}
+					}
+					if (userList!=null && userList.size() == 0){
+						userList = null;
+					}
+					System.out.println("userList:"+ userList);
+					return userList;
 				}
 			});
-		return null;
  	}
 
 	@Override

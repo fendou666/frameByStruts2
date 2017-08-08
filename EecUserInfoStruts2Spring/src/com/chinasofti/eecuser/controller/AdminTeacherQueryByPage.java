@@ -13,10 +13,19 @@ import org.apache.struts2.ServletActionContext;
 
 import com.chinasofti.eecuser.model.javabean.SqlDataPage;
 import com.chinasofti.eecuser.model.javabean.UserInfo;
+import com.opensymphony.xwork2.ActionSupport;
 
-public class AdminTeacherQueryByPage extends AdminQueryUtils {
+public class AdminTeacherQueryByPage extends ActionSupport {
 	private static final long serialVersionUID = 1L;
 	private String result="";
+	private AdminQueryUtils aUtil;
+	
+	public AdminQueryUtils getaUtil() {
+		return aUtil;
+	}
+	public void setaUtil(AdminQueryUtils aUtil) {
+		this.aUtil = aUtil;
+	}
 	
 	public String getResult() {
 		return result;
@@ -31,14 +40,14 @@ public class AdminTeacherQueryByPage extends AdminQueryUtils {
 		HttpServletResponse response = ServletActionContext.getResponse();
 		HttpSession session = request.getSession();
 		
-		HashMap<String, Object> defaultData = getDefaultParamBySession(session);
-		SqlDataPage pageObj = getPageSpliteObjBySession(session);
+		HashMap<String, Object> defaultData = aUtil.getDefaultParamBySession(session);
+		SqlDataPage pageObj =  aUtil.getPageSpliteObjBySession(session);
 //    	获取分页的页码
     	String pageMode 		= request.getParameter("pageIndex");
 //    	获取分页的位置
-    	getPageMode(pageMode, pageObj);
+    	 aUtil.getPageMode(pageMode, pageObj);
 		
-		List<UserInfo> userList = getDateFromService(request, defaultData, pageObj);
+		List<UserInfo> userList =  aUtil.getDateFromService(request, defaultData, pageObj);
     	// 将数据写入
     	JSONArray fromObject = JSONArray.fromObject(userList);
     	// Json数据格式验证  http://www.bejson.com/

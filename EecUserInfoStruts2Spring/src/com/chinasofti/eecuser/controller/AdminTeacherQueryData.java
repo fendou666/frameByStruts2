@@ -13,11 +13,20 @@ import org.apache.struts2.ServletActionContext;
 
 import com.chinasofti.eecuser.model.javabean.SqlDataPage;
 import com.chinasofti.eecuser.model.javabean.UserInfo;
+import com.opensymphony.xwork2.ActionSupport;
 
-public class AdminTeacherQueryData extends AdminQueryUtils {
+public class AdminTeacherQueryData extends ActionSupport {
 
 	private static final long serialVersionUID = 1L;
 	private String result="";
+	private AdminQueryUtils aUtil;
+	
+	public AdminQueryUtils getaUtil() {
+		return aUtil;
+	}
+	public void setaUtil(AdminQueryUtils aUtil) {
+		this.aUtil = aUtil;
+	}
 	
 	public String getResult() {
 		return result;
@@ -32,19 +41,19 @@ public class AdminTeacherQueryData extends AdminQueryUtils {
 		HttpServletResponse response = ServletActionContext.getResponse();
 		HttpSession session = request.getSession();
 		
-		HashMap<String, Object> defaultData = getDefaultParamBySession(session);
-		initTeacherManageDefaultParam(defaultData);
-		if(!paramDataCheck(request, defaultData)){
+		HashMap<String, Object> defaultData = aUtil.getDefaultParamBySession(session);
+		aUtil.initTeacherManageDefaultParam(defaultData);
+		if(!aUtil.paramDataCheck(request, defaultData)){
 			result = "[]";
 			System.out.println("result:" + result);
     		return SUCCESS;
     	}
 		
-		SqlDataPage pageObj = getPageSpliteObjBySession(session);
+		SqlDataPage pageObj = aUtil.getPageSpliteObjBySession(session);
 		// 1代表当前页码 3代表没有包含的行数
-		initPageSpliteObj(1, 3, pageObj);
+		aUtil.initPageSpliteObj(1, 3, pageObj);
 		
-		List<UserInfo> userList = getDateFromService(request, defaultData, pageObj);
+		List<UserInfo> userList = aUtil.getDateFromService(request, defaultData, pageObj);
     	// 将数据写入
     	JSONArray fromObject = JSONArray.fromObject(userList);
     	// Json数据格式验证  http://www.bejson.com/

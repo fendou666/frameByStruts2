@@ -29,7 +29,6 @@
 <fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="javax.servlet.ServletContext"/>
 <fullyQualifiedTypeName name="org.apache.struts2.ServletActionContext"/>
-<fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionSupport"/>
 <fullyQualifiedTypeName name="org.junit.Before"/>
 <fullyQualifiedTypeName name="org.eclipse.jdt.internal.compiler.parser.diagnose.DiagnoseParser"/>
 <fullyQualifiedTypeName name="com.chinasofti.eecuser.tools.jdbc.DBUtil"/>
@@ -54,4 +53,5 @@
 <fullyQualifiedTypeName name="javaInterfaceTest.TestParam"/>
 <fullyQualifiedTypeName name="javaInterfaceTest.TestParam2"/>
 <fullyQualifiedTypeName name="javaInterfaceTest.Test"/>
+<fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionSupport"/>
 </qualifiedTypeNameHistroy>

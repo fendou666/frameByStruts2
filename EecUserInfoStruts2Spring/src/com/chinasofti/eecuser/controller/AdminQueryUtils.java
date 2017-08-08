@@ -16,7 +16,7 @@ import com.chinasofti.eecuser.model.service.AdminTheacherServiceImp;
 import com.chinasofti.eecuser.model.service.IAdminTheacherService;
 import com.opensymphony.xwork2.ActionSupport;
 
-public abstract class AdminQueryUtils extends ActionSupport {
+public class AdminQueryUtils {
 
 	private static final long serialVersionUID = 1L;
 	private HashMap<String, String> queryConf;
@@ -28,8 +28,7 @@ public abstract class AdminQueryUtils extends ActionSupport {
 	public void setAdminTheacherService(IAdminTheacherService adminTheacherService) {
 		this.adminTheacherService = adminTheacherService;
 	}
-	
-	
+
 	public AdminQueryUtils() {
 		queryConf = new HashMap<String, String>();
     	// 分页相关配置
@@ -40,6 +39,8 @@ public abstract class AdminQueryUtils extends ActionSupport {
     	queryConf.put("sessionDefaultDataMapAttr", "defaultDataMap");
     	queryConf.put("teacherDefaultDate", "teacherDefaultDate");
     }
+	
+	
     // ========================条件相关===========================
     // 从session中获取存储所有条件的Map，Object指的是一个dftData对象（起始它的类型是HashMap<String,Object>）
 	public HashMap<String,Object> getSessionDefaultDataMap(HttpSession session){

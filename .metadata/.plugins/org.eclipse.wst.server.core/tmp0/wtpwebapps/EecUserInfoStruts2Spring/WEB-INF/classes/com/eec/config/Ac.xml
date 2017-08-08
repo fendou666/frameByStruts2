@@ -61,14 +61,17 @@
     <bean name="AdminTeacherChain" class="com.chinasofti.eecuser.controller.AdminTeacherChain"
     		scope="prototype"
     		>
+    		<property name="aUtil" ref="AdminQueryUtils"/>
     </bean> 
 	<bean name="AdminTeacherQueryData" class="com.chinasofti.eecuser.controller.AdminTeacherQueryData"
     		scope="prototype"
     		>
+    		<property name="aUtil" ref="AdminQueryUtils"/>
     </bean> 
 	<bean name="AdminTeacherQueryByPage" class="com.chinasofti.eecuser.controller.AdminTeacherQueryByPage"
     		scope="prototype"
     		>
+    		<property name="aUtil" ref="AdminQueryUtils"/>
     </bean> 
 
 </beans>
