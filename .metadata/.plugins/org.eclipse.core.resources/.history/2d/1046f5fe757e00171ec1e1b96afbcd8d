@@ -1,0 +1,185 @@
+package com.chinasofti.eecuser.model.javabean;
+
+import java.util.Date;
+
+public class UserInfo {
+    private Long eecId;
+
+    private String eecName;
+
+    private String nickname;
+
+    private String password;
+
+    private String sex;
+
+    private Date birthday;
+
+    private Short age;
+
+    private String constellatory;
+
+    private Long managerId;
+
+    private Long groupId;
+
+    private Long roleId;
+
+    private Long classId;
+
+    private Long telephone;
+
+    private String email;
+
+    private Date registrationdate;
+
+    private Date lastlogintime;
+
+    private Short isdelete;
+
+    private String headimg;
+
+    public Long getEecId() {
+        return eecId;
+    }
+
+    public void setEecId(Long eecId) {
+        this.eecId = eecId;
+    }
+
+    public String getEecName() {
+        return eecName;
+    }
+
+    public void setEecName(String eecName) {
+        this.eecName = eecName == null ? null : eecName.trim();
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname == null ? null : nickname.trim();
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password == null ? null : password.trim();
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex == null ? null : sex.trim();
+    }
+
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
+    }
+
+    public Short getAge() {
+        return age;
+    }
+
+    public void setAge(Short age) {
+        this.age = age;
+    }
+
+    public String getConstellatory() {
+        return constellatory;
+    }
+
+    public void setConstellatory(String constellatory) {
+        this.constellatory = constellatory == null ? null : constellatory.trim();
+    }
+
+    public Long getManagerId() {
+        return managerId;
+    }
+
+    public void setManagerId(Long managerId) {
+        this.managerId = managerId;
+    }
+
+    public Long getGroupId() {
+        return groupId;
+    }
+
+    public void setGroupId(Long groupId) {
+        this.groupId = groupId;
+    }
+
+    public Long getRoleId() {
+        return roleId;
+    }
+
+    public void setRoleId(Long roleId) {
+        this.roleId = roleId;
+    }
+
+    public Long getClassId() {
+        return classId;
+    }
+
+    public void setClassId(Long classId) {
+        this.classId = classId;
+    }
+
+    public Long getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephone(Long telephone) {
+        this.telephone = telephone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email == null ? null : email.trim();
+    }
+
+    public Date getRegistrationdate() {
+        return registrationdate;
+    }
+
+    public void setRegistrationdate(Date registrationdate) {
+        this.registrationdate = registrationdate;
+    }
+
+    public Date getLastlogintime() {
+        return lastlogintime;
+    }
+
+    public void setLastlogintime(Date lastlogintime) {
+        this.lastlogintime = lastlogintime;
+    }
+
+    public Short getIsdelete() {
+        return isdelete;
+    }
+
+    public void setIsdelete(Short isdelete) {
+        this.isdelete = isdelete;
+    }
+
+    public String getHeadimg() {
+        return headimg;
+    }
+
+    public void setHeadimg(String headimg) {
+        this.headimg = headimg == null ? null : headimg.trim();
+    }
+}

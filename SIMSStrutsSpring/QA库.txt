@@ -1,0 +1,37 @@
+Q1:关于json数据的传递,集合和对象的传递
+A1:
+     （1）在action中如果是list集合，则调用JsonMesg.getJsonArray(list);，
+                如果是一个提示信息，先使用	JsonMesg mesg = new JsonMesg("暂无数据");   
+	      然后使用	result = JsonMesg.getJsonObject(mesg);如下
+	  if(list != null){
+		  result =  JsonMesg.getJsonArray(list);
+	  }else{
+		  JsonMesg mesg = new JsonMesg("暂无数据");
+		  result = JsonMesg.getJsonObject(mesg);
+	  }
+
+    （2）在js中解析时使用
+        $.post(url, {json参数列表}，回调函数，"JSON");后面一定需要添加"JSON"
+    （3）在js中解析对象
+        $.post(
+		    path +"/getDelMesg?id=" + id,
+		    {},
+		    function(data){
+			    var chats=eval('(' + data + ')');
+			    if(chats.mesg != null){
+				    $("#mesg").html(chats.mesg);
+			    }
+		    }, "JSON"
+	    )
+     （4）在js中解析集合
+      var chats=eval(data);  //拿到json对象
+      //调用each方法，chats为对象数组，i为技术器，info为每一个对象
+      $.each(chats, function(i,info){
+		 listInfo += "<tr>" + 
+		 "<td>" + (i+1) + "</td>" + 
+		 "<td>" + info.id + "</td>" + 
+	  });
+	  
+	  
+Q2:action中无法接受到值
+A2:查看action中是否有请求参数的get和set方法。	  

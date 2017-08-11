@@ -1,0 +1,28 @@
+package com.eec.test;
+
+import java.io.IOException;
+import java.io.InputStream;
+
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.junit.Before;
+import org.junit.Test;
+
+import com.chinasofti.eecuser.model.dao.UserInfoMapper;
+
+public class testMybatis {
+	@Test
+	public void testDao() throws IOException{
+		
+		// 获取配置流
+		InputStream is = Resources.getResourceAsStream("config/mybatic/configuration.xml");
+		// 创建工厂
+		SqlSessionFactory sqfc = new  SqlSessionFactoryBuilder().build(is);
+		SqlSession ops = sqfc.openSession();
+		UserInfoMapper uMap = ops.getClass(UserInfoMapper.class);
+		
+	}
+	
+}

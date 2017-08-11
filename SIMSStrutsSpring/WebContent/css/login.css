@@ -1,0 +1,75 @@
+body{
+	color: white;
+	font-weight: bold;
+	font-family:ËÎÌו;
+}
+#main{
+	padding: 20px;
+	position:relative;
+	top:25%;
+}
+#outer{
+	width:330px;
+	background-color: rgba(255,255,255,0.7);
+	margin: 0 auto;
+	border-radius: 10px;
+	padding-bottom:5px;
+	text-indent: 1em;
+	height:280px;
+}
+.block{
+	margin: 5px 0px 10px 0px;
+}
+
+form{
+	display: block;
+}
+
+#head{
+	padding: 10px 0px;
+	border-radius: 10px 10px 0px 0px;
+	text-indent: 3em;
+	color:black;
+}
+
+#rigester,#submit,input,#permissions{
+	text-align:center;
+	border-radius: 10px;
+	background-color: rgba(255,255,255,0.3);
+	border: 1px solid gray;
+	box-shadow: 0 0 1px #808040;
+	text-indent: 8px;
+	line-height:30px;
+	height:33px;
+	width:220px;
+	font-size:14px;
+}
+
+
+.inline{
+    font-size:14px;
+}
+
+#head{
+	font-size:40px;
+}
+
+#randNum{
+	height:33px;
+	width:100px;
+	font-size:14px;
+}
+#image{
+	border:1px solid gray;
+	border-radius: 5px;
+	height: 33px;
+	margin-left:7px;
+	width:100px;
+}
+#submit{
+	background-color: #0080c0;
+}
+
+a{
+	color:ghostwhite;
+}

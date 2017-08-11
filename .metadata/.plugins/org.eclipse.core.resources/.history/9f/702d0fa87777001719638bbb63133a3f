@@ -1,7 +1,0 @@
-package com.chinasofti.eecuser.controller;
-
-import com.opensymphony.xwork2.ActionSupport;
-
-public abstract class AdminQueryUtils extends ActionSupport {
-	
-}

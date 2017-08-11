@@ -18,5 +18,4 @@ public class SingleAction extends AbstractController {
 		rec.setViewName("WEB-INF/success/SingleSuccess.jsp");
 		return rec;
 	}
-
 }

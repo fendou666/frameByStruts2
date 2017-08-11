@@ -1,0 +1,23 @@
+package com.chinasofti.eecuser.controller;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.web.servlet.ModelAndView;
+
+public class AdminTeacher extends AdminQueryUtils{
+
+	public ModelAndView adminTeacherChain(HttpServletRequest arg0,
+			HttpServletResponse arg1) throws Exception {
+		return super.handleRequestInternal(arg0, arg1);
+	}
+	public ModelAndView adminTeacherQueryData(HttpServletRequest arg0,
+			HttpServletResponse arg1) throws Exception {
+		return super.handleRequestInternal(arg0, arg1);
+	}
+	public ModelAndView adminTeacherQueryByPage(HttpServletRequest arg0,
+			HttpServletResponse arg1) throws Exception {
+		return super.handleRequestInternal(arg0, arg1);
+	}
+
+}

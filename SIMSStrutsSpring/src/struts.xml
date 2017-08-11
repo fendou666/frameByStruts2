@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.devMode" value="true"></constant>
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<constant name="struts.objectFactory" value="spring"></constant>
+	
+	<!-- 定义全局result 继承拦截器包-->
+	<package name="all" namespace="/" extends="json-default">
+		<global-results>
+			<result name="error">/jsp/Login.jsp</result>
+			<result  type="json">
+				<param name="root">result</param>
+			</result>
+		</global-results>
+	</package>
+	
+	<!-- 定义拦截器 -->
+	<package name="inter" namespace="/" extends="all">
+		<interceptors>
+			<interceptor name="userRight" class="com.sims.mvc.controller.UserInterceptor"></interceptor>
+			<interceptor-stack name="myInter">
+				<interceptor-ref name="userRight"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		
+		<default-interceptor-ref name="myInter"></default-interceptor-ref>
+	</package>
+	
+	
+	
+	<!-- 定义登录相关action 继承all Result包 -->
+	<package name="login" namespace="/" extends="all">
+		<action name="to_login" class="loginAction" >
+			<result name="success">/jsp/Login.jsp</result>
+		</action>
+		
+		<action name="login" class="loginAction" method="login">
+			<result  type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		
+		<action name="createNum" class="loginAction" >
+			<result name="success">/jsp/Login.jsp</result>
+		</action>
+		
+		<action name="identifyNum" class="loginAction" method="idetifyNum">
+			<result name="success">/jsp/Login.jsp</result>
+		</action>
+		<action name="regist" class="loginAction" method="regist">
+			<result name="success">/jsp/Login.jsp</result>
+			<result name="input">/jsp/Login.jsp</result>
+		</action>
+		<action name="passwordBack" class="loginAction" method="passwordBack">
+			<result name="success">/jsp/changepwd.jsp</result>
+			<result name="input">/jsp/PasswordBack.jsp</result>
+		</action>
+		<action name="changePwd" class="loginAction" method="changePwd">
+			<result name="success">/jsp/Login.jsp</result>
+			<result name="input">/jsp/changepwd.jsp</result>
+		</action>
+	</package>
+	
+	<package name="stuInfo" namespace="/" extends="inter">
+		<action name="mainPage" class="com.sims.mvc.controller.UserAction" >
+			<result name="success">/content/student/showStuInfo.jsp</result>
+			<result name="error">/jsp/Login.jsp</result>
+			<result name="noRight">/jsp/fail.jsp</result>
+		</action>
+	 	<action name="modpwd" class="com.sims.mvc.controller.ModPwdAction" method="modPwd">
+			<result name="pwdnull">/content/student/showStuInfo.jsp</result>
+			<result name="pwdfail">/content/student/mod_pwd.jsp</result>
+			<result name="success">/jsp/succeed.jsp</result>
+		</action> 
+		<action name="update" class="com.sims.mvc.controller.UpdateStudentAction">
+			<result name="input">/content/student/showStuInfo.jsp</result>
+			<result name="success">/jsp/succeed.jsp</result>
+		</action>
+	</package>
+	
+	<package name="managerTeacher" namespace="/" extends="inter">
+		<action name="getStuData" class="com.sims.mvc.controller.ManTeacherAction" method="queClassStudent">
+			<result  type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="quenotclassstu" class="com.sims.mvc.controller.ManTeacherAction" method="queNotClassStudent">
+			<result  type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		
+		<action name="appointclass" class="com.sims.mvc.controller.ManTeacherAction" method="classManagee">
+		<result name="success">/content/classManger/ManagerTacher.jsp</result>
+		</action>
+		
+		<action name="insertStudents" class="com.sims.mvc.controller.ManTeacherAction" method="insertStudents">
+			<result name="success">/content/classManger/ManagerTacher.jsp</result>
+		</action>
+		<action name="deleteStudents" class="com.sims.mvc.controller.ManTeacherAction" method="deleteStudents">
+			<result name="success">/content/classManger/ManagerTacher.jsp</result>
+		</action>
+	</package>
+	
+	<package name="team" namespace="/" extends="inter">
+		<action name="teamcheck" class="com.sims.mvc.controller.TeamAction" method="checkTeamStudent">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+	
+		<action name="deleteamcheck" class="com.sims.mvc.controller.TeamAction" method="DeleteTeamStudent">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+	
+		<action name="noteamcheck" class="com.sims.mvc.controller.TeamAction" method="NotTeamCheckStudent">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+	
+		<action name="inserteamcheck" class="com.sims.mvc.controller.TeamAction" method="AddTeamStudent">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+	</package>
+	
+	<package name="superAdmin" namespace="/" extends="inter">
+		<action name="getNormAdminData" class="com.sims.mvc.controller.SuperAdminAction" method="queryAdmin">
+			<result  type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="getDelMesg" class="com.sims.mvc.controller.SuperAdminAction" method="delAdmin">
+			<result  type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="getAddMesg" class="com.sims.mvc.controller.SuperAdminAction" method="addAdmin">
+			<result  type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+	</package>
+	
+	<package name="class" namespace="/" extends="inter">
+		<action name="checkClassStudent" class="classAction" method="checkClassStudent">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+	
+		<action name="showClass" class="classAction" method="showClass">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+	    
+	    <action name="showTeam" class="classAction" method="showTeam">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		
+		<action name="showTeamStudent" class="classAction" method="showTeamStudent">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+	    
+		<action name="createTeam" class="classAction" method="createTeam">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+	
+		<action name="appoinTeamLeader" class="classAction" method="appoinTeamLeader">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+	</package>
+	
+	<!-- 管理员action -->
+	<package name="admin" namespace="/" extends="inter">
+		<action name="getAllClassInfo" class="com.sims.mvc.controller.AdminAction" method="queryAllClassesInfo">
+			<result  type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="getClassInfoById" class="com.sims.mvc.controller.AdminAction" method="queryClassInfo">
+			<result  type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="addClassInfo" class="com.sims.mvc.controller.AdminAction" method="addClassInfo">
+			<result  type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="appointManTeacher" class="com.sims.mvc.controller.AdminAction" method="appointManTeacher">
+			<result  type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+	</package>
+	
+</struts>

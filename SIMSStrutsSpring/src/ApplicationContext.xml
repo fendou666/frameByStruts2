@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd">
+     
+     <!-- 配置dataSource -->
+     <bean name="comboPool" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+     	<property name="jdbcUrl" value="jdbc:oracle:thin:@175.3.13.29:1521:orcl"></property>
+     	<property name="user" value="scott"></property>
+     	<property name="password" value="tiger"></property>
+     	<property name="initialPoolSize" value="3"></property>
+     	<property name="maxPoolSize" value="10"></property>
+     	<property name="driverClass" value="oracle.jdbc.OracleDriver"></property>
+     	<property name="minPoolSize" value="1"></property>
+     	<property name="acquireIncrement" value="3"></property>
+     	<property name="maxIdleTime" value="60"></property>
+     </bean>
+     
+     <!-- 配置JdbcTemplate -->
+     <bean name="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+     	<property name="dataSource" ref="comboPool"></property>
+     </bean>
+     
+     <!-- 声明式事物控制开始 -->
+     <bean name="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+     	<property name="dataSource" ref="comboPool"></property>
+     </bean>
+     
+     <!-- 声明事物控制通知 -->
+     <tx:advice id="txTransactionManager" transaction-manager="transactionManager">
+     	<tx:attributes>
+     		<tx:method name="update*" isolation="DEFAULT" propagation="REQUIRED" read-only="false"/>
+     		<tx:method name="delete*" isolation="DEFAULT" propagation="REQUIRED" read-only="false"/>
+     		<tx:method name="add*" isolation="DEFAULT" propagation="REQUIRED" read-only="false"/>
+     		<tx:method name="find*" read-only="true"/>
+     		<tx:method name="load*" read-only="true"/>
+     	</tx:attributes>
+     </tx:advice>
+     
+     <!-- 配置事物的切入点 DAO层的所有-->
+     <aop:config>
+     	<aop:pointcut expression="within(com.study.medol.dao..*)" id="txPointCut"/>
+     	<aop:advisor advice-ref="txTransactionManager" pointcut-ref="txPointCut"/>
+     </aop:config>
+     
+     <!-- 配置DAO层 所有的DAO层都加入到这里来-->
+     <bean name="classDAOImp" class="com.sims.mvc.model.dao.ClassDAOImp" scope="prototype">
+     	<property name="jt" ref="jdbcTemplate"/>
+     </bean>
+     <bean name="loginDAOImp" class="com.sims.mvc.model.dao.LoginDAOImp" scope="prototype">
+     	<property name="jt" ref="jdbcTemplate"/>
+     </bean>
+     <bean name="studentFindDAOImp" class="com.sims.mvc.model.dao.StudentFindDAOImp" scope="prototype">
+     	<property name="jt" ref="jdbcTemplate"/>
+     </bean>
+     <bean name="studentUpdateDAOImp" class="com.sims.mvc.model.dao.StudentUpdateDAOImp" scope="prototype">
+     	<property name="jt" ref="jdbcTemplate"/>
+     </bean>
+     <bean name="teamDaoImp" class="com.sims.mvc.model.dao.TeamDaoImp" scope="prototype">
+     	<property name="jt" ref="jdbcTemplate"/>
+     </bean>
+     <bean name="teamDAOImp1" class="com.sims.mvc.model.dao.TeamDAOImp1" scope="prototype">
+     	<property name="jt" ref="jdbcTemplate"/>
+     </bean>
+     
+     
+     <!-- 配置service层  所有的service层都加入到这里来-->
+     <bean name="loginService" class="com.sims.mvc.model.service.LoginServiceImp" scope="prototype">
+     	<property name="loginDao" ref="loginDAOImp"></property>
+     </bean>
+     <bean name="classService" class="com.sims.mvc.model.service.ClassServiceImp" scope="prototype">
+     	<property name="icd" ref="classDAOImp"></property>
+     </bean>
+     <bean name="teamService" class="com.sims.mvc.model.service.TeamServiceImp" scope="prototype">
+     	<property name="iteamdao" ref="teamDAOImp1"></property>
+     </bean>
+     <bean name="studentService" class="com.sims.mvc.model.service.StudentServiceImp" scope="prototype">
+     	<property name="stuUpdate" ref="studentUpdateDAOImp"></property>
+     	<property name="stuFind" ref="studentFindDAOImp"></property>
+     </bean>
+     
+     <!-- 配置action层 所有的action层都加入到这里来-->
+     <bean name="loginAction" class="com.sims.mvc.controller.LoginAction">
+     	<property name="loginService" ref="loginService"></property>
+     </bean> 
+	
+	 <bean name="classActions" class="com.sims.mvc.controller.ClassAction">
+     	<property name="studentService" ref="studentService"/>
+     	<property name="teamService" ref="teamService"/>
+     	<property name="classService" ref="classService"/>
+     </bean>
+      
+   <bean name="superAdminAction" class="com.sims.mvc.controller.SuperAdminAction">
+     	<property name="stuService" ref="studentService"></property>
+     </bean>  
+     
+     <bean name="Teamservce" class="com.sims.mvc.controller.TeamAction">
+        <property name="teamservce" ref="teamService"/>
+        <property name="StudentService" ref="studentService"/>
+     </bean> 
+     <!-- 修改学生信息 -->
+     <bean name="updateStu" class="com.sims.mvc.controller.UpdateStudentAction" scope="prototype">
+     	<property name="stuService" ref="studentService"></property>
+     </bean> 
+      <bean name="adminAction" class="com.sims.mvc.controller.AdminAction">
+        <property name="is" ref="classService"/>
+        <property name="stuService" ref="studentService"/>
+     </bean>
+</beans>
+
