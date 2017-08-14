@@ -11,6 +11,7 @@
   <module moduleId="org.eclipse.jst.jee.server:MVC02-JqueryJsonChangePage" serverId="Tomcat v8.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:EecUserInfoStruts2Spring" serverId="Tomcat v8.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:EecUserInfoSpringMVCSpringJdbcTmp" serverId="Tomcat v8.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:EecUserInfoMybatis" serverId="Tomcat v8.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:EecUserInfoSpringMVC" serverId="Tomcat v8.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:EecUserInfoStruts2" serverId="Tomcat v8.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:EecUserInfoJ2EE" serverId="Tomcat v8.0 Server at localhost"/>

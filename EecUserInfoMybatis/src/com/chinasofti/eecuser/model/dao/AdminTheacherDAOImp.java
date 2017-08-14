@@ -1,14 +1,19 @@
 package com.chinasofti.eecuser.model.dao;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.sql.CallableStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import oracle.jdbc.OracleTypes;
 
@@ -18,7 +23,7 @@ import com.chinasofti.eecuser.model.javabean.UserInfo;
 import com.chinasofti.eecuser.tools.jdbc.DBUtil;
 
 public class AdminTheacherDAOImp implements IAdminTheacherDAO {
-	private String mybatisConfigLocation;
+	private String mybatisConfigLocation = "com/chinasofti/eecuser/config/mybatis.xml";
 	private SqlSessionFactory sqfc;
 	private SqlSession ops;
 	
@@ -123,55 +128,28 @@ public class AdminTheacherDAOImp implements IAdminTheacherDAO {
 		System.out.println("条件语句是 " + conditionStr);
 		// 返回的用户列表
 		List<UserInfo> userList = null;
-		String sql = "{?=call eecAdminQueryTeacherPageRows(?,?,?,?)}";
-		
+		// 获取配置流
+		InputStream is;
 		try {
-			// 函数存储过程通过这中方式调用
-			CallableStatement  pc = DBUtil.getJDBC().getConn().prepareCall(sql);
-			pc.registerOutParameter(1, OracleTypes.CURSOR);
-			System.out.println("teacherPage.getPageMaxRows()" + teacherPage.getPageMaxRows());
-			pc.setObject(2, teacherPage.getPageMaxRows());
-			System.out.println("teacherPage.getCurrentPage()" + teacherPage.getCurrentPage());
-			pc.setObject(3, teacherPage.getCurrentPage());
-			pc.setObject(4, conditionStr);
-			pc.registerOutParameter(5, OracleTypes.INTEGER);
-			
-			pc.execute();
-			
-			ResultSet rs = (ResultSet)pc.getObject(1);
-			if(rs!=null){
-				// 设置总记录条数
-				teacherPage.setAllRows((int)pc.getObject(5));
-				// 设置最大页码
-				teacherPage.setMaxPageIndexByAllRows();
-				userList = new ArrayList<UserInfo>();
-				
-				while(rs.next()){
-					if(rs.isFirst()){
-						System.out.println("数据库返回多条数据第一次执行");
-					}
-					System.out.println("id 为 "  + rs.getString("eec_id"));
-					System.out.println("class_id 为：" + rs.getString("class_Id"));
-					userList.add(new UserInfo(
-							Integer.parseInt(rs.getString("class_Id")==null?"0000":rs.getString("class_Id")),
-							Integer.parseInt(rs.getString("EEC_Id")),
-							rs.getString("EEC_Name"),
-							rs.getString("sex"),
-							Integer.parseInt(rs.getString("age")),
-							rs.getString("email"),
-							Long.parseLong(rs.getString("telephone")),
-							rs.getString("role_name")
-					));
-				}
-			}
-			System.out.println("获取到sql数量是" + pc.getObject(5));
-		} catch (SQLException e) {
-			e.printStackTrace();
+			is = Resources.getResourceAsStream(mybatisConfigLocation);
+			// 创建工厂
+			sqfc = new  SqlSessionFactoryBuilder().build(is);
+			ops = sqfc.openSession();
+			UserInfoMapper uMap = ops.getMapper(UserInfoMapper.class);
+			Map<String, Object> param = new HashMap<String, Object>();
+			param.put("v_maxPageRows", teacherPage.getPageMaxRows());
+			param.put("v_currentPageNumber", teacherPage.getCurrentPage());
+			param.put("v_condition", conditionStr);
+			ops.selectOne("com.chinasofti.eecuser.model.dao.UserInfoMapper.queryDataByCondition", param);
+			userList = (List<UserInfo>)param.get("result");
+			teacherPage.setPageMaxRows((int)param.get("v_count"));
+			teacherPage.setMaxPageIndexByAllRows();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
 		}
-		if (userList!=null && userList.size() == 0){
-			userList = null;
-		}
-		return userList;  
+		System.out.println("userList"  + userList);
+		return userList;
  	}
 
 	public List<UserInfo> queryData() {
