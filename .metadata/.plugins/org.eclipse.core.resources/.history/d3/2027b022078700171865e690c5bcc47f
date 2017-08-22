@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- 经过测试上面结论正确 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" >
+	    <property name="jdbcUrl" value="jdbc:oracle:thin:@localhost:1521:orcl"/>
+		<property name="driverClass" value="oracle.jdbc.OracleDriver"/>
+		<property name="user" value="scott"/>
+		<property name="password" value="tiger"/>
+		<!-- 设定初始化，数据库连接池中连接数量 -->
+		<property name="initialPoolSize" value="3"/>
+		<!-- 设定连接池最大连接数量 -->
+		<property name="maxPoolSize" value="10"/>
+		<!-- 设定连接池最小连接数量， 关于连接数量最小可以是0吗，设置为1是必须连接一个吗 -->
+		<property name="minPoolSize" value="1"/>
+		<!-- 设定连接池一次连接申请的数量 -->
+		<property name="acquireIncrement" value="3"/>
+		<!-- 设定连接最长空闲时间，单位为秒， 超时空闲连接被提出连接池 ，TODO 这里超出时间必须重新conn吗 -->
+		<property name="maxIdleTime" value="60"/>
+	</bean>
+	
+	<!-- 创建mybatis的 sqlSession工厂bean -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<!-- mybatis需要的数据库环境配置  -->
+		<property name="dataSource" ref="dataSource"/>
+		<!-- mybatis配置文件路径  -->
+		<!-- 这里的clsspath是小写， 冒号后面不要有空格  -->
+		<property name="configLocation" value="classpath:com/chinasofti/eecuser/config/mybatis.xml"/>
+		<!-- 加载所有Map  -->
+		<property name="mapperLocations"  value="classpath:com/chinasofti/eecuser/model/mapping/UserInfoMapper.xml" />
+	</bean>
+	<!-- 创建sqlSession工厂中 相应的Map  -->
+	<bean id="stuMapperDAO" class="org.mybatis.spring.mapper.MapperFactoryBean" scope="prototype">
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+		<!-- 这里是MapperInterface  -->
+		<property name="mapperInterface"  value="ls.dao.StudentMapper" />
+	</bean>
+	
+	<bean id="stuService" class="ls.service.StudentServiceImp" scope="prototype">
+		<property name="stuMap"  ref="stuMapperDAO" />
+	</bean>
+
+</beans>
+

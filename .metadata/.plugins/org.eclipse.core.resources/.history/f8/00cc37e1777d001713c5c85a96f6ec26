@@ -1,7 +1,0 @@
-package com.chinasofti.eecuser.controller;
-
-import org.springframework.web.servlet.mvc.AbstractController;
-
-public class LoginController extends AbstractController {
-
-}

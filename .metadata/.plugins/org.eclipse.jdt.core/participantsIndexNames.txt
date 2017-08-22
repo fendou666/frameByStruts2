@@ -5,6 +5,8 @@ E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\14
 \EecUserInfoSpringMVCSpringJdbcTmp\src
 E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1407470926.index
 \lession05_i18n\src
+E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2721903011.index
+\EecUserInfoSpringMybatis\src
 E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4050858010.index
 \EecUserInfoSpring\src
 E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1532024932.index
@@ -59,6 +61,8 @@ E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\15
 \SIMSStrutsSpring\src
 E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2563380405.index
 \S20170616\src
+E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2061968092.index
+\EecUserInfoSpringMybatis\src
 E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\181874000.index
 \EecUserInfoJ2EE\src
 E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1641913956.index
@@ -91,6 +95,8 @@ E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\28
 \S20170616\src
 E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3679814267.index
 \S20170619\src
+E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4071029186.index
+\EecUserInfoMybatisSpring\src
 E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2910867278.index
 \S20170616DataThree\src
 E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1968120597.index
@@ -103,6 +109,8 @@ E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\24
 \SIMSStrutsSpring\src
 E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3748198638.index
 \EecUserInfoJ2EE\src
+E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1476102084.index
+\EecUserInfoMybatisSpring\src
 E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1338483020.index
 \EecUserInfoSpringMVC\src
 E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1722811759.index
@@ -113,10 +121,14 @@ E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\14
 \EecUserInfoJ2EE\src
 E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2965906061.index
 \SIMSStrutsSpring\src
+E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1814250281.index
+\EecUserInfoMybatisSpring\src
 E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2813217284.index
 \EecUserInfoSpring\src
 E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1527661201.index
 \EecUserInfoJ2EE\src
+E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1794932253.index
+\EecUserInfoMybatisSpring\src
 E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3728868400.index
 \S20170620\src
 E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2057721486.index
@@ -149,6 +161,8 @@ E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\33
 \EecUserInfoMybatis\src
 E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1860032437.index
 \EecUserInfoSpringMVC\src
+E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1824380610.index
+\EecUserInfoMybatisSpring\src
 E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\245907859.index
 \S20170616New2\src
 E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4263596655.index
@@ -165,6 +179,8 @@ E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\38
 \MVC02-JqueryJsonChangePage\src
 E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1582071263.index
 \S20170616DataThree\src
+E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\575956196.index
+\EecUserInfoSpringMybatis\src
 E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2853879466.index
 \EecUserInfoSpringMVC\src
 E:\1java\frameByStruts2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3519267932.index

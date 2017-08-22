@@ -1,7 +1,0 @@
-package action.test;
-
-import javax.swing.AbstractAction;
-
-public class SingleAction extends AbstractAction {
-
-}
